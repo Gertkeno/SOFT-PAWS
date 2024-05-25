@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SOFT PAWS?? (Mayjam)"
-run/main_scene="res://hallway.tscn"
+run/main_scene="res://Scenes/Hallway/hallway.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
