@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bct7am5eatqr7"]
+[gd_scene load_steps=29 format=3 uid="uid://b5dqyg5k8bqas"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
 [ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
@@ -12,6 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://ier831hpsxop" path="res://Assets/giant dungeon pack/key.gltf" id="9_e3ere"]
 [ext_resource type="PackedScene" uid="uid://c37dxg0dobrg0" path="res://Assets/giant dungeon pack/plate_stack.gltf" id="10_jmrpu"]
 [ext_resource type="PackedScene" uid="uid://xqk8jjwddnmb" path="res://Assets/giant dungeon pack/chair.gltf" id="11_fefbx"]
+[ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="12_efi38"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fp4pu"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_srcix"]
+sky_material = SubResource("ProceduralSkyMaterial_fp4pu")
+
+[sub_resource type="Environment" id="Environment_u6klr"]
+background_mode = 2
+sky = SubResource("Sky_srcix")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6qi36"]
 size = Vector3(2.03619, 1.01764, 2.02466)
@@ -46,7 +60,25 @@ size = Vector3(0.968231, 0.402222, 0.153442)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wjnl8"]
 height = 0.496234
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_djx1f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjhyr"]
+albedo_texture = ExtResource("12_efi38")
+uv1_scale = Vector3(20, 20, 20)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fntbw"]
+lightmap_size_hint = Vector2i(202, 202)
+add_uv2 = true
+size = Vector2(40, 40)
+
 [node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u6klr")
 
 [node name="XRPlayer" parent="." instance=ExtResource("1_b517u")]
 
@@ -61,6 +93,7 @@ shape = SubResource("BoxShape3D_6qi36")
 
 [node name="PickableObject8" parent="." instance=ExtResource("4_7pgge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39114, 1.02115, 1.34405)
+ranged_grab_method = 2
 
 [node name="candle2" parent="PickableObject8" instance=ExtResource("3_bbgi8")]
 
@@ -134,3 +167,16 @@ shape = SubResource("CylinderShape3D_wjnl8")
 
 [node name="chair2" parent="." instance=ExtResource("11_fefbx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08806, 2.38419e-07, 0.747759)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
+shape = SubResource("WorldBoundaryShape3D_djx1f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -3.5)
+material_override = SubResource("StandardMaterial3D_xjhyr")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fntbw")
