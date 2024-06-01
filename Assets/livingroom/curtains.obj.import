@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dx3sfafmiufpl"
+path="res://.godot/imported/curtains.obj-8a0c3fa91e128e8661ced97ee8dc10cd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/curtains.obj-8a0c3fa91e128e8661ced97ee8dc10cd.mesh"]
+
+source_file="res://Assets/livingroom/curtains.obj"
+dest_files=["res://.godot/imported/curtains.obj-8a0c3fa91e128e8661ced97ee8dc10cd.mesh", "res://.godot/imported/curtains.obj-8a0c3fa91e128e8661ced97ee8dc10cd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

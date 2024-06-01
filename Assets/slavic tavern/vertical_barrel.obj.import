@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmdew8ibwx4g0"
+path="res://.godot/imported/vertical_barrel.obj-64801941946792b5636e9b50c07b3541.mesh"
+
+[deps]
+
+files=["res://.godot/imported/vertical_barrel.obj-64801941946792b5636e9b50c07b3541.mesh"]
+
+source_file="res://Assets/slavic tavern/vertical_barrel.obj"
+dest_files=["res://.godot/imported/vertical_barrel.obj-64801941946792b5636e9b50c07b3541.mesh", "res://.godot/imported/vertical_barrel.obj-64801941946792b5636e9b50c07b3541.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

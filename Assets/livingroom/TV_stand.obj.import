@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crxsbyf1dtqli"
+path="res://.godot/imported/TV_stand.obj-e56d80d632d95accc493d9caa3ee0b3a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/TV_stand.obj-e56d80d632d95accc493d9caa3ee0b3a.mesh"]
+
+source_file="res://Assets/livingroom/TV_stand.obj"
+dest_files=["res://.godot/imported/TV_stand.obj-e56d80d632d95accc493d9caa3ee0b3a.mesh", "res://.godot/imported/TV_stand.obj-e56d80d632d95accc493d9caa3ee0b3a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

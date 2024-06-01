@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8rujhn4xax4d"
+path="res://.godot/imported/door.obj-92dee1a06613d2117610822cf2634c9e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/door.obj-92dee1a06613d2117610822cf2634c9e.mesh"]
+
+source_file="res://Assets/slavic tavern/door.obj"
+dest_files=["res://.godot/imported/door.obj-92dee1a06613d2117610822cf2634c9e.mesh", "res://.godot/imported/door.obj-92dee1a06613d2117610822cf2634c9e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

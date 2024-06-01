@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6xh4fbn6f37n"
+path="res://.godot/imported/floor_tiles.obj-8c1dda5b5c82d81549f4031e0c2474d7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor_tiles.obj-8c1dda5b5c82d81549f4031e0c2474d7.mesh"]
+
+source_file="res://Assets/3d_objects_free kitchen cute/floor_tiles.obj"
+dest_files=["res://.godot/imported/floor_tiles.obj-8c1dda5b5c82d81549f4031e0c2474d7.mesh", "res://.godot/imported/floor_tiles.obj-8c1dda5b5c82d81549f4031e0c2474d7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

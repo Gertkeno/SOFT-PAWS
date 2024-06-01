@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5sk5tchfq7wc"
+path="res://.godot/imported/fireplace.obj-28cf726ba53340429d45ce4ff7154bac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fireplace.obj-28cf726ba53340429d45ce4ff7154bac.mesh"]
+
+source_file="res://christmas/fireplace.obj"
+dest_files=["res://.godot/imported/fireplace.obj-28cf726ba53340429d45ce4ff7154bac.mesh", "res://.godot/imported/fireplace.obj-28cf726ba53340429d45ce4ff7154bac.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

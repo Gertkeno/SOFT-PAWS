@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b356htqimvg0r"
+path="res://.godot/imported/Prop_Living_Room_Modular_Couch_Leg_Rest.obj-c20702fe75965f9be075b8e20e67993c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Living_Room_Modular_Couch_Leg_Rest.obj-c20702fe75965f9be075b8e20e67993c.mesh"]
+
+source_file="res://Assets/modular_house_collection/Prop_Living_Room_Modular_Couch_Leg_Rest.obj"
+dest_files=["res://.godot/imported/Prop_Living_Room_Modular_Couch_Leg_Rest.obj-c20702fe75965f9be075b8e20e67993c.mesh", "res://.godot/imported/Prop_Living_Room_Modular_Couch_Leg_Rest.obj-c20702fe75965f9be075b8e20e67993c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

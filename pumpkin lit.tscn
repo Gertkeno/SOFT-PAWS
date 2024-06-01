@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bovggq8o3bd24"]
+
+[ext_resource type="ArrayMesh" uid="uid://dhfvtrdwmf5m8" path="res://Assets/halloween room/pumpkins.obj" id="1_etro3"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Pumpkins" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00633514, 0, 0.158729)
+mesh = ExtResource("1_etro3")
+
+[node name="OmniLight3D2" type="SpotLight3D" parent="Pumpkins"]
+transform = Transform3D(-0.573769, -0.187469, -0.797273, -0.0774987, 0.98151, -0.175018, 0.815343, -0.038632, -0.577689, -0.148173, 0.254853, 0.422289)
+light_color = Color(1, 0.756863, 0.227451, 1)
+light_energy = 2.5
+spot_range = 1.8171
+spot_angle = 55.8042
+
+[node name="OmniLight3D" type="SpotLight3D" parent="Pumpkins"]
+transform = Transform3D(-0.512068, -0.17571, -0.840781, -0.0787607, 0.984334, -0.157742, 0.855327, -0.0145541, -0.517885, -0.0084081, 0.349737, -0.248516)
+light_color = Color(1, 0.756863, 0.227451, 1)
+light_energy = 2.0
+spot_range = 3.34227
+spot_angle = 64.5795

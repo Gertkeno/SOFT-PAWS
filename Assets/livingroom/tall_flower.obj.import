@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dub8why5oe80e"
+path="res://.godot/imported/tall_flower.obj-cc00ba61e5cb7a8e56fe4cfcf331431a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tall_flower.obj-cc00ba61e5cb7a8e56fe4cfcf331431a.mesh"]
+
+source_file="res://Assets/livingroom/tall_flower.obj"
+dest_files=["res://.godot/imported/tall_flower.obj-cc00ba61e5cb7a8e56fe4cfcf331431a.mesh", "res://.godot/imported/tall_flower.obj-cc00ba61e5cb7a8e56fe4cfcf331431a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

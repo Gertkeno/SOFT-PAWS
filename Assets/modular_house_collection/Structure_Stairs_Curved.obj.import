@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5b1stjbkh5b7"
+path="res://.godot/imported/Structure_Stairs_Curved.obj-8a0245d78f38b32646b1a91b3565e538.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Structure_Stairs_Curved.obj-8a0245d78f38b32646b1a91b3565e538.mesh"]
+
+source_file="res://Assets/modular_house_collection/Structure_Stairs_Curved.obj"
+dest_files=["res://.godot/imported/Structure_Stairs_Curved.obj-8a0245d78f38b32646b1a91b3565e538.mesh", "res://.godot/imported/Structure_Stairs_Curved.obj-8a0245d78f38b32646b1a91b3565e538.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

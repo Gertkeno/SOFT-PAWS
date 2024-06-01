@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dn55pfj3dafkl"
+path="res://.godot/imported/Prop_Bedroom_Dresser_Single.obj-595a5cb4c2ce213d27e178a6e2c6f5b7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Bedroom_Dresser_Single.obj-595a5cb4c2ce213d27e178a6e2c6f5b7.mesh"]
+
+source_file="res://Assets/modular_house_collection/Prop_Bedroom_Dresser_Single.obj"
+dest_files=["res://.godot/imported/Prop_Bedroom_Dresser_Single.obj-595a5cb4c2ce213d27e178a6e2c6f5b7.mesh", "res://.godot/imported/Prop_Bedroom_Dresser_Single.obj-595a5cb4c2ce213d27e178a6e2c6f5b7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

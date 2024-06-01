@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2vkysv72y0ot"
+path="res://.godot/imported/Prop_Kitchen_Oven.obj-1570739e1c74c145a4b52548494db507.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Kitchen_Oven.obj-1570739e1c74c145a4b52548494db507.mesh"]
+
+source_file="res://Assets/modular_house_collection/Prop_Kitchen_Oven.obj"
+dest_files=["res://.godot/imported/Prop_Kitchen_Oven.obj-1570739e1c74c145a4b52548494db507.mesh", "res://.godot/imported/Prop_Kitchen_Oven.obj-1570739e1c74c145a4b52548494db507.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

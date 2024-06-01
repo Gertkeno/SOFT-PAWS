@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvq40q1tjf2b0"
+path="res://.godot/imported/Structure_Ceiling_Beam_Angled.obj-c02a0e6c8420de7b02513620406e1b67.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Structure_Ceiling_Beam_Angled.obj-c02a0e6c8420de7b02513620406e1b67.mesh"]
+
+source_file="res://Assets/modular_house_collection/Structure_Ceiling_Beam_Angled.obj"
+dest_files=["res://.godot/imported/Structure_Ceiling_Beam_Angled.obj-c02a0e6c8420de7b02513620406e1b67.mesh", "res://.godot/imported/Structure_Ceiling_Beam_Angled.obj-c02a0e6c8420de7b02513620406e1b67.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

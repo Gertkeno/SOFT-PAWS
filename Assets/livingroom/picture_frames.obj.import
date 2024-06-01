@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqej5qv2i200x"
+path="res://.godot/imported/picture_frames.obj-7b340add5b6f8d79dc03f3914cc829f7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/picture_frames.obj-7b340add5b6f8d79dc03f3914cc829f7.mesh"]
+
+source_file="res://Assets/livingroom/picture_frames.obj"
+dest_files=["res://.godot/imported/picture_frames.obj-7b340add5b6f8d79dc03f3914cc829f7.mesh", "res://.godot/imported/picture_frames.obj-7b340add5b6f8d79dc03f3914cc829f7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

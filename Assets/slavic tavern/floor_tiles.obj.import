@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3h8lyaqx1v4n"
+path="res://.godot/imported/floor_tiles.obj-1d5d074775780a089572d8252c5ff8e2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor_tiles.obj-1d5d074775780a089572d8252c5ff8e2.mesh"]
+
+source_file="res://Assets/slavic tavern/floor_tiles.obj"
+dest_files=["res://.godot/imported/floor_tiles.obj-1d5d074775780a089572d8252c5ff8e2.mesh", "res://.godot/imported/floor_tiles.obj-1d5d074775780a089572d8252c5ff8e2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdd3fgi2iuuqy"]
+
+[ext_resource type="ArrayMesh" uid="uid://k5wbqlhg7vy" path="res://Assets/livingroom/wall_lamp.obj" id="1_s30jr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7j1p"]
+diffuse_mode = 3
+albedo_color = Color(0.0420676, 0.189622, 0.0556391, 0.666667)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_s30jr")
+surface_material_override/1 = SubResource("StandardMaterial3D_s7j1p")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.116837, 0.0640437, 0)
+light_color = Color(0.886963, 0.57532, 0.214885, 1)
+light_energy = 1.125
+omni_range = 5.008

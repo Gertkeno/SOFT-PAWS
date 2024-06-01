@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bot8pb1u355yj"
+path="res://.godot/imported/decorative_lights.obj-9a3f43aa8a1cc311cb126c99b14d6dba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/decorative_lights.obj-9a3f43aa8a1cc311cb126c99b14d6dba.mesh"]
+
+source_file="res://christmas/decorative_lights.obj"
+dest_files=["res://.godot/imported/decorative_lights.obj-9a3f43aa8a1cc311cb126c99b14d6dba.mesh", "res://.godot/imported/decorative_lights.obj-9a3f43aa8a1cc311cb126c99b14d6dba.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

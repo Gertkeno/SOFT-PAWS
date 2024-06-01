@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://yqgd6htyyuhq"
+path="res://.godot/imported/bar.obj-f4cf01818778d1e906582bf8791e83b1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bar.obj-f4cf01818778d1e906582bf8791e83b1.mesh"]
+
+source_file="res://Assets/slavic tavern/bar.obj"
+dest_files=["res://.godot/imported/bar.obj-f4cf01818778d1e906582bf8791e83b1.mesh", "res://.godot/imported/bar.obj-f4cf01818778d1e906582bf8791e83b1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

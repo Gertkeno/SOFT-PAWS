@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvk8sd5widshq"]
+
+[ext_resource type="ArrayMesh" uid="uid://ceyefk7xe31p2" path="res://Assets/halloween room/carpet.obj" id="1_a46h7"]
+
+[node name="Carpet2" type="MeshInstance3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.51687, -0.114713, 9.98742)
+mesh = ExtResource("1_a46h7")

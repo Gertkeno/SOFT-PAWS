@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dctbkvkcbl6ls"
+path="res://.godot/imported/Prop_Living_Room_TV_Stand.obj-b619d13a9aea8427b5a22001f1a74bfe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Living_Room_TV_Stand.obj-b619d13a9aea8427b5a22001f1a74bfe.mesh"]
+
+source_file="res://Assets/modular_house_collection/Prop_Living_Room_TV_Stand.obj"
+dest_files=["res://.godot/imported/Prop_Living_Room_TV_Stand.obj-b619d13a9aea8427b5a22001f1a74bfe.mesh", "res://.godot/imported/Prop_Living_Room_TV_Stand.obj-b619d13a9aea8427b5a22001f1a74bfe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

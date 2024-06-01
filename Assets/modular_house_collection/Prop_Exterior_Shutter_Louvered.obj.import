@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5frqspd8pq34"
+path="res://.godot/imported/Prop_Exterior_Shutter_Louvered.obj-cd0d0b125d4330f8eb54aa1aacbf29ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Exterior_Shutter_Louvered.obj-cd0d0b125d4330f8eb54aa1aacbf29ea.mesh"]
+
+source_file="res://Assets/modular_house_collection/Prop_Exterior_Shutter_Louvered.obj"
+dest_files=["res://.godot/imported/Prop_Exterior_Shutter_Louvered.obj-cd0d0b125d4330f8eb54aa1aacbf29ea.mesh", "res://.godot/imported/Prop_Exterior_Shutter_Louvered.obj-cd0d0b125d4330f8eb54aa1aacbf29ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

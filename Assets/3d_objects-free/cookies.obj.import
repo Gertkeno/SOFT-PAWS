@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ygkubit6wcoe"
+path="res://.godot/imported/cookies.obj-5e5b54c03fe08a48db43ef69cd522b5e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cookies.obj-5e5b54c03fe08a48db43ef69cd522b5e.mesh"]
+
+source_file="res://Assets/3d_objects-free/cookies.obj"
+dest_files=["res://.godot/imported/cookies.obj-5e5b54c03fe08a48db43ef69cd522b5e.mesh", "res://.godot/imported/cookies.obj-5e5b54c03fe08a48db43ef69cd522b5e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

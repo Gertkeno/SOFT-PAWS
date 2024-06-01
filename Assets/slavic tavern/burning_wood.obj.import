@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1pda5hr2rf4l"
+path="res://.godot/imported/burning_wood.obj-9937017c4ac04d7695173d0590704fa3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/burning_wood.obj-9937017c4ac04d7695173d0590704fa3.mesh"]
+
+source_file="res://Assets/slavic tavern/burning_wood.obj"
+dest_files=["res://.godot/imported/burning_wood.obj-9937017c4ac04d7695173d0590704fa3.mesh", "res://.godot/imported/burning_wood.obj-9937017c4ac04d7695173d0590704fa3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

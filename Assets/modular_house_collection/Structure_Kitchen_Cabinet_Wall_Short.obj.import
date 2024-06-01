@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gcd50w74qbhq"
+path="res://.godot/imported/Structure_Kitchen_Cabinet_Wall_Short.obj-4925a529300bba5d3254db2870e824e6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Structure_Kitchen_Cabinet_Wall_Short.obj-4925a529300bba5d3254db2870e824e6.mesh"]
+
+source_file="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Short.obj"
+dest_files=["res://.godot/imported/Structure_Kitchen_Cabinet_Wall_Short.obj-4925a529300bba5d3254db2870e824e6.mesh", "res://.godot/imported/Structure_Kitchen_Cabinet_Wall_Short.obj-4925a529300bba5d3254db2870e824e6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

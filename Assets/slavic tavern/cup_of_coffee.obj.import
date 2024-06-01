@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7kw2qw1djvdb"
+path="res://.godot/imported/cup_of_coffee.obj-d512926902a96feb1139f0dec2a1df5b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cup_of_coffee.obj-d512926902a96feb1139f0dec2a1df5b.mesh"]
+
+source_file="res://Assets/slavic tavern/cup_of_coffee.obj"
+dest_files=["res://.godot/imported/cup_of_coffee.obj-d512926902a96feb1139f0dec2a1df5b.mesh", "res://.godot/imported/cup_of_coffee.obj-d512926902a96feb1139f0dec2a1df5b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

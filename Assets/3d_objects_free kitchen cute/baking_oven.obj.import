@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dteuop6qw61l2"
+path="res://.godot/imported/baking_oven.obj-8756a36d780c525ea127058035ecf63e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/baking_oven.obj-8756a36d780c525ea127058035ecf63e.mesh"]
+
+source_file="res://Assets/3d_objects_free kitchen cute/baking_oven.obj"
+dest_files=["res://.godot/imported/baking_oven.obj-8756a36d780c525ea127058035ecf63e.mesh", "res://.godot/imported/baking_oven.obj-8756a36d780c525ea127058035ecf63e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=false
+force_disable_mesh_compression=false

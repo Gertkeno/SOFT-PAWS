@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ckn5b5gcjggre"
+path="res://.godot/imported/sink.obj-b9d6b9046f675d1b6748485658b72d0b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sink.obj-b9d6b9046f675d1b6748485658b72d0b.mesh"]
+
+source_file="res://Assets/3d_objects_free kitchen cute/sink.obj"
+dest_files=["res://.godot/imported/sink.obj-b9d6b9046f675d1b6748485658b72d0b.mesh", "res://.godot/imported/sink.obj-b9d6b9046f675d1b6748485658b72d0b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

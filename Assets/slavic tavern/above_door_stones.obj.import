@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://smgy6hniwilu"
+path="res://.godot/imported/above_door_stones.obj-4cdcb33d99286abb8e7a68c472b282f3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/above_door_stones.obj-4cdcb33d99286abb8e7a68c472b282f3.mesh"]
+
+source_file="res://Assets/slavic tavern/above_door_stones.obj"
+dest_files=["res://.godot/imported/above_door_stones.obj-4cdcb33d99286abb8e7a68c472b282f3.mesh", "res://.godot/imported/above_door_stones.obj-4cdcb33d99286abb8e7a68c472b282f3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

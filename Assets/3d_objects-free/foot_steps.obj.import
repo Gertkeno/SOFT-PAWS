@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlqgk8elgqh24"
+path="res://.godot/imported/foot_steps.obj-89f413ce71549936bffb0ecb3dafca46.mesh"
+
+[deps]
+
+files=["res://.godot/imported/foot_steps.obj-89f413ce71549936bffb0ecb3dafca46.mesh"]
+
+source_file="res://Assets/3d_objects-free/foot_steps.obj"
+dest_files=["res://.godot/imported/foot_steps.obj-89f413ce71549936bffb0ecb3dafca46.mesh", "res://.godot/imported/foot_steps.obj-89f413ce71549936bffb0ecb3dafca46.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

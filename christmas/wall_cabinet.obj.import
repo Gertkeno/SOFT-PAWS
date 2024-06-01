@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cl6djik6a2qmm"
+path="res://.godot/imported/wall_cabinet.obj-c17e44b63fa27e45af29041787e7d1cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall_cabinet.obj-c17e44b63fa27e45af29041787e7d1cb.mesh"]
+
+source_file="res://christmas/wall_cabinet.obj"
+dest_files=["res://.godot/imported/wall_cabinet.obj-c17e44b63fa27e45af29041787e7d1cb.mesh", "res://.godot/imported/wall_cabinet.obj-c17e44b63fa27e45af29041787e7d1cb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
