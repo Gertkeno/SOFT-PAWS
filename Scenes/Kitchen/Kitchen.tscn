@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bd1oxd7fjlxs8"]
+[gd_scene load_steps=17 format=3 uid="uid://bd1oxd7fjlxs8"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_e4rkn"]
 [ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="2_sh1bm"]
@@ -10,6 +10,7 @@
 [ext_resource type="ArrayMesh" uid="uid://damu6esun4ntv" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Side_Shelves.obj" id="8_e1unb"]
 [ext_resource type="ArrayMesh" uid="uid://cf2aj37xcobwj" path="res://Assets/modular_house_collection/Structure_Bathroom_Cabinet_Full.obj" id="9_tkd8n"]
 [ext_resource type="PackedScene" uid="uid://blhwe6d408okt" path="res://Assets/low_poly_dungeon/Oven.glb" id="10_6vfxe"]
+[ext_resource type="PackedScene" uid="uid://bpx0j4t0dkyn0" path="res://Props/HangingPans.tscn" id="11_w8odv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6rve4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -143,5 +144,8 @@ mesh = ExtResource("9_tkd8n")
 
 [node name="Oven2" parent="." instance=ExtResource("10_6vfxe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1901, 0.0113821, -6.3014)
+
+[node name="HangingPans" parent="." instance=ExtResource("11_w8odv")]
+transform = Transform3D(1, 0, 0, 0, 0.0535734, -0.998564, 0, 0.998564, 0.0535734, 3.08956, 2.36473, -11.8023)
 
 [editable path="Cooking Assets"]
