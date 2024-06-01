@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bct7am5eatqr7"]
+[gd_scene load_steps=22 format=3 uid="uid://bct7am5eatqr7"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
 [ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
 [ext_resource type="PackedScene" uid="uid://ld8kvvx1ti5t" path="res://Assets/giant dungeon pack/candle.gltf" id="3_bbgi8"]
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="4_7pgge"]
 [ext_resource type="PackedScene" uid="uid://bgcghe8qh6dya" path="res://Assets/giant dungeon pack/candle_melted.gltf" id="4_nwr74"]
 [ext_resource type="PackedScene" uid="uid://bw3trhiiruarx" path="res://Assets/giant dungeon pack/bottle_B_green.gltf" id="5_sfgo0"]
 [ext_resource type="PackedScene" uid="uid://cy1xk8qh5ur7j" path="res://Assets/giant dungeon pack/coin.gltf" id="6_yg64b"]
@@ -14,6 +15,30 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6qi36"]
 size = Vector3(2.03619, 1.01764, 2.02466)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4le2c"]
+height = 0.741264
+radius = 0.185439
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_px8m3"]
+height = 0.580661
+radius = 0.194213
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qqtuy"]
+height = 0.998429
+radius = 0.277786
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uhe1x"]
+height = 0.124633
+radius = 0.175969
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t4pfa"]
+height = 0.79686
+radius = 0.266905
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7qbpk"]
+height = 0.761049
+radius = 0.336483
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlb1p"]
 radius = 0.112046
@@ -38,20 +63,70 @@ shape = SubResource("BoxShape3D_6qi36")
 [node name="candle2" parent="." instance=ExtResource("3_bbgi8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39114, 1.02115, 1.34405)
 
+[node name="RigidBody3D" type="RigidBody3D" parent="candle2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.394687, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="candle2/RigidBody3D"]
+shape = SubResource("CylinderShape3D_4le2c")
+
+[node name="PickableObject" parent="candle2" instance=ExtResource("4_7pgge")]
+
 [node name="candle_melted2" parent="." instance=ExtResource("4_nwr74")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.127102, 0.995122, 1.2588)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0980183, 0.995122, 0.246069)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="candle_melted2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.419897, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="candle_melted2/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0112011, -0.0790569, -0.00270677)
+shape = SubResource("CylinderShape3D_px8m3")
+
+[node name="PickableObject" parent="candle_melted2" instance=ExtResource("4_7pgge")]
 
 [node name="bottle_B_green2" parent="." instance=ExtResource("5_sfgo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717021, 1.05095, 0.821377)
 
+[node name="RigidBody3D" type="RigidBody3D" parent="bottle_B_green2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.410334, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bottle_B_green2/RigidBody3D"]
+transform = Transform3D(0.786597, 0, 0, 0, 0.786597, 0, 0, 0, 0.786597, 0, 0, 0)
+shape = SubResource("CylinderShape3D_qqtuy")
+
+[node name="PickableObject" parent="bottle_B_green2" instance=ExtResource("4_7pgge")]
+
 [node name="coin2" parent="." instance=ExtResource("6_yg64b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452244, 1.05715, 0.567523)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="coin2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coin2/RigidBody3D"]
+transform = Transform3D(0.997182, 0, 0.0750135, 0, 1, 0, -0.0750135, 0, 0.997182, 0, 0, 0)
+shape = SubResource("CylinderShape3D_uhe1x")
+
+[node name="PickableObject" parent="coin2" instance=ExtResource("4_7pgge")]
 
 [node name="bottle_A_brown2" parent="." instance=ExtResource("7_lyjsf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.372894, 1.01486, 0.129049)
 
+[node name="RigidBody3D" type="RigidBody3D" parent="bottle_A_brown2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0176359, 0.449388, -0.0242004)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bottle_A_brown2/RigidBody3D"]
+shape = SubResource("CylinderShape3D_t4pfa")
+
+[node name="PickableObject" parent="bottle_A_brown2" instance=ExtResource("4_7pgge")]
+
 [node name="bottle_C_green2" parent="." instance=ExtResource("8_auhh3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61757, 1.07319, 0.0539776)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="bottle_C_green2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bottle_C_green2/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00206077, 0.319787, 0.0850181)
+shape = SubResource("CylinderShape3D_7qbpk")
+
+[node name="PickableObject" parent="bottle_C_green2" instance=ExtResource("4_7pgge")]
 
 [node name="key2" parent="." instance=ExtResource("9_e3ere")]
 transform = Transform3D(0.435499, 0, 0, 0, 0.0344568, -0.996865, 0, 0.434134, 0.0791203, -0.272308, 1.1131, 0.661907)
@@ -62,6 +137,8 @@ transform = Transform3D(0.435499, 0, 0, 0, 0.0344568, -0.996865, 0, 0.434134, 0.
 transform = Transform3D(0.0174873, -0.999251, -0.0345393, 0.999251, 0.0186598, -0.0339202, 0.0345393, -0.0339202, 0.998829, 0.310295, 0.0264828, -0.022705)
 shape = SubResource("CapsuleShape3D_dlb1p")
 
+[node name="PickableObject" parent="key2" instance=ExtResource("4_7pgge")]
+
 [node name="plate_stack2" parent="." instance=ExtResource("10_jmrpu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38322, 0.987995, 1.35965)
 
@@ -70,6 +147,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38322, 0.987995, 1.35965)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plate_stack2/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26245, 0)
 shape = SubResource("CylinderShape3D_wjnl8")
+
+[node name="PickableObject" parent="plate_stack2" instance=ExtResource("4_7pgge")]
 
 [node name="chair2" parent="." instance=ExtResource("11_fefbx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08806, 2.38419e-07, 0.747759)
