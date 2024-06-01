@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhrkc2e5dstok"]
+
+[ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_e4rkn"]
+[ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="2_dh1wy"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kkwsg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqwil"]
+albedo_texture = ExtResource("2_dh1wy")
+uv1_scale = Vector3(20, 20, 20)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_45i6r"]
+lightmap_size_hint = Vector2i(202, 202)
+add_uv2 = true
+size = Vector2(40, 40)
+
+[node name="Kitchen" type="Node3D"]
+
+[node name="XRPlayer" parent="." instance=ExtResource("1_e4rkn")]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
+shape = SubResource("WorldBoundaryShape3D_kkwsg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -3.5)
+material_override = SubResource("StandardMaterial3D_dqwil")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_45i6r")
