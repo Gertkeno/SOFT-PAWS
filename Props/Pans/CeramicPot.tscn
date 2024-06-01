@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqiauoe2v64w1"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_sywdv"]
+[ext_resource type="PackedScene" uid="uid://dd6tk2w04r4cw" path="res://Assets/kitchen assets/GLB/All/pan_ceramic_pot_large.glb" id="2_h88l1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8kxe1"]
+points = PackedVector3Array(0.959757, -1.66548, 1.32341, -0.887553, -0.146067, -2.4586, -0.882515, 0.0948191, -2.44463, -2.18923, -0.0654668, 1.4224, 2.09557, 1.54661, 0.123889, -0.725874, 1.54829, 1.98034, -1.70371, 1.55718, -1.25356, 2.0296, -0.877434, -1.49794, -1.85138, -1.35339, -1.16306, 0.809391, 1.47243, -2.0604, 2.09984, -0.146108, 1.57769, -0.810649, -1.28239, 2.15342, 0.812742, -1.28477, -2.15049, 0.808327, 1.47041, 2.06482, 0.817037, -0.228644, 2.49592, -1.69063, -1.67565, -0.0363333, -2.18568, 1.47272, 0.205652, 2.33754, -1.19402, -0.116786, -2.59827, 0.0156019, -0.199089, 1.36954, -1.67706, -1.00347, -0.889363, -0.0654668, 2.47076, 2.59826, 0.0156016, -0.199088, -2.09248, 0.0952506, -1.56503, 1.85565, 1.46743, -1.24669, 0.887532, -0.146065, -2.45854, -0.638791, -1.5836, -1.71419, -2.26712, -1.28013, 0.205678, 1.84628, -1.26969, 1.4081, -0.808948, 1.47255, -2.06057, -1.78564, 1.47682, 1.34292, -0.809373, -0.875474, -2.3857, 0.811053, -1.28224, 2.15315)
+
+[node name="Prop" instance=ExtResource("1_sywdv")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.311132, -0.0302015, -0.0052433)
+shape = SubResource("ConvexPolygonShape3D_8kxe1")
+
+[node name="HighlightRing" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123646, 0, 0)
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.591842, 0.0457344, 0)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0619286, 0.0507367, 0)
+visible = true
+
+[node name="Cooking Assets" parent="." index="4" instance=ExtResource("2_h88l1")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.311132, -0.0302015, -0.0052433)
+
+[editable path="Cooking Assets"]
