@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8jr3efn4huwn"
+path="res://.godot/imported/Test_Map_BlockOut_low.obj-c99fc37c2ec5c0e1b3e2c86fbada07ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Test_Map_BlockOut_low.obj-c99fc37c2ec5c0e1b3e2c86fbada07ab.mesh"]
+
+source_file="res://Assets/Alex Assets/Created Assets/Test_Map_BlockOut_low.obj"
+dest_files=["res://.godot/imported/Test_Map_BlockOut_low.obj-c99fc37c2ec5c0e1b3e2c86fbada07ab.mesh", "res://.godot/imported/Test_Map_BlockOut_low.obj-c99fc37c2ec5c0e1b3e2c86fbada07ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4wtfhaoct82c"
+path="res://.godot/imported/Test_Door.obj-71c94f481b0e1eff1e33a57ace7549ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Test_Door.obj-71c94f481b0e1eff1e33a57ace7549ea.mesh"]
+
+source_file="res://Assets/Alex Assets/Test Re-export/Test_Door.obj"
+dest_files=["res://.godot/imported/Test_Door.obj-71c94f481b0e1eff1e33a57ace7549ea.mesh", "res://.godot/imported/Test_Door.obj-71c94f481b0e1eff1e33a57ace7549ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
