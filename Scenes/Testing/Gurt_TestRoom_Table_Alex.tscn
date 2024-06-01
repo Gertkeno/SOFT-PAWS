@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=34 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_ts8fo"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_u45ga"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="14_tv6rs"]
 [ext_resource type="PackedScene" uid="uid://ct858uaj5lgjb" path="res://Assets/Alex Assets/Created Assets/Prop_Painting-Frame_low.FBX" id="15_tbhhv"]
 [ext_resource type="ArrayMesh" uid="uid://dq5g12qotnvah" path="res://Assets/Alex Assets/Created Assets/Test_Kitchen-Floor-Layout-plane.obj" id="16_6m8ci"]
+[ext_resource type="Texture2D" uid="uid://c57o0iqg038wi" path="res://Scenes/Screenshot 2024-06-01 at 4.00.35 PM.png" id="16_qyrju"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yticr"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -80,6 +81,9 @@ uv1_scale = Vector3(20, 20, 20)
 lightmap_size_hint = Vector2i(202, 202)
 add_uv2 = true
 size = Vector2(40, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2omc"]
+albedo_texture = ExtResource("16_qyrju")
 
 [node name="Node3D" type="Node3D"]
 
@@ -326,5 +330,6 @@ picked_up_layer = 65536
 transform = Transform3D(-0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 0, 0, 1, 1.94553, 1.8706, -3.51351)
 
 [node name="TestKitchen-floor-layout-plane" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65354, 0, -0.432191)
+transform = Transform3D(0.571596, 0, 0, 0, 0.571596, 0, 0, 0, 0.571596, 1.65354, 0, -0.432191)
+material_override = SubResource("StandardMaterial3D_e2omc")
 mesh = ExtResource("16_6m8ci")
