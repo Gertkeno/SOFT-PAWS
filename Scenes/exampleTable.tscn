@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bct7am5eatqr7"]
+[gd_scene load_steps=15 format=3 uid="uid://bct7am5eatqr7"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
 [ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
@@ -14,6 +14,10 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6qi36"]
 size = Vector3(2.03619, 1.01764, 2.02466)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlb1p"]
+radius = 0.112046
+height = 0.962383
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wjnl8"]
 height = 0.496234
@@ -51,6 +55,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61757, 1.07319, 0.0539776)
 
 [node name="key2" parent="." instance=ExtResource("9_e3ere")]
 transform = Transform3D(0.435499, 0, 0, 0, 0.0344568, -0.996865, 0, 0.434134, 0.0791203, -0.272308, 1.1131, 0.661907)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="key2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="key2/RigidBody3D"]
+transform = Transform3D(0.0174873, -0.999251, -0.0345393, 0.999251, 0.0186598, -0.0339202, 0.0345393, -0.0339202, 0.998829, 0.310295, 0.0264828, -0.022705)
+shape = SubResource("CapsuleShape3D_dlb1p")
 
 [node name="plate_stack2" parent="." instance=ExtResource("10_jmrpu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38322, 0.987995, 1.35965)
