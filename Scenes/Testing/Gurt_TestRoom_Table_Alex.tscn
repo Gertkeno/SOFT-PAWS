@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=31 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_ts8fo"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_u45ga"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ctmtusg6kfw3v" path="res://Character Models/mouse.tscn" id="12_2j78a"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="13_e7725"]
 [ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="14_tv6rs"]
+[ext_resource type="PackedScene" uid="uid://ct858uaj5lgjb" path="res://Assets/Alex Assets/Created Assets/Prop_Painting-Frame_low.FBX" id="15_tbhhv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yticr"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -319,3 +320,6 @@ picked_up_layer = 65536
 [node name="PickableObject7" parent="." instance=ExtResource("14_tv6rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2982, 0.988281, -3.53628)
 picked_up_layer = 65536
+
+[node name="pictureFrame" parent="." instance=ExtResource("15_tbhhv")]
+transform = Transform3D(-0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 0, 0, 1, 1.94553, 1.8706, -3.51351)
