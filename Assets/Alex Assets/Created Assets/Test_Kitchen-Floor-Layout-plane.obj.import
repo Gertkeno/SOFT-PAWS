@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dq5g12qotnvah"
+path="res://.godot/imported/Test_Kitchen-Floor-Layout-plane.obj-8bdf7747852b4718bd6f4fd14f88eaeb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Test_Kitchen-Floor-Layout-plane.obj-8bdf7747852b4718bd6f4fd14f88eaeb.mesh"]
+
+source_file="res://Assets/Alex Assets/Created Assets/Test_Kitchen-Floor-Layout-plane.obj"
+dest_files=["res://.godot/imported/Test_Kitchen-Floor-Layout-plane.obj-8bdf7747852b4718bd6f4fd14f88eaeb.mesh", "res://.godot/imported/Test_Kitchen-Floor-Layout-plane.obj-8bdf7747852b4718bd6f4fd14f88eaeb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
