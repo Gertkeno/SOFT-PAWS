@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bd1oxd7fjlxs8"]
+[gd_scene load_steps=9 format=3 uid="uid://bd1oxd7fjlxs8"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_e4rkn"]
-[ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="2_dh1wy"]
+[ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="2_sh1bm"]
 [ext_resource type="PackedScene" uid="uid://dbofeung6ah1f" path="res://Assets/kitchen assets/GLB/All/appliance_refrigerator.glb" id="3_moj2e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6rve4"]
@@ -17,10 +17,6 @@ sky = SubResource("Sky_t4c5s")
 tonemap_mode = 2
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kkwsg"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqwil"]
-albedo_texture = ExtResource("2_dh1wy")
-uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_45i6r"]
 lightmap_size_hint = Vector2i(202, 202)
@@ -47,7 +43,7 @@ shape = SubResource("WorldBoundaryShape3D_kkwsg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -3.5)
-material_override = SubResource("StandardMaterial3D_dqwil")
+material_override = ExtResource("2_sh1bm")
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_45i6r")
 
