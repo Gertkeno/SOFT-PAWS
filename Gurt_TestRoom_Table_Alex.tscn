@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=3 uid="uid://boycxyfx7cob"]
+
+[ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_t0xjg"]
+[ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_2gvfh"]
+[ext_resource type="ArrayMesh" uid="uid://embgm34jysvf" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Center.obj" id="3_jkieh"]
+[ext_resource type="ArrayMesh" uid="uid://cygmb684txid1" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Side.obj" id="4_8f51b"]
+[ext_resource type="ArrayMesh" uid="uid://b66yod2n3uvbo" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Corner.obj" id="5_e443l"]
+[ext_resource type="ArrayMesh" uid="uid://dub8why5oe80e" path="res://Assets/livingroom/tall_flower.obj" id="6_rcrv2"]
+[ext_resource type="PackedScene" uid="uid://deah7edck0u3e" path="res://Assets/giant dungeon pack/bottle_A_brown.gltf" id="7_levku"]
+[ext_resource type="PackedScene" uid="uid://b6spchoyyovdl" path="res://Assets/giant dungeon pack/bottle_A_green.gltf" id="8_vwyv4"]
+[ext_resource type="PackedScene" uid="uid://3ow1jssg0vhi" path="res://Assets/giant dungeon pack/bottle_C_green.gltf" id="9_lpdof"]
+[ext_resource type="PackedScene" uid="uid://boov25s3gntje" path="res://Assets/giant dungeon pack/box_small_decorated.gltf" id="10_813xx"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="XRPlayer" parent="." instance=ExtResource("1_t0xjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39901, 0, 0)
+
+[node name="floor_wood_large_dark2" parent="." instance=ExtResource("2_2gvfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.911927, -2.38419e-07, -3.46842)
+
+[node name="floor_wood_large_dark3" parent="." instance=ExtResource("2_2gvfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.911927, -2.38419e-07, -7.43648)
+
+[node name="floor_wood_large_dark4" parent="." instance=ExtResource("2_2gvfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09034, -2.38419e-07, -3.46842)
+
+[node name="floor_wood_large_dark5" parent="." instance=ExtResource("2_2gvfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09034, -2.38419e-07, -7.43648)
+
+[node name="PropDiningRoomTableModularCenter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -3.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularCenter2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -3.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularCenter3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -4.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularCenter4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -4.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularCenter5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -5.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularCenter6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -5.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularCenter7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -6.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularCenter8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -6.40414)
+mesh = ExtResource("3_jkieh")
+
+[node name="PropDiningRoomTableModularSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -3.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -4.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -5.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -6.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide9" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.419939, 0, -6.91013)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide10" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.41994, 0, -6.91013)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -6.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -5.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -4.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -3.40553)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.39942, 0.00618792, -7.4043)
+mesh = ExtResource("5_e443l")
+
+[node name="PropDiningRoomTableModularCorner2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.502072, 0, -7.40362)
+mesh = ExtResource("5_e443l")
+
+[node name="PropDiningRoomTableModularSide11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1.48389, 0, -2.92365)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularSide12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.48389, 0, -2.92365)
+mesh = ExtResource("4_8f51b")
+
+[node name="PropDiningRoomTableModularCorner3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.50528, 0, -2.43016)
+mesh = ExtResource("5_e443l")
+
+[node name="PropDiningRoomTableModularCorner4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4059, 0, -2.43016)
+mesh = ExtResource("5_e443l")
+
+[node name="TallFlower" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41528, 0, -8.92712)
+mesh = ExtResource("6_rcrv2")
+
+[node name="bottle_A_brown2" parent="." instance=ExtResource("7_levku")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21225, 1.06466, -6.12618)
+
+[node name="bottle_A_green2" parent="." instance=ExtResource("8_vwyv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32306, 0.997599, -5.50551)
+
+[node name="bottle_C_green2" parent="." instance=ExtResource("9_lpdof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.306931, 1, -3.72441)
+
+[node name="box_small_decorated2" parent="." instance=ExtResource("10_813xx")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.246212, 1, -6.54002)
