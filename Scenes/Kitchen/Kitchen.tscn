@@ -1,12 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://bd1oxd7fjlxs8"]
+[gd_scene load_steps=17 format=3 uid="uid://bd1oxd7fjlxs8"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_e4rkn"]
 [ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="2_sh1bm"]
 [ext_resource type="PackedScene" uid="uid://dbofeung6ah1f" path="res://Assets/kitchen assets/GLB/All/appliance_refrigerator.glb" id="3_moj2e"]
 [ext_resource type="ArrayMesh" uid="uid://bxg2y3cm6ujjf" path="res://Assets/3d_objects_free kitchen cute/fridge.obj" id="4_wo60t"]
 [ext_resource type="ArrayMesh" uid="uid://cen751jck08na" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Base_Full.obj" id="5_tdev5"]
-[ext_resource type="ArrayMesh" uid="uid://c1kwq4torwraa" path="res://Assets/modular_house_collection/Structure_Bathroom_Cabinet_Sink.obj" id="6_qaq4o"]
+[ext_resource type="ArrayMesh" uid="uid://ddrxc2vwbqksu" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Base_Sink.obj" id="6_qkxwn"]
 [ext_resource type="ArrayMesh" uid="uid://cjjhq4lsuwdnl" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Full.obj" id="7_wjv5c"]
+[ext_resource type="ArrayMesh" uid="uid://damu6esun4ntv" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Side_Shelves.obj" id="8_e1unb"]
+[ext_resource type="ArrayMesh" uid="uid://cf2aj37xcobwj" path="res://Assets/modular_house_collection/Structure_Bathroom_Cabinet_Full.obj" id="9_tkd8n"]
+[ext_resource type="PackedScene" uid="uid://blhwe6d408okt" path="res://Assets/low_poly_dungeon/Oven.glb" id="10_6vfxe"]
+[ext_resource type="PackedScene" uid="uid://bpx0j4t0dkyn0" path="res://Props/HangingPans.tscn" id="11_w8odv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6rve4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -59,8 +63,12 @@ visible = false
 transform = Transform3D(0.530032, 0, 0, 0, 0.425657, 0, 0, 0, 0.438319, 0, 6.88552, 0)
 
 [node name="Fridge" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6.11959e-08, 0, -1.4, 0, 1.4, 0, 1.4, 0, -6.11959e-08, 2.64, 2.08165e-12, -14)
+transform = Transform3D(-6.11959e-08, 0, -1.4, 0, 1.4, 0, 1.4, 0, -6.11959e-08, 2.63482, 2.08165e-12, -14)
 mesh = ExtResource("4_wo60t")
+
+[node name="StructureKitchenCabinetBaseFull4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 0.576078, 0, -14)
+mesh = ExtResource("5_tdev5")
 
 [node name="StructureKitchenCabinetBaseFull" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 3.70813, 0, -14)
@@ -74,12 +82,70 @@ mesh = ExtResource("5_tdev5")
 transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 5.60442, 0, -14)
 mesh = ExtResource("5_tdev5")
 
-[node name="StructureBathroomCabinetSink" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47, 2.08165e-12, -14)
-mesh = ExtResource("6_qaq4o")
+[node name="StructureKitchenCabinetBaseSink" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 1.52328, 2.08165e-12, -14)
+mesh = ExtResource("6_qkxwn")
 
 [node name="StructureKitchenCabinetWallFull" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 2.08165e-12, -14)
 mesh = ExtResource("7_wjv5c")
+
+[node name="StructureKitchenCabinetWallFull2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452637, 2.08165e-12, -14)
+mesh = ExtResource("7_wjv5c")
+
+[node name="StructureKitchenCabinetSideShelves" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.60165, 2.08165e-12, -14)
+mesh = ExtResource("8_e1unb")
+
+[node name="StructureKitchenCabinetSideShelves2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.56119e-08, 1.40136, 2.08165e-12, -14)
+mesh = ExtResource("8_e1unb")
+
+[node name="ISLAND" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.95, 3.31348e-16, 1.43446e-07, 3.31348e-16, 0.95, -3.31348e-16, -1.43446e-07, -3.31347e-16, -0.95, 0.880191, 0, -11.795)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.95, 3.31348e-16, 1.43446e-07, 3.31348e-16, 0.95, -3.31348e-16, -1.43446e-07, -3.31347e-16, -0.95, 1.82608, 0, -11.795)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.95, 3.31348e-16, 1.43446e-07, 3.31348e-16, 0.95, -3.31348e-16, -1.43446e-07, -3.31347e-16, -0.95, 2.77996, 0, -11.795)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.95, 3.31348e-16, 1.43446e-07, 3.31348e-16, 0.95, -3.31348e-16, -1.43446e-07, -3.31347e-16, -0.95, 3.72526, 0, -11.795)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.95, 3.31348e-16, 1.43446e-07, 3.31348e-16, 0.95, -3.31348e-16, -1.43446e-07, -3.31347e-16, -0.95, 4.68135, 0, -11.795)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, -3.31348e-16, 3.31348e-16, 3.31348e-16, 0.95, -3.31348e-16, -3.31348e-16, 3.31348e-16, 0.95, 0.892781, 0.00590062, -11.0798)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, -3.31348e-16, 3.31348e-16, 3.31348e-16, 0.95, -3.31348e-16, -3.31348e-16, 3.31348e-16, 0.95, 1.83867, 0.00590062, -11.0798)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, -3.31348e-16, 3.31348e-16, 3.31348e-16, 0.95, -3.31348e-16, -3.31348e-16, 3.31348e-16, 0.95, 2.79255, 0.00590062, -11.0798)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, -3.31348e-16, 3.31348e-16, 3.31348e-16, 0.95, -3.31348e-16, -3.31348e-16, 3.31348e-16, 0.95, 3.73785, 0.00590062, -11.0798)
+mesh = ExtResource("9_tkd8n")
+
+[node name="ISLAND10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, -3.31348e-16, 3.31348e-16, 3.31348e-16, 0.95, -3.31348e-16, -3.31348e-16, 3.31348e-16, 0.95, 4.69394, 0.00590062, -11.0798)
+mesh = ExtResource("9_tkd8n")
+
+[node name="Oven2" parent="." instance=ExtResource("10_6vfxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1901, 0.0113821, -6.3014)
+
+[node name="HangingPans" parent="." instance=ExtResource("11_w8odv")]
+transform = Transform3D(1, 0, 0, 0, 0.0535734, -0.998564, 0, 0.998564, 0.0535734, 3.08956, 2.36473, -11.8023)
 
 [editable path="Cooking Assets"]
