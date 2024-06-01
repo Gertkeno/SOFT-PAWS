@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c482r8ipodpsi"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_kuxag"]
+[ext_resource type="ArrayMesh" uid="uid://b7kw2qw1djvdb" path="res://Assets/slavic tavern/cup_of_coffee.obj" id="2_2bq1v"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v70f1"]
+points = PackedVector3Array(-0.032873, 0.120463, 0.0543941, -0.015879, 0.0194249, -0.113368, -0.00168749, 0.0168072, -0.107936, -0.0604991, 0.0212878, 0.0941006, 0.111048, 0.0212878, 0.0356965, 0.111048, 0.105228, -0.0117402, -0.0461536, 0.119871, -0.0523791, -0.11159, 0.0212878, -0.0226855, 0.0417064, 0.0212878, 0.105068, 0.0782067, 0.0212878, -0.092057, 0.0293078, 0.120187, -0.0664312, 0.0394199, 0.11983, 0.0537216, 0.0428528, 0.0102979, 0.040064, -0.0637609, 0.120261, 0.0127554, -0.0641354, 0.0212878, -0.0993686, 0.122003, 0.0833309, 0.00647228, -0.100659, 0.0212878, 0.0502975, -0.0563273, 0.010383, -0.0112774, 0.107412, 0.0212878, -0.0519097, 0.0462288, 0.0103728, -0.0454804, 0.0708884, 0.0212878, 0.090467, -0.0239988, 0.0212878, 0.108724, -0.0153909, 0.11999, -0.0696462, 0.0234562, 0.0212878, -0.117625, 0.00864602, 0.109972, 0.0680494, -0.0933631, 0.0212878, -0.0701444, -0.0358723, 0.0137681, 0.077656, -0.0635055, 0.120057, -0.0216141, 0.118366, 0.0979327, 0.00647228, 0.0672486, 0.120252, 0.0162057, 0.0907047, 0.0137955, 0.016039, -0.11159, 0.0212878, 0.0174175)
+
+[node name="CupWithCoffee" instance=ExtResource("1_kuxag")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_v70f1")
+
+[node name="HighlightRing" parent="." index="1"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0486131, 0.120018, -0.0569907)
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108685, 0.111541, -0.0607602)
+
+[node name="CupOfCoffee" type="MeshInstance3D" parent="." index="4"]
+mesh = ExtResource("2_2bq1v")
