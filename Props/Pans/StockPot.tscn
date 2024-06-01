@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://ulj4j58ddgs1"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_r6mbf"]
+[ext_resource type="PackedScene" uid="uid://nd37grty6y47" path="res://Assets/kitchen assets/GLB/All/pan_stock_pot.glb" id="2_6ex4v"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eg8y7"]
+points = PackedVector3Array(-3.205, -3.205, -0.275551, 3.25011, 3.25011, 0.136213, 2.71425, 3.26408, 1.78534, -2.66388, 3.28991, -1.93753, 1.1965, -3.17381, -3.00361, -0.760174, 2.71457, 4.63269, 2.71425, -3.19228, 1.78534, -0.760174, 2.71457, -4.63269, -1.14043, -3.21731, 3.04431, -2.66374, 3.28974, 1.93743, 1.12176, 3.00369, -4.19826, 2.7143, -3.19234, -1.78538, -2.66388, -3.21811, -1.93753, 0.687415, 2.71457, 4.63269, -2.66374, -3.21794, 1.93743, 1.19647, -3.17372, 3.00352, -1.14046, -3.2174, -3.0444, -3.20493, 3.27673, 0.275546, 2.7143, 3.26414, -1.78538, 3.25017, -3.17837, -0.136215, 1.12176, 3.00369, 4.19826, 0.687415, 2.71457, -4.63269, -1.14043, 3.28911, 3.04431, -1.14046, 3.2892, -3.0444, -3.205, 3.2768, -0.275551, -3.20493, -3.20493, 0.275546, -1.04996, 2.71457, 4.34247, -1.04996, 2.71457, -4.34247, 3.25017, 3.25017, -0.136215, 3.25011, -3.17831, 0.136213, 2.14581, -3.16405, -2.31387, 2.14572, -3.16391, 2.31377)
+
+[node name="Prop" instance=ExtResource("1_r6mbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.214322, 0)
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(-0.00194591, 0, -0.0999811, 0, 0.1, 0, 0.0999811, 0, -0.00194591, 0.0137985, 0.148612, 0.000448257)
+shape = SubResource("ConvexPolygonShape3D_eg8y7")
+
+[node name="HighlightRing" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.434696, 0.425102, -0.0159936)
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, -0.0341146, 0.999418, 0, -0.999418, -0.0341146, -0.426009, 0.358898, -0.0456216)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -0.0341146, 0.999418, 0, -0.999418, -0.0341146, 0.465448, 0.352181, -0.0383394)
+visible = true
+
+[node name="Cooking Assets" parent="." index="4" instance=ExtResource("2_6ex4v")]
+transform = Transform3D(-0.00194591, 0, -0.0999811, 0, 0.1, 0, 0.0999811, 0, -0.00194591, 0.0137985, 0.148612, 0.000448257)
+
+[editable path="Cooking Assets"]
