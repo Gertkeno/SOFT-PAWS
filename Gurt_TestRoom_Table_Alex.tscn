@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=27 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_t0xjg"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_2gvfh"]
@@ -26,6 +26,8 @@ background_mode = 2
 sky = SubResource("Sky_v7v5a")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eyhfx"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5c2g5"]
 height = 0.764892
@@ -94,101 +96,129 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09034, -2.38419e-07, -3.46
 [node name="floor_wood_large_dark5" parent="." instance=ExtResource("2_2gvfh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.09034, -2.38419e-07, -7.43648)
 
-[node name="PropDiningRoomTableModularCenter" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -3.40414)
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_eyhfx")
+
+[node name="PropDiningRoomTableModularCenter2" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.999996, 0, 0)
 mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCenter2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -3.40414)
+[node name="PropDiningRoomTableModularCenter3" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCenter3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -4.40414)
+[node name="PropDiningRoomTableModularCenter4" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.999996, 0, -1)
 mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCenter4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -4.40414)
+[node name="PropDiningRoomTableModularCenter5" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCenter5" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -5.40414)
+[node name="PropDiningRoomTableModularCenter6" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.999996, 0, -2)
 mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCenter6" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -5.40414)
+[node name="PropDiningRoomTableModularCenter7" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCenter7" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41527, 0, -6.40414)
+[node name="PropDiningRoomTableModularCenter8" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.999996, 0, -3)
 mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCenter8" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415274, 0, -6.40414)
-mesh = ExtResource("3_jkieh")
-
-[node name="PropDiningRoomTableModularSide" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -3.40553)
+[node name="PropDiningRoomTableModularSide" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4217, 0, -0.00138998)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -4.40553)
+[node name="PropDiningRoomTableModularSide2" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4217, 0, -1.00139)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -5.40553)
+[node name="PropDiningRoomTableModularSide3" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4217, 0, -2.00139)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00642848, 0, -6.40553)
+[node name="PropDiningRoomTableModularSide4" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4217, 0, -3.00139)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide9" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.419939, 0, -6.91013)
+[node name="PropDiningRoomTableModularSide9" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.995331, 0, -3.50599)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide10" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.41994, 0, -6.91013)
+[node name="PropDiningRoomTableModularSide10" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.00467002, 0, -3.50599)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide5" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -6.40553)
+[node name="PropDiningRoomTableModularSide5" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.49844, 0, -3.00139)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide6" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -5.40553)
+[node name="PropDiningRoomTableModularSide6" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.49844, 0, -2.00139)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide7" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -4.40553)
+[node name="PropDiningRoomTableModularSide7" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.49844, 0, -1.00139)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide8" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.91371, 0, -3.40553)
+[node name="PropDiningRoomTableModularSide8" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.49844, 0, -0.00138998)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCorner" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.39942, 0.00618792, -7.4043)
+[node name="PropDiningRoomTableModularCorner" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.98415, 0.00618792, -4.00016)
 mesh = ExtResource("5_e443l")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCorner2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.502072, 0, -7.40362)
+[node name="PropDiningRoomTableModularCorner2" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.91734, 0, -3.99948)
 mesh = ExtResource("5_e443l")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide11" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1.48389, 0, -2.92365)
+[node name="PropDiningRoomTableModularSide11" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.0686201, 0, 0.48049)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularSide12" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.48389, 0, -2.92365)
+[node name="PropDiningRoomTableModularSide12" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.93138, 0, 0.48049)
 mesh = ExtResource("4_8f51b")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCorner3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.50528, 0, -2.43016)
+[node name="PropDiningRoomTableModularCorner3" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.92055, 0, 0.97398)
 mesh = ExtResource("5_e443l")
+skeleton = NodePath("../..")
 
-[node name="PropDiningRoomTableModularCorner4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4059, 0, -2.43016)
+[node name="PropDiningRoomTableModularCorner4" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99063, 0, 0.97398)
 mesh = ExtResource("5_e443l")
+skeleton = NodePath("../..")
+
+[node name="PropDiningRoomTableModularCenter" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = ExtResource("3_jkieh")
+skeleton = NodePath("../..")
 
 [node name="TallFlower" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41528, 0, -8.92712)
@@ -240,10 +270,13 @@ transform = Transform3D(-0.867353, 0, -0.497664, 0, 0.999994, 0, 0.497663, 0, -0
 use_model_front = true
 script = SubResource("GDScript_r1enr")
 
-[node name="mouse" parent="Path3D/PathFollow3D" instance=ExtResource("11_wep54")]
-transform = Transform3D(0.0995899, -0.000435017, -0.00903678, 0.000470422, 0.0999982, 0.000370524, 0.00903502, -0.000411515, 0.0995902, 0, 0, 0)
+[node name="PickableObject5" parent="Path3D/PathFollow3D" instance=ExtResource("7_ohqdl")]
+transform = Transform3D(-0.867379, 0, 0.497678, 0, 1.00001, 0, -0.497677, 0, -0.867378, -2.42483, 0.00146466, 2.54248)
 
-[node name="Marker3D" type="Marker3D" parent="Path3D/PathFollow3D/mouse"]
+[node name="mouse" parent="Path3D/PathFollow3D/PickableObject5" instance=ExtResource("11_wep54")]
+transform = Transform3D(-0.090876, 0.000582109, -0.0417244, 0.000470419, 0.0999976, 0.000370522, 0.0417256, 0.000140438, -0.0908773, -0.837883, -0.00146466, 3.41198)
+
+[node name="Marker3D" type="Marker3D" parent="Path3D/PathFollow3D/PickableObject5/mouse"]
 gizmo_extents = 0.95
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
