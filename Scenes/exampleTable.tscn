@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b5dqyg5k8bqas"]
+[gd_scene load_steps=29 format=3 uid="uid://2xvktqpbusj1"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
 [ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
@@ -13,11 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://c37dxg0dobrg0" path="res://Assets/giant dungeon pack/plate_stack.gltf" id="10_jmrpu"]
 [ext_resource type="PackedScene" uid="uid://xqk8jjwddnmb" path="res://Assets/giant dungeon pack/chair.gltf" id="11_fefbx"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="12_efi38"]
-[ext_resource type="PackedScene" uid="uid://d3ue2s4exyl4o" path="res://Props/Pans/Wok.tscn" id="14_oamtp"]
-[ext_resource type="PackedScene" uid="uid://bqiauoe2v64w1" path="res://Props/Pans/CeramicPot.tscn" id="15_brdq4"]
-[ext_resource type="PackedScene" uid="uid://dhrxr50cl2aye" path="res://Props/Pans/CastIronPan.tscn" id="16_pxcfp"]
-[ext_resource type="PackedScene" uid="uid://ulj4j58ddgs1" path="res://Props/Pans/StockPot.tscn" id="17_2oi12"]
-[ext_resource type="PackedScene" uid="uid://dck1ibmd8rmja" path="res://Props/Pans/Skillet.tscn" id="18_4d4dk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fp4pu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -184,18 +179,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -3.5)
 material_override = SubResource("StandardMaterial3D_xjhyr")
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_fntbw")
-
-[node name="Prop" parent="." instance=ExtResource("14_oamtp")]
-transform = Transform3D(1, 0, 0, 0, 0.298308, 0.95447, 0, -0.95447, 0.298308, 2.58049, 0.25726, 0.751273)
-
-[node name="Prop2" parent="." instance=ExtResource("15_brdq4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8842, 0.235682, -1.04209)
-
-[node name="Prop3" parent="." instance=ExtResource("16_pxcfp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.17664, 0.194481, -0.52888)
-
-[node name="Prop4" parent="." instance=ExtResource("17_2oi12")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1571, 0, 0.7209)
-
-[node name="Prop5" parent="." instance=ExtResource("18_4d4dk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8262, 0.140009, -1.61914)

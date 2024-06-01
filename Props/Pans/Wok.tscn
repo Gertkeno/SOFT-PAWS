@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3ue2s4exyl4o"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_euku7"]
+[ext_resource type="PackedScene" uid="uid://dpyo7duartqe8" path="res://Assets/kitchen assets/GLB/All/pan_wokCylinder_165.glb" id="2_hycbm"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s5ehj"]
+points = PackedVector3Array(-0.885078, -2.1907, 4.12873, 4.74856, 0.779545, 4.21679, 4.11008, 0.779545, 6.12598, -0.344313, 1.84066, -5.33311, -3.95176, 0.779545, 6.55142, 2.09374, -1.57279, 2.19428, -4.16397, 0.779545, 1.24666, 1.77585, 0.779545, 8.24921, 0.502629, 1.20374, -5.12039, -2.34329, -1.39366, 2.01322, 1.05418, -1.4617, 6.17979, -1.61753, 0.779545, 8.24921, -0.652294, -1.89192, 1.81452, -2.25806, -1.44591, 5.33958, -4.80151, 0.779545, 4.00274, 3.72438, 0.487717, 1.07469, 2.74954, -1.43061, 3.94812, -0.344313, 1.20374, -5.12039, 0.502629, 1.84066, -4.69627, -1.11292, -0.874319, 6.99117, 3.22781, -0.478592, 5.99612, 3.04673, -0.654051, 1.45805, 1.02055, -2.18773, 3.74365, -3.71904, -0.660156, 3.54044, 0.605347, -1.90942, 1.81839, 4.74856, 0.779545, 3.15584, -3.13791, -0.469894, 1.27017, 3.72678, -0.666465, 3.76694, -0.699745, -2.01402, 5.11454, -3.28863, -0.479016, 5.80767, -2.8078, -1.43245, 3.75861, -0.344313, 1.84066, -4.69627)
+
+[node name="Prop" instance=ExtResource("1_euku7")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(-0.0799344, -4.80049e-09, -0.00323984, -0.00309594, 0.0235779, 0.0763839, 0.000954855, 0.0764466, -0.0235586, -0.0262214, 0.127132, -0.0748494)
+shape = SubResource("ConvexPolygonShape3D_s5ehj")
+
+[node name="HighlightRing" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0160487, -0.0710028, 0.0662386)
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0378946, 0, 0)
+
+[node name="Cooking Assets" parent="." index="4" instance=ExtResource("2_hycbm")]
+transform = Transform3D(-0.0799344, -5.98147e-09, -0.00323984, -0.00309594, 0.0235779, 0.0763839, 0.000954854, 0.0764466, -0.0235586, -0.0262214, 0.127132, -0.0748494)
+
+[editable path="Cooking Assets"]
