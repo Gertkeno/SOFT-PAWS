@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhrkc2e5dstok"]
+[gd_scene load_steps=7 format=3 uid="uid://dhrkc2e5dstok"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_e4rkn"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="2_dh1wy"]
+[ext_resource type="PackedScene" uid="uid://dbofeung6ah1f" path="res://Assets/kitchen assets/GLB/All/appliance_refrigerator.glb" id="3_moj2e"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kkwsg"]
 
@@ -30,3 +31,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -3.5)
 material_override = SubResource("StandardMaterial3D_dqwil")
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_45i6r")
+
+[node name="Cooking Assets" parent="." instance=ExtResource("3_moj2e")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 1.27957, 0, -13.68)
+
+[editable path="Cooking Assets"]
