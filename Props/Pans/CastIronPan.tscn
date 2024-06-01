@@ -14,7 +14,6 @@ shape = SubResource("ConvexPolygonShape3D_wv6sm")
 
 [node name="GrabPointHandLeft" parent="." index="2"]
 transform = Transform3D(-0.848568, 0.122914, 0.514611, 0.524084, 0.328697, 0.785681, -0.07258, 0.936403, -0.343339, -0.0197998, -0.0750028, 0.0629968)
-visible = true
 
 [node name="GrabPointHandRight" parent="." index="3"]
 transform = Transform3D(-0.983531, -0.0130642, -0.18027, -0.180742, 0.0710904, 0.980958, -7.87979e-11, 0.997384, -0.0722808, -0.0242505, -0.0951757, 0.0588159)

@@ -17,11 +17,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123646, 0, 0)
 
 [node name="GrabPointHandLeft" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.591842, 0.0457344, 0)
-visible = true
 
 [node name="GrabPointHandRight" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0619286, 0.0507367, 0)
-visible = true
 
 [node name="Cooking Assets" parent="." index="4" instance=ExtResource("2_h88l1")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.311132, -0.0302015, -0.0052433)
