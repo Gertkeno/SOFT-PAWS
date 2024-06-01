@@ -1,8 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd1oxd7fjlxs8"]
+[gd_scene load_steps=13 format=3 uid="uid://bd1oxd7fjlxs8"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_e4rkn"]
 [ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="2_sh1bm"]
 [ext_resource type="PackedScene" uid="uid://dbofeung6ah1f" path="res://Assets/kitchen assets/GLB/All/appliance_refrigerator.glb" id="3_moj2e"]
+[ext_resource type="ArrayMesh" uid="uid://bxg2y3cm6ujjf" path="res://Assets/3d_objects_free kitchen cute/fridge.obj" id="4_wo60t"]
+[ext_resource type="ArrayMesh" uid="uid://cen751jck08na" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Base_Full.obj" id="5_tdev5"]
+[ext_resource type="ArrayMesh" uid="uid://c1kwq4torwraa" path="res://Assets/modular_house_collection/Structure_Bathroom_Cabinet_Sink.obj" id="6_qaq4o"]
+[ext_resource type="ArrayMesh" uid="uid://cjjhq4lsuwdnl" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Full.obj" id="7_wjv5c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6rve4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -49,8 +53,33 @@ mesh = SubResource("PlaneMesh_45i6r")
 
 [node name="Cooking Assets" parent="." instance=ExtResource("3_moj2e")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 1.27957, 0, -13.68)
+visible = false
 
 [node name="appliance refrigerator" parent="Cooking Assets" index="0"]
 transform = Transform3D(0.530032, 0, 0, 0, 0.425657, 0, 0, 0, 0.438319, 0, 6.88552, 0)
+
+[node name="Fridge" type="MeshInstance3D" parent="."]
+transform = Transform3D(-6.11959e-08, 0, -1.4, 0, 1.4, 0, 1.4, 0, -6.11959e-08, 2.64, 2.08165e-12, -14)
+mesh = ExtResource("4_wo60t")
+
+[node name="StructureKitchenCabinetBaseFull" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 3.70813, 0, -14)
+mesh = ExtResource("5_tdev5")
+
+[node name="StructureKitchenCabinetBaseFull2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 4.65518, 0, -14)
+mesh = ExtResource("5_tdev5")
+
+[node name="StructureKitchenCabinetBaseFull3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 5.60442, 0, -14)
+mesh = ExtResource("5_tdev5")
+
+[node name="StructureBathroomCabinetSink" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47, 2.08165e-12, -14)
+mesh = ExtResource("6_qaq4o")
+
+[node name="StructureKitchenCabinetWallFull" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 2.08165e-12, -14)
+mesh = ExtResource("7_wjv5c")
 
 [editable path="Cooking Assets"]
