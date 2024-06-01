@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ycolfgyagvh"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_p3so0"]
+[ext_resource type="PackedScene" uid="uid://cnb07alf3fhy" path="res://Assets/kitchen assets/GLB/All/appliance_blender_bullet.glb" id="2_r445o"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_atvsc"]
+points = PackedVector3Array(0.8857, 1.7051, -0.126285, -1.03386, -1.44003, -0.286535, 1.00233, -1.8209, 0.319444, -0.126447, 1.70457, 0.885633, -0.0199816, 1.71179, -0.929725, 0.673383, -1.4399, -0.873686, -0.235577, -1.45326, 1.05656, -0.924345, 1.70195, 0.0329716, -0.249376, -1.8209, -0.989406, -0.989406, -1.8209, 0.319444, 0.6633, 1.68108, 0.6633, -0.654006, 1.69093, 0.667149, 0.513864, -1.4415, 0.94123, -0.66336, 1.71488, -0.663155, 0.667208, 1.69108, -0.653864, 1.05771, -1.45484, -0.235636, -0.874135, -1.44097, 0.673878, 0.20581, -1.8209, -1.04611, -0.66471, -1.44955, -0.879586, 0.826872, -1.42841, 0.721001, 1.05069, -1.44513, 0.247365, 0.247666, -1.44694, 1.052, -0.287297, -1.44177, -1.03512, 0.881385, -1.43133, -0.656068, 0.139005, 1.69449, 0.880432, 0.880499, 1.69501, 0.138844, -1.03684, -1.06979, 0.193683, -0.654941, -1.42845, 0.879832, -0.929808, 1.71194, -0.0197797, 0.193887, -1.06979, -1.03684, -0.878624, -1.44831, -0.663932, 0.0329717, 1.70195, -0.924345)
+
+[node name="Prop" instance=ExtResource("1_p3so0")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -0.00511108, 0.107725, 0.00090909)
+shape = SubResource("ConvexPolygonShape3D_atvsc")
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0940046, 0.164087, -0.0453362)
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0930509, 0.156781, -0.0428103)
+
+[node name="Cooking Assets" parent="." index="4" instance=ExtResource("2_r445o")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -0.00511108, 0.107725, 0.00090909)
+
+[editable path="Cooking Assets"]

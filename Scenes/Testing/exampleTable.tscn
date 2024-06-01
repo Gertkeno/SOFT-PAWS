@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b5dqyg5k8bqas"]
+[gd_scene load_steps=35 format=3 uid="uid://b5dqyg5k8bqas"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
 [ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dhrxr50cl2aye" path="res://Props/Pans/CastIronPan.tscn" id="16_pxcfp"]
 [ext_resource type="PackedScene" uid="uid://ulj4j58ddgs1" path="res://Props/Pans/StockPot.tscn" id="17_2oi12"]
 [ext_resource type="PackedScene" uid="uid://dck1ibmd8rmja" path="res://Props/Pans/Skillet.tscn" id="18_4d4dk"]
+[ext_resource type="PackedScene" uid="uid://ycolfgyagvh" path="res://Props/Appliances/Blender.tscn" id="19_ylsm3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fp4pu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -199,3 +200,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1571, 0, 0.7209)
 
 [node name="Prop5" parent="." instance=ExtResource("18_4d4dk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8262, 0.140009, -1.61914)
+
+[node name="Prop6" parent="." instance=ExtResource("19_ylsm3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.480876, 0, -1.70856)
