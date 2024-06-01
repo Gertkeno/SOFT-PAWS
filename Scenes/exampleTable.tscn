@@ -1,0 +1,58 @@
+[gd_scene load_steps=13 format=3 uid="uid://bct7am5eatqr7"]
+
+[ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
+[ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
+[ext_resource type="PackedScene" uid="uid://ld8kvvx1ti5t" path="res://Assets/giant dungeon pack/candle.gltf" id="3_bbgi8"]
+[ext_resource type="PackedScene" uid="uid://bgcghe8qh6dya" path="res://Assets/giant dungeon pack/candle_melted.gltf" id="4_nwr74"]
+[ext_resource type="PackedScene" uid="uid://bw3trhiiruarx" path="res://Assets/giant dungeon pack/bottle_B_green.gltf" id="5_sfgo0"]
+[ext_resource type="PackedScene" uid="uid://cy1xk8qh5ur7j" path="res://Assets/giant dungeon pack/coin.gltf" id="6_yg64b"]
+[ext_resource type="PackedScene" uid="uid://deah7edck0u3e" path="res://Assets/giant dungeon pack/bottle_A_brown.gltf" id="7_lyjsf"]
+[ext_resource type="PackedScene" uid="uid://3ow1jssg0vhi" path="res://Assets/giant dungeon pack/bottle_C_green.gltf" id="8_auhh3"]
+[ext_resource type="PackedScene" uid="uid://ier831hpsxop" path="res://Assets/giant dungeon pack/key.gltf" id="9_e3ere"]
+[ext_resource type="PackedScene" uid="uid://c37dxg0dobrg0" path="res://Assets/giant dungeon pack/plate_stack.gltf" id="10_jmrpu"]
+[ext_resource type="PackedScene" uid="uid://xqk8jjwddnmb" path="res://Assets/giant dungeon pack/chair.gltf" id="11_fefbx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wjnl8"]
+height = 0.496234
+
+[node name="Node3D" type="Node3D"]
+
+[node name="XRPlayer" parent="." instance=ExtResource("1_b517u")]
+
+[node name="table_medium2" parent="." instance=ExtResource("2_5va3t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.122352, 0, 0.739075)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="table_medium2"]
+
+[node name="candle2" parent="." instance=ExtResource("3_bbgi8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39114, 1.02115, 1.34405)
+
+[node name="candle_melted2" parent="." instance=ExtResource("4_nwr74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.127102, 0.995122, 1.2588)
+
+[node name="bottle_B_green2" parent="." instance=ExtResource("5_sfgo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717021, 1.05095, 0.821377)
+
+[node name="coin2" parent="." instance=ExtResource("6_yg64b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452244, 1.05715, 0.567523)
+
+[node name="bottle_A_brown2" parent="." instance=ExtResource("7_lyjsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.372894, 1.01486, 0.129049)
+
+[node name="bottle_C_green2" parent="." instance=ExtResource("8_auhh3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61757, 1.07319, 0.0539776)
+
+[node name="key2" parent="." instance=ExtResource("9_e3ere")]
+transform = Transform3D(0.435499, 0, 0, 0, 0.0344568, -0.996865, 0, 0.434134, 0.0791203, -0.272308, 1.1131, 0.661907)
+
+[node name="plate_stack2" parent="." instance=ExtResource("10_jmrpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38322, 0.987995, 1.35965)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="plate_stack2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plate_stack2/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26245, 0)
+shape = SubResource("CylinderShape3D_wjnl8")
+
+[node name="chair2" parent="." instance=ExtResource("11_fefbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08806, 2.38419e-07, 0.747759)
