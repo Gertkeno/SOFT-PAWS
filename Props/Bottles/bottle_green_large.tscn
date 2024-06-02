@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhvwloxs63i77"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_m7vk5"]
+[ext_resource type="PackedScene" uid="uid://bw3trhiiruarx" path="res://Assets/giant dungeon pack/bottle_B_green.gltf" id="2_qpnx4"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3ahh8"]
+points = PackedVector3Array(-0.0554189, 0.150153, -0.255133, 0.0587761, 0.332947, 0.24208, 0.0539422, 0.87855, -0.0865851, 0.265264, 0.175366, -0.0557286, -0.267603, 0.190842, 0.0640303, 0.0640866, 0.0179, 0.196837, -0.100625, 0.864546, 0.0399104, -0.197861, 0.286448, -0.19791, -0.148797, 0.0164893, -0.148743, 0.0679787, 0.850542, 0.0820756, 0.197635, 0.18972, -0.202152, 0.194945, 0.206305, 0.208078, -0.202605, 0.189081, 0.198042, 0.144823, 0.0149086, -0.149286, -0.149662, 0.0139732, 0.145098, -0.0551452, 0.284064, -0.267105, -0.0443684, 0.864546, -0.100622, -0.0443684, 0.87855, 0.0961123, 0.246866, 0.330791, -0.0520512, 0.146682, 0.00949883, 0.146635, 0.0375243, 0.17725, 0.263387, 0.1934, 0.299436, -0.197916, 0.0961068, 0.87855, -0.0444199, -0.100625, 0.864546, -0.0444199, -0.263109, 0.28646, 0.0629077, 0.206428, 0.286358, 0.167312, -0.189717, 0.317863, 0.185157, -0.201398, 0.19061, -0.201449, -0.202407, 0.0157496, 0.0511014, 0.0237696, 0.299538, 0.258442, 0.195724, 0.0204805, -0.06825, -0.0552708, 0.0180828, -0.201364)
+
+[node name="Prop" instance=ExtResource("1_m7vk5")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.106811, 0, 0.156787)
+shape = SubResource("ConvexPolygonShape3D_3ahh8")
+
+[node name="HighlightRing" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.117798, 0.427673, 0.144183)
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185341, 0.477015, 0.114528)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206479, 0.465739, 0.0968621)
+visible = true
+
+[node name="bottle_B_green2" parent="." index="4" instance=ExtResource("2_qpnx4")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.106811, 0, 0.156787)
+
+[editable path="bottle_B_green2"]
