@@ -17,6 +17,8 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	while i < state.get_contact_count():
 		var vec := state.get_contact_collider_velocity_at_position(i)
 		var force := vec.length_squared()
+		if force > 10:
+			print(name, "> ", force)
 		if force > durability_sq:
 			pass # shatter
 			GameData.score -= cash_value * (5 if on_will else 1)

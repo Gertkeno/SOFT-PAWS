@@ -20,6 +20,7 @@ open_pose = ExtResource("7_hipvw")
 closed_pose = ExtResource("7_hipvw")
 
 [node name="Prop" instance=ExtResource("1_wo0p2")]
+input_ray_pickable = false
 max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("2_pskfu")

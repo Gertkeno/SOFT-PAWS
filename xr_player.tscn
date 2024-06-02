@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://rb0negbwpm2v"]
+[gd_scene load_steps=60 format=3 uid="uid://rb0negbwpm2v"]
 
 [ext_resource type="PackedScene" uid="uid://hpr0v012ghsb" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_tac_glove.tscn" id="1_8t0w8"]
 [ext_resource type="PackedScene" uid="uid://dup2vp8v5rpi5" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_tac_glove.tscn" id="2_i58nb"]
@@ -30,7 +30,7 @@ noise = SubResource("FastNoiseLite_30hqb")
 as_normal_map = true
 noise = SubResource("FastNoiseLite_30hqb")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1qfrw"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ytor"]
 render_priority = 0
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
@@ -65,9 +65,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_haw5o"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xwd6d"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_1qfrw")
+next_pass = SubResource("ShaderMaterial_2ytor")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -101,9 +101,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tejoc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lwr13"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_haw5o")
+next_pass = SubResource("ShaderMaterial_xwd6d")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -137,9 +137,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ta1k"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0adg4"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_tejoc")
+next_pass = SubResource("ShaderMaterial_lwr13")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -173,9 +173,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2be40"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_osllc"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_1ta1k")
+next_pass = SubResource("ShaderMaterial_0adg4")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -209,9 +209,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0d8o1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_upokn"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_2be40")
+next_pass = SubResource("ShaderMaterial_osllc")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -245,9 +245,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_75np2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wylil"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_0d8o1")
+next_pass = SubResource("ShaderMaterial_upokn")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -281,9 +281,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_drlg8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3d1gd"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_75np2")
+next_pass = SubResource("ShaderMaterial_wylil")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -317,9 +317,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7nddy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ahrv"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_drlg8")
+next_pass = SubResource("ShaderMaterial_3d1gd")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -353,9 +353,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yh4cq"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bavo8"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_7nddy")
+next_pass = SubResource("ShaderMaterial_6ahrv")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -389,9 +389,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b58xt"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vjl18"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_yh4cq")
+next_pass = SubResource("ShaderMaterial_bavo8")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -425,9 +425,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_8jkc8")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_byh0u"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_30h82"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_b58xt")
+next_pass = SubResource("ShaderMaterial_vjl18")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -466,36 +466,40 @@ diffuse_mode = 1
 specular_mode = 2
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tak1a"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4yo7i"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cql5r"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dlhp6"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_10o6k"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_x55bu"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bpfsa"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ph5q2"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_tkcbp"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_hbmsd"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_p01t6"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ac2rq"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_tak1a")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_4yo7i")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_cql5r")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_dlhp6")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_10o6k")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_x55bu")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_bpfsa")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_ph5q2")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_tkcbp")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_hbmsd")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r5m36"]
+radius = 0.0506947
+height = 0.195201
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_idtr3"]
 frequency = 0.0095
@@ -508,7 +512,7 @@ noise = SubResource("FastNoiseLite_idtr3")
 as_normal_map = true
 noise = SubResource("FastNoiseLite_idtr3")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4i3ie"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7i18g"]
 render_priority = 0
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
@@ -543,9 +547,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g0mty"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vodo8"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_4i3ie")
+next_pass = SubResource("ShaderMaterial_7i18g")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -579,9 +583,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xppas"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rk2nh"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_g0mty")
+next_pass = SubResource("ShaderMaterial_vodo8")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -615,9 +619,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yvie1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33dlc"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_xppas")
+next_pass = SubResource("ShaderMaterial_rk2nh")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -651,9 +655,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_reyey"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2u40p"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_yvie1")
+next_pass = SubResource("ShaderMaterial_33dlc")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -687,9 +691,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nbrr1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qdxwm"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_reyey")
+next_pass = SubResource("ShaderMaterial_2u40p")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -723,9 +727,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mmalf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aswyk"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_nbrr1")
+next_pass = SubResource("ShaderMaterial_qdxwm")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -759,9 +763,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_67tsm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qp7w8"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_mmalf")
+next_pass = SubResource("ShaderMaterial_aswyk")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -795,9 +799,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5h7a7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6hd0f"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_67tsm")
+next_pass = SubResource("ShaderMaterial_qp7w8")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -831,9 +835,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5fyhh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4gycf"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_5h7a7")
+next_pass = SubResource("ShaderMaterial_6hd0f")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -867,9 +871,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mlj50"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m3cwp"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_5fyhh")
+next_pass = SubResource("ShaderMaterial_4gycf")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -903,9 +907,9 @@ shader_parameter/jitter_texture = SubResource("NoiseTexture2D_6qtwq")
 shader_parameter/albedo_texture = SubResource("GradientTexture1D_ioq7k")
 metadata/is_fur = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_08g4g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_div8w"]
 render_priority = 0
-next_pass = SubResource("ShaderMaterial_mlj50")
+next_pass = SubResource("ShaderMaterial_m3cwp")
 shader = ExtResource("3_p6tdq")
 shader_parameter/height = 0.02
 shader_parameter/normal_strength = 1.0
@@ -944,34 +948,34 @@ diffuse_mode = 1
 specular_mode = 2
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ik0fh"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lpqaq"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1o1eh"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5335s"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_whcp3"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_r6ywn"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r8vw8"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bqog7"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_i405t"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_q6py6"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_qvr2k"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_mdbog"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_ik0fh")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_lpqaq")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_1o1eh")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_5335s")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_whcp3")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_r6ywn")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_r8vw8")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_bqog7")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_i405t")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_q6py6")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
 
@@ -1013,7 +1017,7 @@ bones/22/rotation = Quaternion(0.0585786, 0.0216483, -0.269905, 0.96086)
 bones/23/rotation = Quaternion(0.00687177, -0.00357275, -0.211953, 0.977249)
 
 [node name="mesh_Glove_L" parent="XROrigin3D/LeftHand/LeftHand/Hand_Glove_L/Armature/Skeleton3D" index="0"]
-material_overlay = SubResource("ShaderMaterial_byh0u")
+material_overlay = SubResource("ShaderMaterial_30h82")
 surface_material_override/0 = SubResource("StandardMaterial3D_8go4b")
 
 [node name="Fur" type="Node" parent="XROrigin3D/LeftHand/LeftHand/Hand_Glove_L/Armature/Skeleton3D/mesh_Glove_L" index="0"]
@@ -1035,7 +1039,7 @@ bone_idx = 9
 [node name="Poke" parent="XROrigin3D/LeftHand/LeftHand/Hand_Glove_L/Armature/Skeleton3D/BoneAttachment3D" instance=ExtResource("10_xbalp")]
 
 [node name="AnimationTree" parent="XROrigin3D/LeftHand/LeftHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_p01t6")
+tree_root = SubResource("AnimationNodeBlendTree_ac2rq")
 
 [node name="Marker3D" type="Marker3D" parent="XROrigin3D/LeftHand"]
 
@@ -1048,7 +1052,18 @@ strafe = true
 
 [node name="FunctionPickup" parent="XROrigin3D/LeftHand" instance=ExtResource("6_nd82y")]
 ranged_distance = 3.0
-ranged_angle = 10.0
+ranged_angle = 15.0
+
+[node name="RigidBody3DLeft" type="RigidBody3D" parent="XROrigin3D/LeftHand"]
+collision_layer = 0
+collision_mask = 4
+input_ray_pickable = false
+freeze = true
+freeze_mode = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/LeftHand/RigidBody3DLeft"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0228577, -0.0489229, 0.0957895)
+shape = SubResource("CapsuleShape3D_r5m36")
 
 [node name="RightHand" type="XRController3D" parent="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
@@ -1078,7 +1093,7 @@ bones/22/rotation = Quaternion(0.0585786, -0.0216483, 0.269905, 0.96086)
 bones/23/rotation = Quaternion(0.00687177, 0.00357275, 0.211953, 0.977249)
 
 [node name="mesh_Glove_R" parent="XROrigin3D/RightHand/RightHand/Hand_Glove_R/Armature/Skeleton3D" index="0"]
-material_overlay = SubResource("ShaderMaterial_08g4g")
+material_overlay = SubResource("ShaderMaterial_div8w")
 surface_material_override/0 = SubResource("StandardMaterial3D_t7kfl")
 
 [node name="Fur" type="Node" parent="XROrigin3D/RightHand/RightHand/Hand_Glove_R/Armature/Skeleton3D/mesh_Glove_R" index="0"]
@@ -1102,7 +1117,7 @@ bone_idx = 8
 transform = Transform3D(0.356468, 0.109286, -0.927894, -0.927111, 0.164404, -0.336803, 0.115741, 0.98032, 0.159925, 0.00450265, 0.01978, 0.0106875)
 
 [node name="AnimationTree" parent="XROrigin3D/RightHand/RightHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_qvr2k")
+tree_root = SubResource("AnimationNodeBlendTree_mdbog")
 
 [node name="Marker3D" type="Marker3D" parent="XROrigin3D/RightHand"]
 
@@ -1122,7 +1137,18 @@ collision_mask = 3
 
 [node name="FunctionPickup" parent="XROrigin3D/RightHand" instance=ExtResource("6_nd82y")]
 ranged_distance = 3.0
-ranged_angle = 10.0
+ranged_angle = 20.0
+
+[node name="RigidBody3DRight" type="RigidBody3D" parent="XROrigin3D/RightHand"]
+collision_layer = 0
+collision_mask = 4
+input_ray_pickable = false
+freeze = true
+freeze_mode = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/RightHand/RigidBody3DRight"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0206751, -0.0371339, 0.0938232)
+shape = SubResource("CapsuleShape3D_r5m36")
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("6_xgpg3")]
 collision_mask = 1019
