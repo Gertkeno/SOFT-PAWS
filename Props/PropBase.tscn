@@ -20,8 +20,12 @@ open_pose = ExtResource("7_hipvw")
 closed_pose = ExtResource("7_hipvw")
 
 [node name="Prop" instance=ExtResource("1_wo0p2")]
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("2_pskfu")
 cash_value = 10
+on_will = false
+durability = null
 picked_up_layer = 65540
 ranged_grab_method = 2
 ranged_grab_speed = 10.0

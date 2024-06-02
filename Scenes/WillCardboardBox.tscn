@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://c6vbocv5wc8dj"]
+
+[ext_resource type="Material" uid="uid://dxs0pc3a3dh15" path="res://Assets/cardboard_box/cardboard_box_mat.tres" id="1_uq6ie"]
+[ext_resource type="Script" path="res://Scenes/WillCardboardBox.gd" id="1_vljvi"]
+[ext_resource type="ArrayMesh" uid="uid://cfhtky7kk4xc1" path="res://Assets/cardboard_box/box_opened_damaged.obj" id="2_r15jj"]
+[ext_resource type="Texture2D" uid="uid://dvsya36dr8mba" path="res://Assets/ParticlePNGs/fade_off_gradient.tres" id="3_dgv22"]
+[ext_resource type="Material" uid="uid://cwbbeosn3ooe2" path="res://Assets/ParticlePNGs/stars_particle_mat.tres" id="3_vb38t"]
+[ext_resource type="Material" uid="uid://q2q1d121wjlx" path="res://Assets/ParticlePNGs/flames_particle_mat.tres" id="4_dmjqc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6fb63"]
+size = Vector3(0.666992, 0.635742, 1.19922)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_46srk"]
+emission_shape = 3
+emission_box_extents = Vector3(0.33, 0.02, 0.52)
+angle_max = 260.2
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 1.5
+initial_velocity_max = 3.0
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+gravity = Vector3(0, -1, 0)
+scale_min = 0.3
+color_ramp = ExtResource("3_dgv22")
+anim_offset_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_vipuc"]
+material = ExtResource("3_vb38t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ct8k8"]
+emission_shape = 3
+emission_box_extents = Vector3(0.33, 0.02, 0.52)
+angle_max = 260.2
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.5
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+gravity = Vector3(0, 1, 0)
+scale_max = 1.2
+color_ramp = ExtResource("3_dgv22")
+anim_offset_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_3jkfi"]
+material = ExtResource("4_dmjqc")
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+script = ExtResource("1_vljvi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109929, 0, 0.0404947)
+shape = SubResource("BoxShape3D_6fb63")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.353283, 0, 0, 0, 0.353283, 0, 0, 0, 0.353283, 0, 0, 0)
+material_override = ExtResource("1_uq6ie")
+mesh = ExtResource("2_r15jj")
+skeleton = NodePath("../..")
+
+[node name="SuccessParticle" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767204, 0.344258, 0)
+emitting = false
+amount = 50
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.71
+randomness = 0.19
+visibility_aabb = AABB(-2.45191, -1.01158, -2.65947, 5.24344, 4.74551, 4.72615)
+process_material = SubResource("ParticleProcessMaterial_46srk")
+draw_pass_1 = SubResource("QuadMesh_vipuc")
+
+[node name="FailureParticle" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767204, 0.344258, 0)
+emitting = false
+amount = 30
+lifetime = 0.76
+one_shot = true
+explosiveness = 0.73
+visibility_aabb = AABB(-2.15889, -1.00001, -1.73993, 4.08423, 3.83102, 3.96496)
+process_material = SubResource("ParticleProcessMaterial_ct8k8")
+draw_pass_1 = SubResource("QuadMesh_3jkfi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
