@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vgjr1ltkv6sl"
+path="res://.godot/imported/metal pan hit 1.wav-7dadfd3ee2394ccd79fc942955ccdac0.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Pan/metal pan hit 1.wav"
+dest_files=["res://.godot/imported/metal pan hit 1.wav-7dadfd3ee2394ccd79fc942955ccdac0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

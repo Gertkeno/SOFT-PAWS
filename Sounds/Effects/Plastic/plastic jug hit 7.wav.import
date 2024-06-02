@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2umehemb6vtx"
+path="res://.godot/imported/plastic jug hit 7.wav-d95bfce766f5e4f83a8f9d90c08998d0.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Plastic/plastic jug hit 7.wav"
+dest_files=["res://.godot/imported/plastic jug hit 7.wav-d95bfce766f5e4f83a8f9d90c08998d0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
