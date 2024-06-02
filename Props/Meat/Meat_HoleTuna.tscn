@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://duwa386w6guhp"]
+[gd_scene load_steps=5 format=3 uid="uid://duwa386w6guhp"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_0na8u"]
 [ext_resource type="PackedScene" uid="uid://dmil644tthwjh" path="res://Assets/LowPolyFoodPack/Assets/tuna.glb" id="2_4lvuv"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_h11po"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8oawl"]
 points = PackedVector3Array(-0.563827, -0.0216431, -0.015572, 0.0623317, 0.463624, 0.0156133, -0.000333168, 0.0722777, -0.187827, -0.563827, 0.322655, -0.015572, -0.000333168, 0.0722777, 0.187868, 0.0309503, -0.131227, 0.0156133, 0.412954, 0.121616, -0.0147916, -0.563827, 0.322655, 0.0156133, 0.0623317, 0.463624, -0.015572, -0.563827, -0.0216431, 0.0156133, 0.328388, 0.181745, -0.0782002, 0.328388, 0.134989, 0.0782414, -0.266389, -0.115564, 0.0156133, -0.0316166, 0.103604, -0.187827, -0.0316166, 0.103604, 0.187868, 0.0309503, -0.131227, -0.015572, -0.266389, -0.115564, -0.015572, -0.266389, 0.416634, 0.0156133, -0.266389, 0.416634, -0.015572, 0.414318, 0.166198, 0.0148753, 0.328388, 0.181745, 0.0782414, 0.328388, 0.134989, -0.0782002, 0.417872, 0.121155, 0.0149859, -0.000333168, 0.103604, -0.187827, -0.000333168, 0.103604, 0.187868, -0.0316166, 0.0722777, -0.187827, -0.0316166, 0.0722777, 0.187868, 0.414831, 0.166198, -0.01485, 0.248859, 0.0670001, 0.0708659, 0.293986, 0.0805352, -0.0570341, 0.046641, 0.463624, 0.0156133, 0.385395, 0.108369, 0.0288998)
@@ -12,5 +13,17 @@ points = PackedVector3Array(-0.563827, -0.0216431, -0.015572, 0.0623317, 0.46362
 shape = SubResource("ConvexPolygonShape3D_8oawl")
 
 [node name="tuna2" parent="." index="1" instance=ExtResource("2_4lvuv")]
+
+[node name="tuna" parent="tuna2" index="0"]
+material_override = ExtResource("3_h11po")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(-1.13133e-08, 0.965926, -0.258819, 4.2222e-08, 0.258819, 0.965926, 1, 0, -4.37114e-08, -0.366694, 0.0895052, -0.0121995)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(-1.13133e-08, 0.965926, -0.258819, 4.2222e-08, 0.258819, 0.965926, 1, 0, -4.37114e-08, -0.366694, 0.0895052, 0.0100494)
 
 [editable path="tuna2"]

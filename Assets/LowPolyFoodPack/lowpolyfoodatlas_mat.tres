@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://rxf0a83n5u1s"]
+
+[ext_resource type="Texture2D" uid="uid://dmirtiklckrhu" path="res://Assets/LowPolyFoodPack/Blender/textures/ImphenziaPixel-BaseColor.png" id="1_ghmwk"]
+[ext_resource type="Texture2D" uid="uid://cc501pvej3l1k" path="res://Assets/LowPolyFoodPack/Blender/textures/ImphenziaPixel-Emission.png" id="2_mknw1"]
+
+[resource]
+albedo_texture = ExtResource("1_ghmwk")
+emission_enabled = true
+emission_texture = ExtResource("2_mknw1")

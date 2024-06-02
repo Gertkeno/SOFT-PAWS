@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfcr7gwd70gny"]
+[gd_scene load_steps=5 format=3 uid="uid://dfcr7gwd70gny"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_uuok0"]
 [ext_resource type="PackedScene" uid="uid://bwmam464ac32x" path="res://Assets/LowPolyFoodPack/Assets/baconStrip03.glb" id="2_lyckr"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_o71oj"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lqqbr"]
 points = PackedVector3Array(-0.0871001, 0.00685555, -0.0479528, 0.0811619, 0.0234079, 0.0210046, 0.0756369, 0.0234079, 0.0320309, 0.0287244, 0.0399603, -0.0727706, 0.0480285, -0.00141848, -0.078301, -0.0484752, -0.00417937, 0.081701, -0.0650335, 0.00685555, 0.0679095, 0.0443431, -6.01169e-05, 0.0811983, -0.062271, 0.00133809, -0.0810489, -0.0319336, 0.00962077, 0.0872141, -0.00986701, 0.0344429, -0.0838141, -0.0898794, -0.00141848, -0.0424397, 0.0480285, 0.00685555, -0.0865794, 0.0783994, 0.012373, 0.00997835, 0.0452827, 0.00685555, 0.0899794, 0.0645868, 0.0234079, 0.0430745, 0.0397577, 0.0399603, -0.0645095, -0.0126295, 0.0344429, -0.0755358, -0.0650335, -0.00417937, 0.0679095, -0.0898794, 0.00685555, -0.0369093, -0.0650335, 0.00962077, -0.0810489, -0.00435873, 0.00133809, -0.0865794, -0.00435873, -0.00141848, -0.0810489, 0.0315037, 0.0399603, -0.0645095, 0.0811619, 0.0234079, 0.0127263, 0.0783994, 0.012373, 0.0237698, 0.0397577, 0.0399603, -0.0700227, -0.00986701, 0.0261602, -0.0865794, 0.00114954, 0.00133809, 0.0899794, 0.0149454, 0.0371994, -0.0810489, -0.0402044, -0.00417937, 0.081701, -0.062271, -0.00417937, 0.056866)
@@ -12,5 +13,17 @@ points = PackedVector3Array(-0.0871001, 0.00685555, -0.0479528, 0.0811619, 0.023
 shape = SubResource("ConvexPolygonShape3D_lqqbr")
 
 [node name="baconStrip032" parent="." index="1" instance=ExtResource("2_lyckr")]
+
+[node name="baconStrip03" parent="baconStrip032" index="0"]
+material_override = ExtResource("3_o71oj")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.057509, 0.0640936, 0.024455)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.043725, 0.0712964, -1.49012e-08)
 
 [editable path="baconStrip032"]

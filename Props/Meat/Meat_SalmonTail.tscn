@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ralajabn6d5k"]
+[gd_scene load_steps=5 format=3 uid="uid://ralajabn6d5k"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_ycgvm"]
 [ext_resource type="PackedScene" uid="uid://ddjc56ewf1p0c" path="res://Assets/LowPolyFoodPack/Assets/salmonTail.glb" id="2_138cn"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_5stmy"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qipsu"]
 points = PackedVector3Array(0.076846, -0.00254047, 0.00902666, -0.0930217, 0.337218, -0.00739152, -0.0930217, 0.337218, 0.00902666, 0.0987741, 0.337218, 0.00902666, -0.0656116, -0.00254047, 0.0638405, -0.0656116, 0.0139067, -0.0567405, 0.0603999, -0.00254047, -0.0567405, 0.0603999, 0.00844719, 0.0638405, 0.0987741, 0.337218, -0.00739152, -0.0875397, -0.00254047, -0.00191486, -0.0930217, 0.34824, 0.00902666, -0.0710936, -0.00254047, -0.051252, -0.0656116, 0.34824, -0.00739152, 0.0549179, 0.0139067, -0.0567405, -0.0656116, 0.0139067, 0.0638405, 0.0549179, 0.0139067, 0.0638405, 0.0603999, -0.00254047, 0.0638405, -0.0710936, -0.00254047, 0.058352, 0.08781, 0.342712, -0.00739152, -0.0875397, -0.00254047, 0.00902666, 0.076846, -0.00254047, -0.00191486, -0.0930217, 0.34824, -0.00739152, 0.071364, -0.00254047, 0.0309451, 0.071364, -0.00254047, -0.0238333, 0.0987741, 0.331793, -0.00739152, -0.0820576, 0.34824, 0.00902666, 0.0987741, 0.331793, 0.00902666, 0.0603999, 0.00844719, -0.0567405, -0.0546475, 0.34824, 0.00355, -0.0710936, 0.00844719, 0.058352, -0.0710936, 0.00844719, -0.051252)
@@ -12,5 +13,17 @@ points = PackedVector3Array(0.076846, -0.00254047, 0.00902666, -0.0930217, 0.337
 shape = SubResource("ConvexPolygonShape3D_qipsu")
 
 [node name="salmonTail2" parent="." index="1" instance=ExtResource("2_138cn")]
+
+[node name="salmonTail" parent="salmonTail2" index="0"]
+material_override = ExtResource("3_5stmy")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0361842, 0.183468, -0.0685969)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0257761, 0.200367, -0.0735282)
 
 [editable path="salmonTail2"]

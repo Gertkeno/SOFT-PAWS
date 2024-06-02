@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://q2q1d121wjlx" path="res://Assets/ParticlePNGs/flames_particle_mat.tres" id="4_dmjqc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6fb63"]
-size = Vector3(0.666992, 0.635742, 1.19922)
+size = Vector3(0.666992, 0.317871, 1.19922)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_46srk"]
 emission_shape = 3
@@ -59,7 +59,7 @@ monitorable = false
 script = ExtResource("1_vljvi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109929, 0.35333, 0.0404947)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109929, 0.194395, 0.0404947)
 shape = SubResource("BoxShape3D_6fb63")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

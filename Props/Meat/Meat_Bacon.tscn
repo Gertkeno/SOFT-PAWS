@@ -1,16 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://3hi324tv1ndh"]
+[gd_scene load_steps=5 format=3 uid="uid://3hi324tv1ndh"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_n1146"]
 [ext_resource type="PackedScene" uid="uid://ch8ug7t0m78ka" path="res://Assets/LowPolyFoodPack/Assets/bacon.glb" id="2_k5kvw"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_6kqd1"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3wcuy"]
-points = PackedVector3Array(0.0346436, 0.0622782, 0.0871701, -0.00364113, 0.0636113, 0.0912338, -0.0385833, -0.00177032, 0.0882351, 0.0350487, 0.000300848, -0.10175, 0.0352249, 0.000146699, 0.0857477, 0.035288, 0.0628418, -0.102388, -0.022745, -0.00177032, -0.104909, -0.022745, 0.0647036, -0.104909, -0.0365819, 0.062953, 0.0862392, 0.0269738, 0.00238752, 0.0912119, -0.0385833, 0.00139263, 0.0850808, -0.0128346, 0.0268761, 0.0912789, 0.0350299, 0.00328159, 0.0881999, 0.00247845, 0.0115383, 0.0913616, -0.0128331, 0.0299366, 0.0912671)
+[sub_resource type="BoxShape3D" id="BoxShape3D_xkp15"]
+size = Vector3(0.0673828, 0.064209, 0.191406)
 
 [node name="Prop" instance=ExtResource("1_n1146")]
 
 [node name="CollisionShape3D" parent="." index="0"]
-shape = SubResource("ConvexPolygonShape3D_3wcuy")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0319349, -0.00709996)
+shape = SubResource("BoxShape3D_xkp15")
 
 [node name="bacon2" parent="." index="1" instance=ExtResource("2_k5kvw")]
+
+[node name="bacon" parent="bacon2" index="0"]
+material_override = ExtResource("3_6kqd1")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.025732, 0.100901, 0.0492845)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0255263, 0.103127, 0)
 
 [editable path="bacon2"]

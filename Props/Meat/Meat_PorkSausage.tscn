@@ -2,13 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_ktu43"]
 [ext_resource type="PackedScene" uid="uid://kxk37gorg3nr" path="res://Assets/LowPolyFoodPack/Assets/porkSausage.glb" id="2_i5rtx"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_vei6s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pwkvs"]
 radius = 0.03
 height = 0.28
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5x52"]
-albedo_color = Color(0.313166, 0.111285, 0.0600068, 1)
 
 [node name="Prop" instance=ExtResource("1_ktu43")]
 cash_value = 2
@@ -20,6 +18,15 @@ shape = SubResource("CapsuleShape3D_pwkvs")
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0274458, 0, 0)
 
 [node name="porkSausage" parent="porkSausage2" index="0"]
-material_override = SubResource("StandardMaterial3D_c5x52")
+material_override = ExtResource("3_vei6s")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0299835, -0.0668644)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0299835, -0.0668644)
 
 [editable path="porkSausage2"]
