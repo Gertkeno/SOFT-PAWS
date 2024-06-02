@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+GameData="*res://System/GameData.gd"
 
 [debug]
 
@@ -33,10 +34,6 @@ window/vsync/vsync_mode=0
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/so_fluffy/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
-
-[filesystem]
-
-import/fbx/enabled=false
 
 [layer_names]
 

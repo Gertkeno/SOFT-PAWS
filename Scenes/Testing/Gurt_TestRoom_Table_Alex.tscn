@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ctmtusg6kfw3v" path="res://Character Models/mouse.tscn" id="12_2j78a"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="13_e7725"]
 [ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="14_tv6rs"]
-[ext_resource type="PackedScene" uid="uid://ct858uaj5lgjb" path="res://Assets/Alex Assets/Created Assets/Prop_Painting-Frame_low.FBX" id="15_tbhhv"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="15_r3jqj"]
 [ext_resource type="ArrayMesh" uid="uid://4wtfhaoct82c" path="res://Assets/Alex Assets/Test Re-export/Test_Door.obj" id="16_ituxt"]
 [ext_resource type="ArrayMesh" uid="uid://c8jr3efn4huwn" path="res://Assets/Alex Assets/Created Assets/Test_Map_BlockOut_low.obj" id="17_cwaat"]
 [ext_resource type="PackedScene" uid="uid://b6d5kikxmjpj0" path="res://Assets/giant dungeon pack/shelf_large.gltf" id="18_7gb2a"]
@@ -334,18 +334,18 @@ mesh = SubResource("PlaneMesh_uqybx")
 
 [node name="PickableObject5" parent="." instance=ExtResource("14_tv6rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -4)
+script = ExtResource("15_r3jqj")
 picked_up_layer = 65536
 
 [node name="PickableObject6" parent="." instance=ExtResource("14_tv6rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -3)
+script = ExtResource("15_r3jqj")
 picked_up_layer = 65536
 
 [node name="PickableObject7" parent="." instance=ExtResource("14_tv6rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2982, 0.988281, -3.53628)
+script = ExtResource("15_r3jqj")
 picked_up_layer = 65536
-
-[node name="pictureFrame" parent="." instance=ExtResource("15_tbhhv")]
-transform = Transform3D(-0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 0, 0, 1, 1.94553, 1.8706, -3.51351)
 
 [node name="TestDoor" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.999857, 0, 9.45204)

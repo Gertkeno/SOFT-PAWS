@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://nj5gioyvcsfa"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_3j5b2"]
+[ext_resource type="PackedScene" uid="uid://0og6atwcowwi" path="res://Assets/low_poly_dungeon/Book_Brown.glb" id="2_aypc4"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kgnfy"]
+points = PackedVector3Array(0.18069, 0.386358, 0.0351381, -0.139612, 0.0136253, -0.0518, 0.170417, 0.0101415, -0.0527798, 0.172692, 0.0073944, 0.0523413, -0.143313, 0.381981, 0.0518, -0.139612, 0.377675, -0.0518, -0.143313, 0.00931916, 0.0518, 0.170417, 0.381159, -0.0527798, 0.172692, 0.383906, 0.0523413, 0.180333, 0.00535692, -0.036282, 0.180333, 0.385943, -0.036282, 0.18069, 0.00494231, 0.0351381)
+
+[node name="Prop" instance=ExtResource("1_3j5b2")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(-2.62268e-08, -2.09272e-16, -0.6, 2.09272e-16, 0.6, -2.09272e-16, 0.6, -2.09272e-16, -2.62268e-08, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+shape = SubResource("ConvexPolygonShape3D_kgnfy")
+
+[node name="HighlightRing" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.098348, 0.0182124)
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(0.327877, 0, 0.94472, 0, 1, 0, -0.94472, 0, 0.327877, -0.0410015, 0.112665, 0.102887)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(-0.244377, 0, 0.96968, 0, 1, 0, -0.96968, 0, -0.244377, -0.0614634, 0.083682, -0.117557)
+visible = true
+
+[node name="Book_Brown2" parent="." index="4" instance=ExtResource("2_aypc4")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="Book_Brown" parent="Book_Brown2" index="0"]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[editable path="Book_Brown2"]
