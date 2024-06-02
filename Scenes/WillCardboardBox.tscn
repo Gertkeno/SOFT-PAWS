@@ -110,4 +110,6 @@ shape = SubResource("BoxShape3D_2xs0q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108514, 0.227879, -0.586956)
 shape = SubResource("BoxShape3D_2xs0q")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
