@@ -17,11 +17,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164882, 0.32118, 0)
 
 [node name="GrabPointHandLeft" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.259222, 0.363391, -0.0745338)
-visible = true
 
 [node name="GrabPointHandRight" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.271599, 0.370419, -0.0312687)
-visible = true
 
 [node name="bottle_C_green2" parent="." index="4" instance=ExtResource("2_rgcxq")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.00608456, 1.19209e-07, -0.00908542)
