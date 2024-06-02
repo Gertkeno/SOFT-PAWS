@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bra3c4ybf0cv2"]
+[gd_scene load_steps=6 format=3 uid="uid://bra3c4ybf0cv2"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_hncua"]
 [ext_resource type="PackedScene" uid="uid://nxwbv2ncje7q" path="res://Assets/LowPolyFoodPack/Assets/tBone.glb" id="2_258ys"]
 [ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_b4v83"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_rsaq3"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ikd2e"]
 points = PackedVector3Array(-0.16484, -0.00346508, -0.158637, -0.161714, 0.0493481, -0.156, -0.159497, -0.00346508, 0.129135, 0.176265, 0.00187238, -0.0307225, -0.156598, 0.0493688, 0.12661, 0.0909555, 0.0445043, -0.07337, 0.0334827, 1.38778e-17, 0.096508, 0.0803044, 0.0498365, 0.0864878, 0.165581, -0.00346508, -0.0200465, 0.165581, 0.0445043, 0.0171926, -0.0582276, 0.0498365, -0.137313, -0.12751, -0.00346508, -0.158637, 0.176265, 0.00187238, 0.0012209, 0.176265, 0.0391668, -0.0307225, -0.132853, 0.0498365, 0.129135, 0.138936, 0.00187238, -0.0520463, -0.12751, 0.0498365, -0.158637, -0.132853, -0.00346508, 0.129135, -0.0341708, 0.0032444, -0.124415, -0.16484, -0.00346508, -0.105342, 0.0909555, 0.0498365, 0.065164, 0.112348, 0, 0.0455103, 0.176265, 0.0391668, 0.0012209, 0.170923, 0.0391668, -0.0360464, 0.155521, 0.0431629, -0.0247286, 0.160238, 0.0445043, 0.0225447, 0.170923, 0.00187238, -0.0360464, 0.0706061, 3.46945e-18, 0.073325, 0.160238, 0.0391668, -0.0413985)
@@ -25,5 +26,8 @@ transform = Transform3D(-0.707107, 3.09086e-08, 0.707107, 0.707107, -3.09086e-08
 
 [node name="GrabPointHandRight" parent="." index="4"]
 transform = Transform3D(0.707107, -3.09086e-08, 0.707107, 0.707107, -3.09086e-08, -0.707107, 4.37114e-08, 1, 1.91069e-15, 0.11404, 0.0794809, 0.0373055)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_rsaq3")
 
 [editable path="tBone2"]

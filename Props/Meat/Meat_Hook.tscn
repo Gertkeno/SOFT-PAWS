@@ -3,13 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_5m0jp"]
 [ext_resource type="PackedScene" uid="uid://c3ifog1mabk5n" path="res://Assets/LowPolyFoodPack/Assets/meatHook.glb" id="2_tes3w"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0jatm"]
-points = PackedVector3Array(0.0640827, 0.0127695, -0.135328, -0.147338, -0.000223029, -0.00783513, -0.147338, 0.0257646, -0.00783513, 0.119698, 0.0257646, -0.130625, 0.119698, -0.000223029, -0.130625, -0.190532, -0.000223029, 0.0270798, -0.190532, 0.0257672, 0.0270798, 0.190532, 0.0257646, -0.0811923, 0.190532, -0.000223029, -0.0811923, -0.186541, -0.000223029, 0.0951971, -0.186541, 0.0257646, 0.0951971, 0.146741, 0.0257646, 0.0181594, 0.187846, 0.0257646, -0.0172412, 0.187846, -0.000223029, -0.0172412, -0.1241, 0.00319874, 0.125792, 0.146741, -0.000223029, 0.0181594, -0.1241, 0.0223429, 0.125792)
+[sub_resource type="BoxShape3D" id="BoxShape3D_cutol"]
+size = Vector3(0.379883, 0.0270996, 0.249023)
 
 [node name="Prop" instance=ExtResource("1_5m0jp")]
 
 [node name="CollisionShape3D" parent="." index="0"]
-shape = SubResource("ConvexPolygonShape3D_0jatm")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0131381, 0)
+shape = SubResource("BoxShape3D_cutol")
 
 [node name="meatHook2" parent="." index="1" instance=ExtResource("2_tes3w")]
 

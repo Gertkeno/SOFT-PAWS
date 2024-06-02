@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtt0woe2tohul"]
+[gd_scene load_steps=6 format=3 uid="uid://dtt0woe2tohul"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_45uso"]
 [ext_resource type="PackedScene" uid="uid://b4vpy422xk66n" path="res://Assets/LowPolyFoodPack/Assets/lambRib.glb" id="2_es304"]
 [ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_pc7e1"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_snslx"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mc18y"]
 points = PackedVector3Array(-0.108496, 0.00123508, 0.0458836, 0.108189, 0.225199, -0.0464789, 0.108189, 0.0883396, 0.0723643, 0.114935, 0.0231288, -0.0414283, -0.100693, 0.225199, -0.0753008, -0.100693, 0.0883396, 0.0723643, -0.106602, 0.0307091, -0.048021, 0.113088, 0.000634361, 0.046141, 0.108189, 0.217981, -0.0753008, -0.100693, 0.225199, -0.0464789, -0.103298, 0.00296664, -0.0238931, 0.110793, 0.00296664, -0.0238931, 0.114097, 0.0307091, -0.048021, 0.115386, 0.0883396, 0.0687507, -0.107891, 0.0883396, 0.0687507, 0.115263, 0.127398, -0.0380633, -0.106054, 0.0242332, 0.055156, 0.108189, 0.225199, -0.0753008, -0.100693, 0.217981, -0.0753008, 0.113549, 0.0242332, 0.055156, 0.115327, 0.00539471, 0.0177075, -0.107826, 0.0018948, 0.00375232, 0.115431, 0.0157585, -0.0346157, 0.114158, 0.00650958, 0.0485448, -0.106663, 0.00650958, 0.0485448, -0.105481, 0.0144578, -0.033887, 0.11514, 0.12738, -0.0310499)
@@ -25,5 +26,8 @@ transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 
 
 [node name="GrabPointHandRight" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0.107994, 0.228565, -0.124851)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_snslx")
 
 [editable path="lambRib2"]

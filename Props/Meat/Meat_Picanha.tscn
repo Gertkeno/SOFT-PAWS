@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbkpg3xxj060d"]
+[gd_scene load_steps=6 format=3 uid="uid://dbkpg3xxj060d"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_mrnyc"]
 [ext_resource type="PackedScene" uid="uid://c56sdcaj36via" path="res://Assets/LowPolyFoodPack/Assets/picanha.glb" id="2_votnr"]
 [ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_2v3jb"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_idtke"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ed07f"]
 points = PackedVector3Array(0.146835, 0.00283546, 0.0954738, -0.101108, 0.0819261, -0.13197, -0.101864, 0.0895241, -0.132831, -0.195772, 0.0751313, 0.166701, -0.182313, 0.0002, -0.109142, 0.253864, 0.0514909, -0.0856967, -0.00453025, 0.116564, 0.0113971, -0.176217, 0.00727654, 0.173972, 0.076795, 0.0596703, 0.141299, -0.219444, 0.114576, 0.0404707, 0.245596, 0.000996344, -0.0708422, 0.261772, 0.0357131, 0.0325872, -0.0222431, 0.11513, -0.0932416, 0.0997755, 0.000217491, -0.109106, -0.182057, 0.0955622, -0.104678, -0.0306452, 0.0809979, 0.158808, -0.00341425, 0.00131903, 0.155681, 0.102917, 0.098275, 0.00490336, -0.193587, 0.00117713, 0.0536641, -0.0111543, 0.103847, -0.130359, -0.195772, 0.122465, 0.0168519, 0.263151, 0.0002, -0.0348849, 0.0997388, 0.0933361, -0.102691, -0.195088, 0.0823086, -0.11228, -0.197151, 0.0002, -0.0274652, 0.0774428, 0.0670049, -0.12375, 0.285444, 0.0357131, -0.0147137, 0.107, 0.100317, -0.029681, -0.182976, 0.00746576, -0.116984, 0.222284, 0.043602, 0.0641528, 0.238099, 0.0593798, -0.0147137, 0.0907008, 0.00195542, 0.132656)
@@ -23,5 +24,8 @@ visible = false
 
 [node name="GrabPointHandRight" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.257401, 0.063869, -0.114158)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_idtke")
 
 [editable path="picanha2"]

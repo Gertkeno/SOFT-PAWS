@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://8iq8jgjqgy0v"]
+[gd_scene load_steps=6 format=3 uid="uid://8iq8jgjqgy0v"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_qaxus"]
 [ext_resource type="PackedScene" uid="uid://df2foilnn6ejp" path="res://Assets/LowPolyFoodPack/Assets/tomahawk02.glb" id="2_smx4q"]
 [ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_aes5i"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_ch60e"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_e2qjj"]
 points = PackedVector3Array(0.0662753, 0.0378175, 0.0537407, 0.0418904, -0.00165244, -0.070931, 0.152736, -0.00540159, 0.104166, -0.236202, 0.001803, -0.0182586, 0.131076, 0.0378175, -0.0903016, -0.214586, 0.0306129, 0.0249104, 0.123901, 0.0306129, 0.132997, 0.224802, -0.00540159, 0.0105499, 0.224802, 0.0378175, 0.0249104, 0.181571, -0.00540159, -0.0903016, 0.116726, 0.001803, 0.132997, 0.0518803, 0.0378175, -0.0903016, -0.236202, 0.0306129, -0.0182586, -0.202574, 0.00263138, 0.0247055, 0.0950655, -0.00540159, 0.11138, 0.167057, 0.0294964, -0.0816481, 0.224802, -0.00540159, 0.0321235, 0.217536, 0.0378175, 0.00335871, 0.116726, 0.0306129, 0.132997, -0.236202, 0.0306129, -0.00385433, 0.195966, -0.00540159, -0.0614713, 0.224802, 0.0378175, 0.0177848, 0.123901, 0.001803, 0.132997, 0.217536, -0.00540159, -0.0110455, 0.159911, 0.0378175, -0.0614713, 0.116726, -0.00540159, 0.11138, 0.109551, 0.0378175, 0.0465496)
@@ -25,5 +26,8 @@ transform = Transform3D(1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 
 
 [node name="GrabPointHandRight" parent="." index="4"]
 transform = Transform3D(-1.3027e-15, 1, 4.37114e-08, -2.98023e-08, -4.37114e-08, 1, 1, 0, 2.98023e-08, -0.0829405, -0.0511431, 0.0182695)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_ch60e")
 
 [editable path="tomahawk022"]
