@@ -29,3 +29,6 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "pickedup":
 		pass # TODO: particles and yipee!!
 		GameData.score += bonus_score
+		$Prop.shatter()
+		$Prop.drop()
+		queue_free()

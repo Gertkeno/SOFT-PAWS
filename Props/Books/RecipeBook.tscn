@@ -3,14 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_gp2bb"]
 [ext_resource type="PackedScene" uid="uid://5jydhajlk6ie" path="res://Assets/low_poly_dungeon/Book_Big_Brown.glb" id="2_1ulak"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2f8yb"]
-points = PackedVector3Array(0.207464, 0.443815, 0.0545962, -0.163256, 0.0123889, -0.0798, 0.197432, 0.00961051, -0.080842, 0.197854, 0.00910059, 0.0807364, -0.163936, 0.437947, 0.0798, -0.163256, 0.437156, -0.0798, -0.163936, 0.0115975, 0.0798, 0.197432, 0.439934, -0.080842, 0.197854, 0.440444, 0.0807364, 0.207396, 0.00580875, -0.0548893, 0.207396, 0.443736, -0.0548893, 0.207464, 0.0057294, 0.0545962)
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtcr8"]
+size = Vector3(0.387634, 0.451294, 0.15918)
 
 [node name="Prop" instance=ExtResource("1_gp2bb")]
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_2f8yb")
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.0156006, 0.177393, 0)
+shape = SubResource("BoxShape3D_vtcr8")
+
+[node name="HighlightRing" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177276, 0)
 
 [node name="GrabPointHandLeft" parent="." index="2"]
 transform = Transform3D(-0.902833, 0.202188, 0.379489, 0.0442033, 0.921518, -0.385812, -0.427713, -0.331549, -0.840914, 0.193857, 0.193803, -0.00514671)

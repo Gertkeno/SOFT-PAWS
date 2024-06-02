@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dck1ibmd8rmja"]
+[gd_scene load_steps=5 format=3 uid="uid://dck1ibmd8rmja"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_ncmt3"]
 [ext_resource type="PackedScene" uid="uid://s2tex1qqs7uy" path="res://Assets/kitchen assets/GLB/Pans/pan_skillet.glb" id="2_4wqu1"]
+[ext_resource type="AudioStream" uid="uid://b1wc2uimig6ww" path="res://Sounds/Effects/Metal/knife_hit_rand.tres" id="3_gdbnl"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p2r13"]
 points = PackedVector3Array(-2.57504, -2.83737, 1.84735, 3.46425, -1.71496, 2.84874, 2.91543, -1.71496, 4.49352, -0.374785, -0.4355, -5.92497, -2.93459, -1.71496, 4.49352, 2.1894, -2.81459, 0.709945, 0.999787, -2.89249, 4.80215, 0.355618, -0.984161, -5.92497, 1.26964, -1.71496, 5.77407, -3.48342, -1.71496, 2.11683, -1.07238, -2.77817, -0.226755, -1.19976, -2.73544, 5.19639, -0.557725, -1.1668, -5.37633, 2.94136, -2.69849, 1.72604, 0.355618, -0.4355, -5.55844, -1.28881, -1.71496, 5.77407, -2.62744, -2.69662, 0.742592, 2.91543, -1.71496, 0.288785, 2.53106, -2.73122, 4.15789, -3.04439, -2.72644, 2.62118, 1.05643, -2.78139, -0.227213, -2.17339, -2.8803, 3.91827, 1.04519, -2.4179, 5.54911, 2.63543, -2.87218, 2.56882, -2.93459, -1.71496, 0.472048, 2.61783, -2.7002, 0.74558, -0.374785, -0.4355, -5.55844, -2.38694, -2.73388, 4.33923, 3.46425, -1.71496, 1.93357, 0.538559, -0.618387, -5.74171, -2.25768, -2.83915, 0.886459, -3.48342, -1.71496, 2.84874)
@@ -20,5 +21,8 @@ transform = Transform3D(-0.995282, 1.36443e-11, 0.0970272, 0.0906438, -0.356722,
 
 [node name="Cooking Assets" parent="." index="4" instance=ExtResource("2_4wqu1")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.0015586, 0.0963225, 0.214835)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("3_gdbnl")
 
 [editable path="Cooking Assets"]
