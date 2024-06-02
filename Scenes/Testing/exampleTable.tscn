@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b5dqyg5k8bqas"]
+[gd_scene load_steps=37 format=3 uid="uid://b5dqyg5k8bqas"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
 [ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dck1ibmd8rmja" path="res://Props/Pans/Skillet.tscn" id="18_4d4dk"]
 [ext_resource type="PackedScene" uid="uid://ycolfgyagvh" path="res://Props/Appliances/Blender.tscn" id="19_ylsm3"]
 [ext_resource type="PackedScene" uid="uid://ckt2mg76rh7fe" path="res://Props/Appliances/RiceCooker.tscn" id="20_8en3c"]
+[ext_resource type="PackedScene" uid="uid://diaiidqgfsqvt" path="res://Props/Bottles/bottle_green.tscn" id="21_oacvr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fp4pu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -207,3 +208,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.480876, 0, -1.70856)
 
 [node name="Prop7" parent="." instance=ExtResource("20_8en3c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00616, 0, -2.52237)
+
+[node name="Prop8" parent="." instance=ExtResource("21_oacvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.489353, 0, -1.56941)
