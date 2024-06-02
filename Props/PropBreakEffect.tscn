@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dthc4cqc05jhd"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u2c8b"]
+lifetime_randomness = 0.26
+particle_flag_align_y = true
+angle_max = 180.0
+direction = Vector3(0, 1, 0)
+spread = 22.0
+initial_velocity_min = 2.5
+initial_velocity_max = 4.0
+scale_min = 0.2
+scale_max = 0.4
+
+[sub_resource type="PrismMesh" id="PrismMesh_wuaqx"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="GDScript" id="GDScript_46sc5"]
+script/source = "extends GPUParticles3D
+
+
+func _on_finished() -> void:
+	queue_free()
+"
+
+[node name="PropBreakEffect" type="GPUParticles3D"]
+emitting = false
+amount = 14
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB(-2.73681, -1.00001, -3.49263, 4.63789, 4.88305, 5.49409)
+process_material = SubResource("ParticleProcessMaterial_u2c8b")
+draw_pass_1 = SubResource("PrismMesh_wuaqx")
+script = SubResource("GDScript_46sc5")
+
+[node name="ShatterSoundFX" type="AudioStreamPlayer3D" parent="."]
+autoplay = true
+
+[connection signal="finished" from="." to="." method="_on_finished"]

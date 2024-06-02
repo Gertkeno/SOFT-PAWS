@@ -22,12 +22,12 @@ closed_pose = ExtResource("7_hipvw")
 [node name="Prop" instance=ExtResource("1_wo0p2")]
 input_ray_pickable = false
 sleeping = true
-max_contacts_reported = 1
+max_contacts_reported = 2
 contact_monitor = true
 script = ExtResource("2_pskfu")
 cash_value = 10
 on_will = false
-durability = 1000.0
+durability = 15.0
 ranged_grab_method = 2
 ranged_grab_speed = 10.0
 
@@ -38,3 +38,6 @@ hand_pose = SubResource("Resource_ovmpd")
 
 [node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("4_hrhd4")]
 hand_pose = SubResource("Resource_he4gy")
+
+[node name="ClankSoundPlayer" type="AudioStreamPlayer3D" parent="." index="4"]
+volume_db = -20.0

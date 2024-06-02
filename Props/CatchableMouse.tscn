@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bsyh2jr2a747y"]
+[gd_scene load_steps=23 format=3 uid="uid://bsyh2jr2a747y"]
 
 [ext_resource type="Script" path="res://Props/CatchableMouse.gd" id="1_0kofr"]
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_op51x"]
@@ -20,6 +20,31 @@ roughness = 0.7
 
 [sub_resource type="Animation" id="Animation_744j2"]
 resource_name = "alert"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.4, 1.5, 1.7, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label3D:offset")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 20), Vector2(0, 18)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_niws2"]
 _data = {
@@ -30,9 +55,57 @@ _data = {
 "run": ExtResource("5_wm0kj")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uelih"]
+animation = &"alert"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wnfkr"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_60krg"]
+animation = &"pickedup"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eapfb"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fs1kf"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5tenx"]
+advance_mode = 2
+advance_condition = &"alerted"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dbe1n"]
+xfade_time = 1.0
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6n7tr"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ctbrs"]
+advance_mode = 2
+advance_condition = &"picked_up"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_aawbi"]
+advance_mode = 2
+advance_condition = &"started_alert"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_pmpdp"]
+states/Start/position = Vector2(190, 100)
+states/alert/node = SubResource("AnimationNodeAnimation_uelih")
+states/alert/position = Vector2(459, 54)
+states/idle/node = SubResource("AnimationNodeAnimation_wnfkr")
+states/idle/position = Vector2(318, 100)
+states/pickedup/node = SubResource("AnimationNodeAnimation_60krg")
+states/pickedup/position = Vector2(762, 97)
+states/run/node = SubResource("AnimationNodeAnimation_eapfb")
+states/run/position = Vector2(630, 100)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_fs1kf"), "idle", "alert", SubResource("AnimationNodeStateMachineTransition_5tenx"), "alert", "run", SubResource("AnimationNodeStateMachineTransition_dbe1n"), "pickedup", "End", SubResource("AnimationNodeStateMachineTransition_6n7tr"), "run", "pickedup", SubResource("AnimationNodeStateMachineTransition_ctbrs"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_aawbi")]
+graph_offset = Vector2(22, -1)
 
 [node name="CatchableMouse" type="PathFollow3D"]
+use_model_front = true
 script = ExtResource("1_0kofr")
 
 [node name="Prop" parent="." instance=ExtResource("1_op51x")]
@@ -241,9 +314,21 @@ bones/293/rotation = Quaternion(0.205935, 2.52354e-11, 0.00174612, 0.978564)
 
 [node name="Plane_001" parent="Prop/mouse2/rig/Skeleton3D" index="0"]
 material_override = SubResource("StandardMaterial3D_ql12h")
+lod_bias = 4.0
 
 [node name="AnimationPlayer" parent="Prop/mouse2" index="1"]
 autoplay = "run cycle"
+
+[node name="Label3D" type="Label3D" parent="Prop/mouse2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01825, 1.10889)
+visible = false
+pixel_size = 0.1975
+billboard = 1
+fixed_size = true
+alpha_cut = 1
+modulate = Color(1, 0.194376, 0.144153, 1)
+outline_modulate = Color(0.0962047, 0.0962048, 0.0962047, 1)
+text = "!"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Prop/mouse2")
@@ -252,12 +337,15 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-active = false
 root_node = NodePath("../Prop/mouse2")
 tree_root = SubResource("AnimationNodeStateMachine_pmpdp")
 anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/alerted = false
+parameters/conditions/picked_up = false
+parameters/conditions/started_alert = false
 
 [connection signal="grabbed" from="Prop" to="." method="_on_prop_grabbed"]
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 
 [editable path="Prop"]
 [editable path="Prop/mouse2"]

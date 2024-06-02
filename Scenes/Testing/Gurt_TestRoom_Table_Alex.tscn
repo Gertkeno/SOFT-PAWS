@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=41 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_ts8fo"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_u45ga"]
@@ -6,8 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cygmb684txid1" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Side.obj" id="4_03b55"]
 [ext_resource type="ArrayMesh" uid="uid://b66yod2n3uvbo" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Corner.obj" id="5_fu6cm"]
 [ext_resource type="ArrayMesh" uid="uid://dub8why5oe80e" path="res://Assets/livingroom/tall_flower.obj" id="6_0ilck"]
-[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="7_xn7pe"]
-[ext_resource type="PackedScene" uid="uid://ctmtusg6kfw3v" path="res://Character Models/mouse.tscn" id="12_2j78a"]
+[ext_resource type="PackedScene" uid="uid://bsyh2jr2a747y" path="res://Props/CatchableMouse.tscn" id="7_cw84t"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="13_e7725"]
 [ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="14_tv6rs"]
 [ext_resource type="ArrayMesh" uid="uid://4wtfhaoct82c" path="res://Assets/Alex Assets/Test Re-export/Test_Door.obj" id="16_ituxt"]
@@ -56,19 +55,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
 point_count = 6
-
-[sub_resource type="GDScript" id="GDScript_r1enr"]
-script/source = "extends PathFollow3D
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	progress += 1 * delta
-"
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_x5lhr"]
-size = Vector3(0.31665, 0.414307, 0.333008)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_t3j41"]
 
@@ -244,23 +230,8 @@ mesh = ExtResource("6_0ilck")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.167035, 0.0284243, -0.0860417)
 curve = SubResource("Curve3D_y01x1")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.867353, 0, -0.497664, 0, 0.999994, 0, 0.497663, 0, -0.867355, -1.25113, 0.970111, -3.042)
-use_model_front = true
-script = SubResource("GDScript_r1enr")
-
-[node name="PickableObject" parent="Path3D/PathFollow3D" instance=ExtResource("7_xn7pe")]
-transform = Transform3D(0.995899, -0.00435019, -0.090368, 0.00470424, 0.999982, 0.00370522, 0.0903503, -0.00411514, 0.995902, -4.76837e-07, 0, -1.19209e-06)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Path3D/PathFollow3D/PickableObject"]
-transform = Transform3D(-0.908783, 0.00470424, 0.417262, 0.00582125, 0.999982, 0.00140437, -0.41725, 0.00370519, -0.908787, 0.00556427, 0.0647999, -0.0112157)
-shape = SubResource("BoxShape3D_x5lhr")
-
-[node name="mouse" parent="Path3D/PathFollow3D/PickableObject" instance=ExtResource("12_2j78a")]
-transform = Transform3D(0.1, 5.82077e-12, -5.96047e-09, -5.82077e-12, 0.1, 0, 5.96047e-09, 3.46945e-19, 0.1, 0, 0, 0)
-
-[node name="Marker3D" type="Marker3D" parent="Path3D/PathFollow3D/PickableObject/mouse"]
-gizmo_extents = 0.95
+[node name="CatchableMouse" parent="Path3D" instance=ExtResource("7_cw84t")]
+transform = Transform3D(-0.867366, 0, -0.49767, 0, 1, 0, 0.49767, 0, -0.867366, -1.25113, 0.970111, -3.042)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
