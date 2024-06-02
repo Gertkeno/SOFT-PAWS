@@ -36,12 +36,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0654749, 0.310808, 0.064803
 
 [node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("3_6eh0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0243772, 0.382462, 0.0226097)
-visible = true
 hand_pose = SubResource("Resource_ovmpd")
 
 [node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("6_eyaln")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162082, 0.384261, 0.0236187)
-visible = true
 hand_pose = SubResource("Resource_he4gy")
 
 [node name="bottle_C_brown2" parent="." index="4" instance=ExtResource("8_r4au3")]
