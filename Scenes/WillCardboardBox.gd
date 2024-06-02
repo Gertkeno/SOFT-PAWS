@@ -9,3 +9,4 @@ func _on_body_entered(body: Node3D) -> void:
 		else:
 			$FailureParticle.restart()
 			GameData.score -= body.cash_value
+		body.queue_free()

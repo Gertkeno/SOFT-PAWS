@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6vbocv5wc8dj"]
+[gd_scene load_steps=14 format=3 uid="uid://c6vbocv5wc8dj"]
 
 [ext_resource type="Material" uid="uid://dxs0pc3a3dh15" path="res://Assets/cardboard_box/cardboard_box_mat.tres" id="1_uq6ie"]
 [ext_resource type="Script" path="res://Scenes/WillCardboardBox.gd" id="1_vljvi"]
@@ -22,6 +22,8 @@ angular_velocity_max = 90.0
 gravity = Vector3(0, -1, 0)
 scale_min = 0.3
 color_ramp = ExtResource("3_dgv22")
+hue_variation_min = -0.02
+hue_variation_max = 0.04
 anim_offset_max = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_vipuc"]
@@ -44,22 +46,30 @@ anim_offset_max = 1.0
 [sub_resource type="QuadMesh" id="QuadMesh_3jkfi"]
 material = ExtResource("4_dmjqc")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sy4sb"]
+size = Vector3(0.05, 1, 1.31348)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2xs0q"]
+size = Vector3(0.71875, 1, 0.05)
+
 [node name="Area3D" type="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+collision_mask = 4
+monitorable = false
 script = ExtResource("1_vljvi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109929, 0, 0.0404947)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109929, 0.35333, 0.0404947)
 shape = SubResource("BoxShape3D_6fb63")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.353283, 0, 0, 0, 0.353283, 0, 0, 0, 0.353283, 0, 0, 0)
+transform = Transform3D(0.353283, 0, 0, 0, 0.353283, 0, 0, 0, 0.353283, 0, 0.35333, 0)
 material_override = ExtResource("1_uq6ie")
 mesh = ExtResource("2_r15jj")
 skeleton = NodePath("../..")
 
 [node name="SuccessParticle" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767204, 0.344258, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767204, 0.697589, 0)
 emitting = false
 amount = 50
 lifetime = 1.5
@@ -71,7 +81,7 @@ process_material = SubResource("ParticleProcessMaterial_46srk")
 draw_pass_1 = SubResource("QuadMesh_vipuc")
 
 [node name="FailureParticle" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767204, 0.344258, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767204, 0.697589, 0)
 emitting = false
 amount = 30
 lifetime = 0.76
@@ -80,5 +90,23 @@ explosiveness = 0.73
 visibility_aabb = AABB(-2.15889, -1.00001, -1.73993, 4.08423, 3.83102, 3.96496)
 process_material = SubResource("ParticleProcessMaterial_ct8k8")
 draw_pass_1 = SubResource("QuadMesh_3jkfi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271285, 0.227879, 0.0434055)
+shape = SubResource("BoxShape3D_sy4sb")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499164, 0.227879, 0.0488312)
+shape = SubResource("BoxShape3D_sy4sb")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108514, 0.227879, 0.688082)
+shape = SubResource("BoxShape3D_2xs0q")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108514, 0.227879, -0.586956)
+shape = SubResource("BoxShape3D_2xs0q")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
