@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://76mli3xvacoh"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_7nboi"]
+[ext_resource type="PackedScene" uid="uid://0og6atwcowwi" path="res://Assets/low_poly_dungeon/Book_Brown.glb" id="2_ygiyf"]
+[ext_resource type="Material" uid="uid://bp2tewifpx1ny" path="res://Assets/low_poly_dungeon/low_poly_dungeon_atlas_mat.tres" id="3_wq3dq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pcdr6"]
+points = PackedVector3Array(0.18069, 0.386358, 0.0351381, -0.139612, 0.0136253, -0.0518, 0.170417, 0.0101415, -0.0527798, 0.172692, 0.0073944, 0.0523413, -0.143313, 0.381981, 0.0518, -0.139612, 0.377675, -0.0518, -0.143313, 0.00931916, 0.0518, 0.170417, 0.381159, -0.0527798, 0.172692, 0.383906, 0.0523413, 0.180333, 0.00535692, -0.036282, 0.180333, 0.385943, -0.036282, 0.18069, 0.00494231, 0.0351381)
+
+[node name="Prop" instance=ExtResource("1_7nboi")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_pcdr6")
+
+[node name="Book_Brown2" parent="." index="2" instance=ExtResource("2_ygiyf")]
+
+[node name="Book_Brown" parent="Book_Brown2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("3_wq3dq")
+
+[editable path="Book_Brown2"]

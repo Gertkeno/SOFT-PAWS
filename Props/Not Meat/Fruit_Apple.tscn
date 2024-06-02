@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwpf4m53vosej"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_n3pon"]
+[ext_resource type="PackedScene" uid="uid://dh1t3ymowcfqx" path="res://Assets/LowPolyFoodPack/Assets/apple.glb" id="2_vxim6"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_arkl8"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vuix2"]
+points = PackedVector3Array(0.046277, 0.0574253, -0.00568141, -0.0492332, 0.0613097, -0.00181255, -0.0492081, 0.0613107, 0.00208933, 0.00992649, 0.129129, -0.00397132, 0.00739699, 0.061322, 0.0486936, -0.00814032, 0.00490757, -0.0309814, 0.00156753, 0.0690286, -0.0481433, 0.0134916, 0.0038517, 0.0298354, -0.0296794, 0.00852647, 0.0274998, -0.0414393, 0.0671539, 0.039256, 0.0428409, 0.0652007, 0.039411, 0.0293241, 0.00784139, -0.0275645, -0.039474, 0.0632568, -0.0409188, 0.0408653, 0.0652001, -0.0410795, -0.000361111, 0.129129, 0.0042491, -0.0318463, 0.00423486, -0.00969289, 0.033407, 0.00764314, 0.0279414, -0.0316183, 0.088638, -0.0311122, -0.0389628, 0.0883344, 0.00206576, 0.0384503, 0.0884705, 0.00207623, 0.00956918, -0.000315899, -0.00184484, 0.00156351, 0.0690166, 0.0483206, -0.02968, 0.00852541, -0.0272226, 0.00158501, 0.0613154, -0.0485809, 0.0485467, 0.065193, 0.00599749, -0.00229497, 0.0574573, 0.0485517, -0.0122359, 0.00390161, 0.0298104, -0.000361111, 0.129129, -0.00602642, 0.0331598, 0.00409737, 0.00999151, 0.00786091, 0.129129, 0.0042491, 0.00347957, 0.0883058, -0.0364867, -0.0312468, 0.0825441, 0.0329456)
+
+[node name="Prop" instance=ExtResource("1_n3pon")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_vuix2")
+
+[node name="apple2" parent="." index="1" instance=ExtResource("2_vxim6")]
+
+[node name="apple" parent="apple2" index="0"]
+material_override = ExtResource("3_arkl8")
+
+[editable path="apple2"]
