@@ -26,7 +26,6 @@ script = ExtResource("2_pskfu")
 cash_value = 10
 on_will = false
 durability = 1000.0
-picked_up_layer = 65540
 ranged_grab_method = 2
 ranged_grab_speed = 10.0
 
