@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://8y04qvdx5yoy"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_5tjs7"]
+[ext_resource type="PackedScene" uid="uid://nwwcc24jj4r1" path="res://Assets/LowPolyFoodPack/Assets/picanhaSkewer.glb" id="2_1amo4"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ib34a"]
+points = PackedVector3Array(0.269404, 0.0573059, 0.0528584, 0.0180342, 0.0217553, -0.0625575, -0.585454, 0.0061661, 0.0236336, 0.137914, -0.00845346, 0.0528584, -0.585454, 0.0499962, -0.0201907, 0.263477, 0.0551957, -0.0598204, 0.583653, 0.0207785, -0.0055912, 0.0114382, -0.00293458, -0.0552115, -0.585454, 0.0499962, 0.0236336, -0.585454, 0.0061661, -0.0201907, 0.115942, 0.0134687, 0.0601711, 0.583653, 0.0353838, 0.00902121, 0.117764, 0.0593124, -0.0493052, 0.181744, -0.00845346, 0.00170857, 0.240652, 0.00996239, -0.0539157, 0.0303441, 0.0593497, 0.038175, 0.21825, 0.0573059, -0.0640408, 0.583653, 0.0207785, 0.00902121, 0.282614, 0.042261, -0.0623106, 0.30591, 0.0573059, 0.00902121, 0.583653, 0.0353838, -0.0055912, 0.22493, 0.00926192, 0.0508812, 0.0444036, 0.0215992, -0.0639628, -0.0191734, 0.0587851, 0.0373848, 0.30591, 0.0573059, 0.0236336, -0.0376789, -0.00265617, -0.0486138, 0.284053, 0.0573059, 0.0455458)
+
+[node name="Prop" instance=ExtResource("1_5tjs7")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_ib34a")
+
+[node name="picanhaSkewer2" parent="." index="1" instance=ExtResource("2_1amo4")]
+
+[editable path="picanhaSkewer2"]
