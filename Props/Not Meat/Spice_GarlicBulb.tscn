@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx1bcubqk4d6q"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_s31rr"]
+[ext_resource type="PackedScene" uid="uid://cif3f3tkbaeo7" path="res://Assets/LowPolyFoodPack/Assets/garlicBulb.glb" id="2_bilqo"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qd5tv"]
+points = PackedVector3Array(-0.0177983, 0.00503417, -0.0124383, 0.0253696, 0.0181432, 0.00143347, 0.0257826, 0.0172397, 0.00147273, -0.0196168, 0.0172436, 0.0212756, -0.00151303, 0.0461571, -0.00356673, 0.0207078, 0.0164464, -0.022351, 0.020054, 0.00728373, 0.0180379, -0.0218237, 0.0181251, -0.0213705, 0.0203903, 0.0181663, 0.0200272, 0.0192397, 0.00727327, -0.0208811, -0.00719226, 0.000888729, 0.00637198, -0.00228579, 0.0164312, -0.0273582, 0.00276849, 0.0461571, 0.000712943, -0.0262342, 0.0172409, 0.0014722, -0.0196361, 0.00732234, 0.0188243, -0.00228101, 0.0172675, 0.0252969, -0.0214941, 0.00716765, -0.0201836, 0.00673582, 0.000886476, -0.00836759, -0.00323092, 0.0461571, 0.000712943, 0.000178837, 0.0065011, -0.0249479, 0.00263861, 0.00661739, 0.0219574, 0.023149, 0.00661453, -0.00345657, -0.0235637, 0.00663998, 0.00145211, 0.0075373, 0.000935565, 0.00553672, -0.00798333, 0.000967192, -0.00834583, 0.020482, 0.0181447, -0.0221207, -0.0217112, 0.0181505, 0.0192645, 0.000976891, 0.0181682, -0.0268481, 0.0253838, 0.0181405, -0.00343482, 0.00173824, 0.0190807, 0.0241998, 0.0221673, 0.0181323, 0.0177256, -0.0258012, 0.0181438, -0.00343104)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7y4w"]
+albedo_color = Color(0.984586, 0.893468, 0.572007, 1)
+
+[node name="Prop" instance=ExtResource("1_s31rr")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_qd5tv")
+
+[node name="garlicBulb2" parent="." index="1" instance=ExtResource("2_bilqo")]
+
+[node name="garlicBulb" parent="garlicBulb2" index="0"]
+material_override = SubResource("StandardMaterial3D_w7y4w")
+
+[editable path="garlicBulb2"]

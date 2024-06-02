@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://duknstj5k4ntf"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_psq5d"]
+[ext_resource type="PackedScene" uid="uid://bdx53usekqd7c" path="res://Assets/LowPolyFoodPack/Assets/onionRed.glb" id="2_nxaoj"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_jec7g"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1oart"]
+points = PackedVector3Array(-0.0345732, 0.0432141, -0.000420606, 0.0262773, 0.0291414, 0.00282466, 0.0240859, 0.0313217, 0.0159247, -0.0339098, 0.000598271, -0.00043618, -0.00429632, 0.0356465, -0.0339561, -0.0107927, 0.058427, 0.0223335, 0.00333545, 0.00409611, 0.0235253, 0.0164843, 0.0127382, -0.0266766, 0.00647112, 0.0571611, -0.0111862, -0.0314386, 0.0356632, 0.0245413, -0.0250124, 0.0531302, -0.0266206, -0.00212617, 0.033489, 0.0353071, 0.0194028, 0.0539457, 0.00171636, 0.0174315, 0.0117709, 0.0277999, -0.0172955, 0.0194087, -0.0264391, 0.0224681, 0.0302688, -0.0207543, 0.005445, 0.00102561, -0.00150623, -0.0250113, 0.0520396, 0.0290127, -0.0335819, 0.0367424, -0.0210461, -0.009729, 0.0628867, -0.000427553, -0.01518, 0.0193418, 0.0289767, -0.00104379, 0.00533335, -0.0220973, 0.0218157, 0.00956928, -0.00151745, 0.00961603, 0.0441734, 0.0241977, -0.0271329, 0.057427, 0.00281774, -0.00975362, 0.0597588, -0.0201321, 0.00752896, 0.0452983, -0.0240668, -0.0359417, 0.0378618, 0.00501267, 0.0228007, 0.0280787, 0.0223151, 0.0226392, 0.0431762, -0.0101159, -0.00537665, 0.0324069, -0.0343621, -0.00537064, 0.0302519, 0.035275)
+
+[node name="Prop" instance=ExtResource("1_psq5d")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_1oart")
+
+[node name="onionRed2" parent="." index="1" instance=ExtResource("2_nxaoj")]
+
+[node name="onionRed" parent="onionRed2" index="0"]
+material_override = ExtResource("3_jec7g")
+
+[editable path="onionRed2"]

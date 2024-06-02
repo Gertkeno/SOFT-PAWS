@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3h48jbb75enk"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_0jhj3"]
+[ext_resource type="PackedScene" uid="uid://cw5ehqlrlb23p" path="res://Assets/LowPolyFoodPack/Assets/friedEgg01.glb" id="2_1dldu"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_me1ai"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4qltl"]
+points = PackedVector3Array(0.063962, 0.0002, 0.0378963, -0.00473518, 0.0002, -0.0758222, -0.00541057, 0.00426508, -0.086637, -0.0649608, 0.00426508, 0.0595502, 0.00614989, 0.0178926, 0.00614989, 0.0676746, 0.00426508, -0.0595502, -0.0649608, 0.00426508, -0.062264, 0.0649608, 0.00426508, 0.062264, -0.0568518, 0.0002, 0.0521166, 0.00541057, 0.00426508, 0.086637, -0.086637, 0.00426508, -0.00541057, 0.086637, 0.00426508, 0.00541057, -0.00614989, 0.0178926, -0.00614989, -0.0568518, 0.0002, -0.0544917, 0.0592268, 0.0002, -0.0521166, 0.00473518, 0.0002, 0.0758222, -0.00614989, 0.0178926, 0.00614989, 0.00614989, 0.0178926, -0.00614989, -0.0758222, 0.0002, 0.00473518, 0.00541057, 0.00426508, -0.086637, -0.00541057, 0.00426508, 0.086637, 0.0758222, 0.0002, -0.00473518, -0.086637, 0.00426508, 0.00541057, 0.086637, 0.00426508, -0.00541057, -0.0595502, 0.00426508, 0.0649608, 0.0568518, 0.0002, 0.0544917, 0.0541397, 0.00426508, -0.0676746, -0.00473518, 0.0002, 0.0758222, 0.00473518, 0.0002, -0.0758222, -0.0541397, 0.00426508, -0.0676746, 0.0730851, 0.00426508, 0.0433015, -0.0758222, 0.0002, -0.00473518)
+
+[node name="Prop" instance=ExtResource("1_0jhj3")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_4qltl")
+
+[node name="friedEgg012" parent="." index="1" instance=ExtResource("2_1dldu")]
+
+[node name="friedEgg01" parent="friedEgg012" index="0"]
+material_override = ExtResource("3_me1ai")
+
+[editable path="friedEgg012"]
