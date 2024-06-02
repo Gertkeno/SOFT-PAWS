@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bsyh2jr2a747y"]
+[gd_scene load_steps=22 format=3 uid="uid://bsyh2jr2a747y"]
 
 [ext_resource type="Script" path="res://Props/CatchableMouse.gd" id="1_0kofr"]
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_op51x"]
@@ -11,12 +11,6 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rdvys"]
 radius = 0.0363851
 height = 0.169256
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ql12h"]
-diffuse_mode = 3
-specular_mode = 1
-albedo_color = Color(1, 0.466667, 1, 1)
-roughness = 0.7
 
 [sub_resource type="Animation" id="Animation_744j2"]
 resource_name = "alert"
@@ -92,7 +86,7 @@ advance_mode = 2
 advance_condition = &"started_alert"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_pmpdp"]
-states/Start/position = Vector2(190, 100)
+states/Start/position = Vector2(191, 100)
 states/alert/node = SubResource("AnimationNodeAnimation_uelih")
 states/alert/position = Vector2(460, 54)
 states/idle/node = SubResource("AnimationNodeAnimation_wnfkr")
@@ -150,7 +144,6 @@ bones/28/rotation = Quaternion(0.997489, 7.59888e-08, 1.07021e-06, 0.0708259)
 bones/28/scale = Vector3(1, 1, 0.999998)
 bones/31/rotation = Quaternion(0.997489, 7.59895e-08, 1.07023e-06, -0.0708261)
 bones/32/rotation = Quaternion(-0.129298, -1.32865e-10, 1.35338e-11, 0.991606)
-bones/32/scale = Vector3(1, 1, 1)
 bones/33/rotation = Quaternion(0.0050919, -4.42434e-12, -1.23889e-12, 0.999987)
 bones/34/rotation = Quaternion(-0.00155958, -1.19209e-07, 1.86303e-10, 0.999999)
 bones/34/scale = Vector3(1, 1, 1)
@@ -228,7 +221,6 @@ bones/157/scale = Vector3(1, 1, 1)
 bones/158/scale = Vector3(1, 1, 1)
 bones/159/rotation = Quaternion(-0.627896, -0.205387, -0.0658457, 0.747815)
 bones/160/rotation = Quaternion(0.544423, 0.655434, 0.455442, 0.258037)
-bones/161/enabled = false
 bones/161/rotation = Quaternion(-0.0102666, -1.43034e-06, -2.69266e-08, 0.999947)
 bones/162/rotation = Quaternion(-0.627896, 0.205384, 0.0658432, 0.747816)
 bones/163/rotation = Quaternion(-0.544424, 0.655435, 0.45544, -0.258034)
@@ -252,7 +244,6 @@ bones/192/rotation = Quaternion(0.116497, -0.0511527, 0.455183, 0.881261)
 bones/194/rotation = Quaternion(0.0182389, -0.618829, 0.780917, 0.0829886)
 bones/194/scale = Vector3(1, 1, 1)
 bones/195/rotation = Quaternion(0.131147, 4.11473e-07, -1.20718e-07, 0.991363)
-bones/195/scale = Vector3(1, 1, 1)
 bones/196/rotation = Quaternion(0.189333, -0.00872899, 0.045014, 0.980842)
 bones/196/scale = Vector3(1, 1, 1)
 bones/198/rotation = Quaternion(0.0182389, -0.618829, 0.780917, 0.0829886)
@@ -274,7 +265,6 @@ bones/232/rotation = Quaternion(6.28643e-08, 4.13973e-07, -2.40747e-07, 1)
 bones/235/rotation = Quaternion(0.758923, -0.333458, -0.216272, 0.515819)
 bones/236/rotation = Quaternion(-0.0182395, -0.618829, 0.780917, -0.0829881)
 bones/237/rotation = Quaternion(0.131147, -1.2006e-06, 2.18889e-07, 0.991363)
-bones/237/scale = Vector3(1, 1, 1)
 bones/238/rotation = Quaternion(0.189333, 0.00872909, -0.045014, 0.980842)
 bones/240/rotation = Quaternion(-0.0182395, -0.618829, 0.780917, -0.0829881)
 bones/241/rotation = Quaternion(0.0505067, 0.007399, 0.000374237, 0.998696)
@@ -307,7 +297,6 @@ bones/276/rotation = Quaternion(-0.0600065, -0.0520732, 0.996834, -0.00313407)
 bones/278/rotation = Quaternion(-0.0102096, 0.935885, 0.342483, 0.0819824)
 bones/278/scale = Vector3(1, 1, 1)
 bones/279/rotation = Quaternion(0.998343, 1.11944e-08, -0.0575432, -6.02283e-08)
-bones/279/scale = Vector3(1, 1, 1)
 bones/281/rotation = Quaternion(0.970306, -1.04714e-09, -0.172304, 0.16976)
 bones/282/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
 bones/284/rotation = Quaternion(0.997484, 0.0450698, -0.0166621, -0.052124)
@@ -317,10 +306,6 @@ bones/288/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
 bones/290/rotation = Quaternion(0.997484, -0.0450698, 0.0166621, -0.052124)
 bones/290/scale = Vector3(1, 1, 1)
 bones/293/rotation = Quaternion(0.205935, 2.52354e-11, 0.00174612, 0.978564)
-
-[node name="Plane_001" parent="Prop/mouse2/rig/Skeleton3D" index="0"]
-material_override = SubResource("StandardMaterial3D_ql12h")
-lod_bias = 4.0
 
 [node name="AnimationPlayer" parent="Prop/mouse2" index="1"]
 autoplay = "run cycle"
