@@ -1,48 +1,48 @@
 [gd_scene load_steps=56 format=3 uid="uid://ckdh1cw6akt0c"]
 
-[ext_resource type="ArrayMesh" uid="uid://dx3sfafmiufpl" path="res://Assets/livingroom/curtains.obj" id="1_oc474"]
-[ext_resource type="Texture2D" uid="uid://dx216u3m8utr7" path="res://textures/dreamy-days-pink-parfait-stripe-floral--merw-l.jpg" id="2_x3x0r"]
-[ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="3_ikn6l"]
-[ext_resource type="ArrayMesh" uid="uid://c8jr3efn4huwn" path="res://Assets/Alex Assets/Created Assets/Test_Map_BlockOut_low.obj" id="4_oivgk"]
-[ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="5_gldmb"]
-[ext_resource type="ArrayMesh" uid="uid://dub8why5oe80e" path="res://Assets/livingroom/tall_flower.obj" id="6_tekwb"]
-[ext_resource type="ArrayMesh" uid="uid://be2qlonhsuiky" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Square_Small.obj" id="7_bbfpf"]
-[ext_resource type="ArrayMesh" uid="uid://2i0wl5rnutvj" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Square_Large.obj" id="8_og0qc"]
-[ext_resource type="ArrayMesh" uid="uid://cxo5w5intjol0" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Portrait.obj" id="9_fg1sm"]
-[ext_resource type="ArrayMesh" uid="uid://be2r7fkbv316n" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Landscape.obj" id="10_evui1"]
-[ext_resource type="ArrayMesh" uid="uid://cdipe2r0y5opw" path="res://Assets/modular_house_collection/Prop_Misc_Rug_Rectangle.obj" id="11_7k4w6"]
-[ext_resource type="Texture2D" uid="uid://st565pe4ujth" path="res://textures/WijOXI.jpg" id="12_wmhpu"]
-[ext_resource type="ArrayMesh" uid="uid://efwdbjv35ta2" path="res://Assets/modular_house_collection/Prop_Misc_Rug_Square.obj" id="13_dhnko"]
-[ext_resource type="ArrayMesh" uid="uid://bfxof63m7xhot" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Corner.obj" id="14_agcmu"]
-[ext_resource type="ArrayMesh" uid="uid://damu6esun4ntv" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Side_Shelves.obj" id="15_l4huh"]
-[ext_resource type="PackedScene" uid="uid://bikisik7py2ok" path="res://Assets/Scenes/furniture/furniture_shelf_1.tscn" id="16_wslk4"]
-[ext_resource type="PackedScene" uid="uid://ch84sdomsnivc" path="res://Assets/Scenes/furniture/furniture_shelf_2.tscn" id="17_l3gf0"]
-[ext_resource type="PackedScene" uid="uid://cmd50qaj25od0" path="res://Assets/Scenes/furniture/furniture_shelf_4.tscn" id="18_cmvlq"]
-[ext_resource type="ArrayMesh" uid="uid://b5451weujhbqc" path="res://Assets/slavic tavern/table_with_one_cloths.obj" id="19_nm6x3"]
-[ext_resource type="ArrayMesh" uid="uid://bmdew8ibwx4g0" path="res://Assets/slavic tavern/vertical_barrel.obj" id="20_ofug0"]
-[ext_resource type="ArrayMesh" uid="uid://xqra3sfeefew" path="res://Assets/slavic tavern/window.obj" id="21_rewf7"]
-[ext_resource type="PackedScene" uid="uid://wj73r5gr2v24" path="res://Assets/Scenes/furniture/furniture_desk_drawers_2.tscn" id="22_qjlub"]
-[ext_resource type="PackedScene" uid="uid://8sdxss4j6hrg" path="res://Assets/Scenes/furniture/furniture_rocking_chair_1.tscn" id="23_kxmgs"]
-[ext_resource type="PackedScene" uid="uid://dxf4jtx50x1ed" path="res://Assets/Scenes/furniture/furniture_step_ladder_2.tscn" id="24_v7hmx"]
-[ext_resource type="ArrayMesh" uid="uid://gcd50w74qbhq" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Short.obj" id="25_ps3jm"]
-[ext_resource type="ArrayMesh" uid="uid://c0h7n7vo5b3qh" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Open.obj" id="26_32of1"]
-[ext_resource type="ArrayMesh" uid="uid://ch22315k6ppuq" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Half.obj" id="27_hovtc"]
-[ext_resource type="PackedScene" uid="uid://ld8kvvx1ti5t" path="res://Assets/giant dungeon pack/candle.gltf" id="28_d4er6"]
-[ext_resource type="PackedScene" uid="uid://bgcghe8qh6dya" path="res://Assets/giant dungeon pack/candle_melted.gltf" id="29_a5te6"]
-[ext_resource type="PackedScene" uid="uid://cs78mkcjyh6gg" path="res://Assets/giant dungeon pack/candle_thin.gltf" id="30_6hfac"]
-[ext_resource type="PackedScene" uid="uid://c01tnypfpprxw" path="res://Assets/giant dungeon pack/shelf_small_candles.gltf" id="31_f3mer"]
-[ext_resource type="PackedScene" uid="uid://4qwy0eo371ri" path="res://Assets/giant dungeon pack/shelf_small.gltf" id="32_mcvqh"]
-[ext_resource type="ArrayMesh" uid="uid://d2tdlelgov6ga" path="res://christmas/chair_1.obj" id="33_v0qot"]
-[ext_resource type="Texture2D" uid="uid://csrdito181h04" path="res://textures/Granny Chic - Granny Squares MD.jpg" id="34_6lajj"]
-[ext_resource type="Texture2D" uid="uid://co30i8m7gw83h" path="res://textures/gGkYcM.jpg" id="35_inxrd"]
-[ext_resource type="Texture2D" uid="uid://fuwmu281lq3k" path="res://textures/textures/book_pattern_disp_1k.png" id="36_tjnxb"]
-[ext_resource type="ArrayMesh" uid="uid://cqej5qv2i200x" path="res://Assets/livingroom/picture_frames.obj" id="37_0tg5j"]
-[ext_resource type="PackedScene" uid="uid://ewgra0i6quii" path="res://Assets/low_poly_dungeon/Desk.glb" id="38_dcbhd"]
-[ext_resource type="ArrayMesh" uid="uid://dkc5tshqcn465" path="res://Assets/low_poly_dungeon/Bookcase (1).obj" id="39_c4cxt"]
+[ext_resource type="ArrayMesh" uid="uid://dx3sfafmiufpl" path="res://Assets/livingroom/curtains.obj" id="1_nxd0a"]
+[ext_resource type="Texture2D" uid="uid://dx216u3m8utr7" path="res://textures/dreamy-days-pink-parfait-stripe-floral--merw-l.jpg" id="2_u0ckv"]
+[ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="3_nj3xn"]
+[ext_resource type="ArrayMesh" uid="uid://c8jr3efn4huwn" path="res://Assets/Alex Assets/Created Assets/Test_Map_BlockOut_low.obj" id="4_43q6m"]
+[ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="5_540e1"]
+[ext_resource type="ArrayMesh" uid="uid://dub8why5oe80e" path="res://Assets/livingroom/tall_flower.obj" id="6_amx2s"]
+[ext_resource type="ArrayMesh" uid="uid://be2qlonhsuiky" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Square_Small.obj" id="7_01gxs"]
+[ext_resource type="ArrayMesh" uid="uid://2i0wl5rnutvj" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Square_Large.obj" id="8_eolxx"]
+[ext_resource type="ArrayMesh" uid="uid://cxo5w5intjol0" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Portrait.obj" id="9_4gnbq"]
+[ext_resource type="ArrayMesh" uid="uid://be2r7fkbv316n" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Landscape.obj" id="10_j8f3f"]
+[ext_resource type="ArrayMesh" uid="uid://cdipe2r0y5opw" path="res://Assets/modular_house_collection/Prop_Misc_Rug_Rectangle.obj" id="11_nf6my"]
+[ext_resource type="Texture2D" uid="uid://st565pe4ujth" path="res://textures/WijOXI.jpg" id="12_vl0t7"]
+[ext_resource type="ArrayMesh" uid="uid://efwdbjv35ta2" path="res://Assets/modular_house_collection/Prop_Misc_Rug_Square.obj" id="13_fmm7h"]
+[ext_resource type="ArrayMesh" uid="uid://bfxof63m7xhot" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Corner.obj" id="14_xinjx"]
+[ext_resource type="ArrayMesh" uid="uid://damu6esun4ntv" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Side_Shelves.obj" id="15_1ju77"]
+[ext_resource type="PackedScene" uid="uid://bikisik7py2ok" path="res://Assets/Scenes/furniture/furniture_shelf_1.tscn" id="16_ogw5n"]
+[ext_resource type="PackedScene" uid="uid://ch84sdomsnivc" path="res://Assets/Scenes/furniture/furniture_shelf_2.tscn" id="17_qvcuv"]
+[ext_resource type="PackedScene" uid="uid://cmd50qaj25od0" path="res://Assets/Scenes/furniture/furniture_shelf_4.tscn" id="18_nekeq"]
+[ext_resource type="ArrayMesh" uid="uid://bmdew8ibwx4g0" path="res://Assets/slavic tavern/vertical_barrel.obj" id="19_ei4pg"]
+[ext_resource type="ArrayMesh" uid="uid://xqra3sfeefew" path="res://Assets/slavic tavern/window.obj" id="20_7tlk1"]
+[ext_resource type="PackedScene" uid="uid://wj73r5gr2v24" path="res://Assets/Scenes/furniture/furniture_desk_drawers_2.tscn" id="21_4jnnq"]
+[ext_resource type="PackedScene" uid="uid://8sdxss4j6hrg" path="res://Assets/Scenes/furniture/furniture_rocking_chair_1.tscn" id="22_t5f2y"]
+[ext_resource type="PackedScene" uid="uid://dxf4jtx50x1ed" path="res://Assets/Scenes/furniture/furniture_step_ladder_2.tscn" id="23_6lm3u"]
+[ext_resource type="ArrayMesh" uid="uid://gcd50w74qbhq" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Short.obj" id="24_uxi8e"]
+[ext_resource type="ArrayMesh" uid="uid://c0h7n7vo5b3qh" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Open.obj" id="25_k03nv"]
+[ext_resource type="ArrayMesh" uid="uid://ch22315k6ppuq" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Half.obj" id="26_ieycl"]
+[ext_resource type="PackedScene" uid="uid://ld8kvvx1ti5t" path="res://Assets/giant dungeon pack/candle.gltf" id="27_fswmm"]
+[ext_resource type="PackedScene" uid="uid://bgcghe8qh6dya" path="res://Assets/giant dungeon pack/candle_melted.gltf" id="28_o33rl"]
+[ext_resource type="PackedScene" uid="uid://cs78mkcjyh6gg" path="res://Assets/giant dungeon pack/candle_thin.gltf" id="29_p2d0x"]
+[ext_resource type="PackedScene" uid="uid://c01tnypfpprxw" path="res://Assets/giant dungeon pack/shelf_small_candles.gltf" id="30_kw07c"]
+[ext_resource type="PackedScene" uid="uid://4qwy0eo371ri" path="res://Assets/giant dungeon pack/shelf_small.gltf" id="31_xsc3g"]
+[ext_resource type="ArrayMesh" uid="uid://b5451weujhbqc" path="res://Assets/slavic tavern/table_with_one_cloths.obj" id="32_fanjb"]
+[ext_resource type="ArrayMesh" uid="uid://d2tdlelgov6ga" path="res://christmas/chair_1.obj" id="33_y06io"]
+[ext_resource type="Texture2D" uid="uid://csrdito181h04" path="res://textures/Granny Chic - Granny Squares MD.jpg" id="34_2levw"]
+[ext_resource type="Texture2D" uid="uid://co30i8m7gw83h" path="res://textures/gGkYcM.jpg" id="35_v53i5"]
+[ext_resource type="Texture2D" uid="uid://fuwmu281lq3k" path="res://textures/textures/book_pattern_disp_1k.png" id="36_pn47p"]
+[ext_resource type="ArrayMesh" uid="uid://cqej5qv2i200x" path="res://Assets/livingroom/picture_frames.obj" id="37_wc3lb"]
+[ext_resource type="PackedScene" uid="uid://ewgra0i6quii" path="res://Assets/low_poly_dungeon/Desk.glb" id="38_505ks"]
+[ext_resource type="ArrayMesh" uid="uid://dkc5tshqcn465" path="res://Assets/low_poly_dungeon/Bookcase (1).obj" id="39_ks4dc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nj1ex"]
 albedo_color = Color(0.338726, 0.37625, 0.407796, 0.372549)
-albedo_texture = ExtResource("2_x3x0r")
+albedo_texture = ExtResource("2_u0ckv")
 uv1_scale = Vector3(0.455, 0.455, 0.455)
 uv1_triplanar = true
 
@@ -66,7 +66,7 @@ albedo_color = Color(0.0629387, 0.123243, 0.159797, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxrrx"]
 albedo_color = Color(0.255808, 0.365547, 0.454068, 1)
-albedo_texture = ExtResource("12_wmhpu")
+albedo_texture = ExtResource("12_vl0t7")
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5pap"]
@@ -86,11 +86,11 @@ albedo_color = Color(0.790699, 0.649565, 0.95163, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04f3i"]
 albedo_color = Color(0.62602, 0.598776, 0.843068, 1)
-albedo_texture = ExtResource("34_6lajj")
+albedo_texture = ExtResource("34_2levw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4jwu2"]
 albedo_color = Color(0.663457, 0.36563, 0.440016, 1)
-albedo_texture = ExtResource("35_inxrd")
+albedo_texture = ExtResource("35_v53i5")
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjy6a"]
@@ -98,7 +98,7 @@ albedo_color = Color(0.177028, 1.2514e-06, 0.117625, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dal4r"]
 albedo_color = Color(0.812755, 0.410197, 0.797786, 1)
-albedo_texture = ExtResource("36_tjnxb")
+albedo_texture = ExtResource("36_pn47p")
 uv1_triplanar = true
 
 [node name="Node3D" type="Node3D"]
@@ -106,7 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77951, 0.195961, 2.65423)
 
 [node name="Curtains" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.36351, 0, 4.37982)
-mesh = ExtResource("1_oc474")
+mesh = ExtResource("1_nxd0a")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73332, 0.921378, 1.96881)
@@ -145,7 +145,7 @@ size = Vector3(1.07404, 3.5708, 0.333252)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190006, -0.840382, -1.98353)
-material_override = ExtResource("3_ikn6l")
+material_override = ExtResource("3_nj3xn")
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_8kgug")
 skeleton = NodePath("../TestMapBlockOutLow")
@@ -156,55 +156,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148407, 0, 1.35033)
 visible = false
 material_override = SubResource("StandardMaterial3D_vqd73")
 transparency = 1.0
-mesh = ExtResource("4_oivgk")
+mesh = ExtResource("4_43q6m")
 metadata/_edit_lock_ = true
 
-[node name="XRPlayer" parent="." instance=ExtResource("5_gldmb")]
+[node name="XRPlayer" parent="." instance=ExtResource("5_540e1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7965, -0.864038, 9.68073)
 
 [node name="TallFlower" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.126715, -0.887609, 2.25443)
-mesh = ExtResource("6_tekwb")
+mesh = ExtResource("6_amx2s")
 
 [node name="PropMiscPictureSquareSmall" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.989343, -0.139692, -0.0410779, -0.140006, 0.990139, 0.00487513, 0.0399918, 0.0105743, -0.999144, -0.771741, 0.653659, 6.36174)
-mesh = ExtResource("7_bbfpf")
+mesh = ExtResource("7_01gxs")
 
 [node name="PropMiscPictureSquareSmall3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.989343, -0.139692, -0.0410779, -0.140006, 0.990139, 0.00487513, 0.0399918, 0.0105743, -0.999144, -2.97635, 1.70971, 6.2962)
-mesh = ExtResource("7_bbfpf")
+mesh = ExtResource("7_01gxs")
 
 [node name="PropMiscPictureSquareLarge" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.992243, 0.124312, 8.67447e-08, 0.124312, 0.992243, -1.08677e-08, -8.74228e-08, 0, -1, -2.03498, -0.650659, 6.36934)
-mesh = ExtResource("8_og0qc")
+mesh = ExtResource("8_eolxx")
 
 [node name="PropMiscPictureSquareLarge3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.571406, 1.50311, 6.36934)
-mesh = ExtResource("8_og0qc")
+mesh = ExtResource("8_eolxx")
 
 [node name="PropMiscPicturePortrait" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -3.0838, -0.490836, 6.32909)
-mesh = ExtResource("9_fg1sm")
+mesh = ExtResource("9_4gnbq")
 
 [node name="PropMiscPictureLandscape" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.996604, -0.0823386, 8.91034e-08, -0.0823386, 0.996604, 7.36164e-09, -8.9407e-08, 0, -1, -2.86367, 0.735909, 6.32572)
-mesh = ExtResource("10_evui1")
+mesh = ExtResource("10_j8f3f")
 
 [node name="PropMiscPictureLandscape2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.4, 0, 2.11394e-07, 0, 1.4, 0, -2.11394e-07, 0, -1.4, -1.85303, 1.44892, 6.2041)
-mesh = ExtResource("10_evui1")
+mesh = ExtResource("10_j8f3f")
 
 [node name="PropMiscPictureSquareLarge2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -1.72305, 0.527127, 6.34728)
-mesh = ExtResource("8_og0qc")
+mesh = ExtResource("8_eolxx")
 
 [node name="PropMiscPictureSquareSmall2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, -3.84198, 0, 6.33606)
-mesh = ExtResource("7_bbfpf")
+mesh = ExtResource("7_01gxs")
 
 [node name="PropMiscRugRectangle" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.5, 0, 0, 0, 1, 0, 0, 0, 2.5, -3.54848, -0.845561, 4.70174)
-mesh = ExtResource("11_7k4w6")
+mesh = ExtResource("11_nf6my")
 surface_material_override/0 = SubResource("StandardMaterial3D_kds1c")
 surface_material_override/1 = SubResource("StandardMaterial3D_70y44")
 surface_material_override/2 = SubResource("StandardMaterial3D_oxrrx")
@@ -214,90 +214,86 @@ surface_material_override/5 = SubResource("StandardMaterial3D_oebxs")
 
 [node name="PropMiscRugSquare" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69932, 0, 3.27155)
-mesh = ExtResource("13_dhnko")
+mesh = ExtResource("13_fmm7h")
 
 [node name="StructureKitchenCabinetWallCorner" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0459907, 0, 0.998942, 0, 1, 0, -0.998942, 0, 0.0459907, -5.94428, 3.15524, 5.17009)
-mesh = ExtResource("14_agcmu")
+mesh = ExtResource("14_xinjx")
 
 [node name="StructureKitchenCabinetSideShelves" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.989116, 0, 0.147136, 0, 1, 0, -0.147136, 0, 0.989116, -0.0978642, 0, 2.60542)
-mesh = ExtResource("15_l4huh")
+mesh = ExtResource("15_1ju77")
 
-[node name="Furniture_Shelf_1" parent="." instance=ExtResource("16_wslk4")]
+[node name="Furniture_Shelf_1" parent="." instance=ExtResource("16_ogw5n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28401, 0, 0.653863)
 
-[node name="Furniture_Shelf_2" parent="." instance=ExtResource("17_l3gf0")]
+[node name="Furniture_Shelf_2" parent="." instance=ExtResource("17_qvcuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6, -5.09626, 0.34965, 2.34731)
 surface_material_override/0 = SubResource("StandardMaterial3D_xa3sh")
 
-[node name="Furniture_Shelf_4" parent="." instance=ExtResource("18_cmvlq")]
+[node name="Furniture_Shelf_4" parent="." instance=ExtResource("18_nekeq")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 2.53935, 0.0934199, 2.39654)
-
-[node name="TableWithOneCloths" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85538, -1.83027, 5.09405)
-mesh = ExtResource("19_nm6x3")
 
 [node name="VerticalBarrel" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45148, 0, 2.97459)
-mesh = ExtResource("20_ofug0")
+mesh = ExtResource("19_ei4pg")
 
 [node name="Window" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11003, 0, 4.49466)
-mesh = ExtResource("21_rewf7")
+mesh = ExtResource("20_7tlk1")
 
-[node name="Furniture_DeskDrawers_3" parent="." instance=ExtResource("22_qjlub")]
+[node name="Furniture_DeskDrawers_3" parent="." instance=ExtResource("21_4jnnq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35819, 0.892473, 12.9257)
 
-[node name="Furniture_RockingChair_1" parent="." instance=ExtResource("23_kxmgs")]
+[node name="Furniture_RockingChair_1" parent="." instance=ExtResource("22_t5f2y")]
 transform = Transform3D(0.870909, 0, 0.67195, 0, 1.1, 0, -0.67195, 0, 0.870909, -5.27245, -0.391836, 2.96474)
 
-[node name="Furniture_StepLadder_2" parent="." instance=ExtResource("24_v7hmx")]
+[node name="Furniture_StepLadder_2" parent="." instance=ExtResource("23_6lm3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.864234, 0.162565, 2.8624)
 
 [node name="StructureKitchenCabinetWallShort" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.92116, -2.75425, 7.6928)
-mesh = ExtResource("25_ps3jm")
+mesh = ExtResource("24_uxi8e")
 
 [node name="StructureKitchenCabinetWallOpen" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49672, 1.50383, 14.2116)
-mesh = ExtResource("26_32of1")
+mesh = ExtResource("25_k03nv")
 
 [node name="StructureKitchenCabinetWallHalf" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.38528, -1.52575, 7.64657)
-mesh = ExtResource("27_hovtc")
+mesh = ExtResource("26_ieycl")
 
 [node name="StructureKitchenCabinetWallCorner2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70606, -2.17027, 7.20641)
-mesh = ExtResource("14_agcmu")
+mesh = ExtResource("14_xinjx")
 
 [node name="StructureKitchenCabinetSideShelves2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02083, -2.89021, 8.33518)
-mesh = ExtResource("15_l4huh")
+mesh = ExtResource("15_1ju77")
 
-[node name="candle2" parent="." instance=ExtResource("28_d4er6")]
+[node name="candle2" parent="." instance=ExtResource("27_fswmm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.69289, -0.249711, 13.437)
 
-[node name="candle_melted2" parent="." instance=ExtResource("29_a5te6")]
+[node name="candle_melted2" parent="." instance=ExtResource("28_o33rl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25226, -0.249711, 13.1481)
 
-[node name="candle_thin2" parent="." instance=ExtResource("30_6hfac")]
+[node name="candle_thin2" parent="." instance=ExtResource("29_p2d0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.29328, -0.249711, 13.5528)
 
-[node name="shelf_small_candles2" parent="." instance=ExtResource("31_f3mer")]
+[node name="shelf_small_candles2" parent="." instance=ExtResource("30_kw07c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32654, -0.249711, 12.5297)
 
-[node name="shelf_small2" parent="." instance=ExtResource("32_mcvqh")]
+[node name="shelf_small2" parent="." instance=ExtResource("31_xsc3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.70594, -0.249711, 10.6566)
 
 [node name="TableWithOneCloths2" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1.5, -2.19989, -0.93747, 4.61327)
-mesh = ExtResource("19_nm6x3")
+mesh = ExtResource("32_fanjb")
 surface_material_override/1 = SubResource("ORMMaterial3D_fsmsh")
 
 [node name="Chair1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.554689, 0, 0.708745, 0, 0.9, 0, -0.708745, 0, 0.554689, -5.46304, -0.981704, 5.34868)
-mesh = ExtResource("33_v0qot")
+mesh = ExtResource("33_y06io")
 surface_material_override/0 = SubResource("StandardMaterial3D_04f3i")
 surface_material_override/2 = SubResource("StandardMaterial3D_4jwu2")
 surface_material_override/3 = SubResource("StandardMaterial3D_jjy6a")
@@ -305,15 +301,15 @@ surface_material_override/5 = SubResource("StandardMaterial3D_dal4r")
 
 [node name="PictureFrames" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.21161, -0.195961, 6.79415)
-mesh = ExtResource("37_0tg5j")
+mesh = ExtResource("37_wc3lb")
 
 [node name="PictureFrames2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.660975, -1.29425, 6.79439)
-mesh = ExtResource("37_0tg5j")
+mesh = ExtResource("37_wc3lb")
 
-[node name="Desk2" parent="." instance=ExtResource("38_dcbhd")]
+[node name="Desk2" parent="." instance=ExtResource("38_505ks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0536776, -0.195961, 3.27373)
 
 [node name="Bookcase(1)" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23563, -0.756028, 2.37831)
-mesh = ExtResource("39_c4cxt")
+mesh = ExtResource("39_ks4dc")
