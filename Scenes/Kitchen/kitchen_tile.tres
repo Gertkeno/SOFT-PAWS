@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://blm2pldosjg8u" path="res://textures/kitchen_tiles/Tile_Roughness.jpg" id="3_6r0ka"]
 
 [resource]
-albedo_color = Color(0.0331844, 0.210864, 0.148218, 1)
+albedo_color = Color(0.391022, 0.414899, 0.482392, 1)
 albedo_texture = ExtResource("1_ed1av")
 roughness_texture = ExtResource("3_6r0ka")
 normal_enabled = true
 normal_texture = ExtResource("2_sfojv")
-uv1_scale = Vector3(0.35, 0.35, 0.35)
+uv1_scale = Vector3(0.225, 0.225, 0.225)
 uv1_triplanar = true

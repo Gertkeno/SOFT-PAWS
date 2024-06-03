@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://bn4jw88xp6i6e"]
+[gd_scene load_steps=122 format=3 uid="uid://bn4jw88xp6i6e"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_oiek0"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="2_ur0m3"]
@@ -66,6 +66,8 @@
 [ext_resource type="ArrayMesh" uid="uid://bfxof63m7xhot" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Corner.obj" id="64_7i223"]
 [ext_resource type="ArrayMesh" uid="uid://c0h7n7vo5b3qh" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Open.obj" id="65_v56cr"]
 [ext_resource type="ArrayMesh" uid="uid://b18icrt0peovx" path="res://Assets/modular_house_collection/Structure_Kitchen_Bar_Corner_Inner.obj" id="66_nka6e"]
+[ext_resource type="PackedScene" uid="uid://cgfq6us5yxe2n" path="res://Furnitures/gltf/Furnitures.gltf" id="67_u1qk4"]
+[ext_resource type="ArrayMesh" uid="uid://djch0qoeeutbc" path="res://Assets/slavic tavern/cup_of_beer.obj" id="68_h7tyb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xxxft"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -317,7 +319,7 @@ shadow_enabled = true
 environment = SubResource("Environment_5scoe")
 
 [node name="XRPlayer" parent="." instance=ExtResource("1_oiek0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4185, 0.0561342, -6.57012)
+transform = Transform3D(0.998157, 0, -0.0606827, 0, 1, 0, 0.0606827, 0, 0.998157, -16.4185, 0.0561342, -2.23064)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 3, 2, -3.5)
@@ -682,7 +684,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_cbpkw")
 material_override = SubResource("StandardMaterial3D_2mgi5")
 
 [node name="Flower2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.738, 0, -17.3548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8176, 1.71502, -20.9722)
 mesh = ExtResource("33_a7gnr")
 
 [node name="WallCabinet3" type="MeshInstance3D" parent="."]
@@ -693,7 +695,7 @@ mesh = ExtResource("47_36fnx")
 transform = Transform3D(0.188892, 0, -0.192924, 0, 0.27, 0, 0.192924, 0, 0.188892, -16.7666, 0.0966196, -19.451)
 
 [node name="piano_Cube_029" parent="Piano" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75941, 0, -4.65994)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -4.75941, 0, -4.65994)
 surface_material_override/0 = SubResource("StandardMaterial3D_gj8lt")
 surface_material_override/1 = SubResource("StandardMaterial3D_uwri1")
 surface_material_override/2 = SubResource("StandardMaterial3D_ihado")
@@ -704,15 +706,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4409, 0, -15.5897)
 mesh = ExtResource("59_f4bch")
 
 [node name="StructureWallDoor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9319, -4.76837e-07, -14.0948)
+transform = Transform3D(-7.86805e-08, 0, 1.8, 0, 1.8, 0, -1.8, 0, -7.86805e-08, -19.1461, -4.76837e-07, -15.7468)
 mesh = ExtResource("60_8il4i")
 
 [node name="StructureWallDoorway" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1438, 0, -14.8024)
+transform = Transform3D(-7.86805e-08, 0, 1.8, 0, 1.8, 0, -1.8, 0, -7.86805e-08, -19.1916, 0.0147552, -15.7347)
 mesh = ExtResource("61_51km8")
 
 [node name="StructureKitchenCabinetWallHalf" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.21025, 0, 0.977648, 0, 1, 0, -0.977648, 0, 0.21025, -18.5546, 0, -11.4031)
+transform = Transform3D(0.997847, 0, -0.0655947, 0, 1, 0, 0.0655947, 0, 0.997847, -14.5076, 0, -23.0662)
 mesh = ExtResource("62_p1r8w")
 
 [node name="StructureKitchenCabinetSideShelves" type="MeshInstance3D" parent="."]
@@ -724,11 +726,15 @@ transform = Transform3D(0.0459907, 0, 0.998942, 0, 1, 0, -0.998942, 0, 0.0459907
 mesh = ExtResource("64_7i223")
 
 [node name="StructureKitchenCabinetWallOpen" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0283, 0, -5.63281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5872, 0.70151, -22.8554)
 mesh = ExtResource("65_v56cr")
 
 [node name="StructureKitchenBarCornerInner" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.941, 0, -3.7527)
+transform = Transform3D(-1.5, 0, -3.57648e-08, 0, 1.5, 0, 3.57648e-08, 0, -1.5, -13.1664, 0, -21.2454)
+mesh = ExtResource("66_nka6e")
+
+[node name="StructureKitchenBarCornerInner2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 0, -1.5, 0, 1.5, 0, 1.5, 0, 0, -11.6877, 0.000261666, -21.241)
 mesh = ExtResource("66_nka6e")
 
 [node name="Node3D4" parent="." instance=ExtResource("14_lomuu")]
@@ -742,6 +748,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7085, 5.44839, -20.4927)
 
 [node name="Node3D7" parent="." instance=ExtResource("14_lomuu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7007, 1.05897, -22.0228)
+
+[node name="Furnitures" parent="." instance=ExtResource("67_u1qk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13909, 0, -23.6954)
+
+[node name="CupOfBeer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1694, 1.69653, -21.016)
+mesh = ExtResource("68_h7tyb")
 
 [editable path="candle_lit5"]
 [editable path="shelf_large2"]
