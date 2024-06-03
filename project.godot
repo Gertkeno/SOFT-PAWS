@@ -34,6 +34,12 @@ window/vsync/vsync_mode=0
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/so_fluffy/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red"
+}
+
 [filesystem]
 
 import/fbx/enabled=false
