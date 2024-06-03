@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6vbocv5wc8dj"]
+[gd_scene load_steps=16 format=3 uid="uid://c6vbocv5wc8dj"]
 
 [ext_resource type="Material" uid="uid://dxs0pc3a3dh15" path="res://Assets/cardboard_box/cardboard_box_mat.tres" id="1_uq6ie"]
 [ext_resource type="Script" path="res://Scenes/WillCardboardBox.gd" id="1_vljvi"]
@@ -51,6 +51,12 @@ size = Vector3(0.05, 1, 1.31348)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2xs0q"]
 size = Vector3(0.71875, 1, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sa71j"]
+size = Vector3(0.0546875, 0.480896, 1.21545)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d6c3e"]
+size = Vector3(0.703003, 0.411621, 0.0693359)
 
 [node name="Area3D" type="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
@@ -109,6 +115,25 @@ shape = SubResource("BoxShape3D_2xs0q")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108514, 0.227879, -0.586956)
 shape = SubResource("BoxShape3D_2xs0q")
+
+[node name="Backboard" type="StaticBody3D" parent="."]
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Backboard"]
+transform = Transform3D(0.832477, 0.55406, 0, -0.55406, 0.832477, 0, 0, 0, 1, 0.619978, 0.922003, 0.0515747)
+shape = SubResource("BoxShape3D_sa71j")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Backboard"]
+transform = Transform3D(0.861159, -0.508335, 0, 0.508335, 0.861159, 0, 0, 0, 1, -0.385716, 0.92405, 0.0573285)
+shape = SubResource("BoxShape3D_sa71j")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Backboard"]
+transform = Transform3D(1, 0, 0, 0, 0.731044, -0.68233, 0, 0.68233, 0.731044, 0.121759, 0.862607, 0.823475)
+shape = SubResource("BoxShape3D_d6c3e")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Backboard"]
+transform = Transform3D(1, 0, 0, 0, 0.795018, 0.606585, 0, -0.606585, 0.795018, 0.121759, 0.847953, -0.6961)
+shape = SubResource("BoxShape3D_d6c3e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

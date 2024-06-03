@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bsyh2jr2a747y"]
+[gd_scene load_steps=25 format=3 uid="uid://bsyh2jr2a747y"]
 
 [ext_resource type="Script" path="res://Props/CatchableMouse.gd" id="1_0kofr"]
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_op51x"]
@@ -7,6 +7,7 @@
 [ext_resource type="Animation" uid="uid://ckrteq5vas5a7" path="res://Assets/Mouse Character and Animations/run.res" id="5_wm0kj"]
 [ext_resource type="Animation" uid="uid://cbj5dgv823f7v" path="res://Assets/Mouse Character and Animations/reset.res" id="6_p00y5"]
 [ext_resource type="Animation" uid="uid://5ro6fwyjm8j3" path="res://Assets/Mouse Character and Animations/pickedup.res" id="7_ssvdq"]
+[ext_resource type="Animation" uid="uid://0e68xjk5krwx" path="res://Assets/Mouse Character and Animations/alert.res" id="8_vgpy6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rdvys"]
 radius = 0.0363851
@@ -39,18 +40,38 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 20), Vector2(0, 18)]
 }
+tracks/2/type = "animation"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": PackedStringArray("Aleted"),
+"times": PackedFloat32Array(0.1)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_niws2"]
 _data = {
 "RESET": ExtResource("6_p00y5"),
 "alert": SubResource("Animation_744j2"),
+"alert_mouse": ExtResource("8_vgpy6"),
 "idle": ExtResource("4_10yqw"),
 "pickedup": ExtResource("7_ssvdq"),
 "run": ExtResource("5_wm0kj")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uelih"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_beia0"]
 animation = &"alert"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ag85i"]
+animation = &"alert_mouse"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_7p0sb"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_beia0")
+blend_point_0/pos = -0.2
+blend_point_1/node = SubResource("AnimationNodeAnimation_ag85i")
+blend_point_1/pos = 0.2
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wnfkr"]
 animation = &"idle"
@@ -62,15 +83,6 @@ animation = &"pickedup"
 animation = &"run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fs1kf"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5tenx"]
-advance_mode = 2
-advance_condition = &"alerted"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dbe1n"]
-xfade_time = 1.0
-switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6n7tr"]
@@ -85,27 +97,40 @@ advance_condition = &"picked_up"
 advance_mode = 2
 advance_condition = &"started_alert"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5l6a8"]
+advance_mode = 2
+advance_condition = &"alerted"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_57rww"]
+xfade_time = 0.9
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_pmpdp"]
+states/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_7p0sb")
+states/BlendSpace1D/position = Vector2(466, 2)
 states/Start/position = Vector2(191, 100)
-states/alert/node = SubResource("AnimationNodeAnimation_uelih")
-states/alert/position = Vector2(460, 54)
 states/idle/node = SubResource("AnimationNodeAnimation_wnfkr")
-states/idle/position = Vector2(318, 100)
+states/idle/position = Vector2(320, 100)
 states/pickedup/node = SubResource("AnimationNodeAnimation_60krg")
-states/pickedup/position = Vector2(762, 97)
+states/pickedup/position = Vector2(772, 100)
 states/run/node = SubResource("AnimationNodeAnimation_eapfb")
 states/run/position = Vector2(630, 100)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_fs1kf"), "idle", "alert", SubResource("AnimationNodeStateMachineTransition_5tenx"), "alert", "run", SubResource("AnimationNodeStateMachineTransition_dbe1n"), "pickedup", "End", SubResource("AnimationNodeStateMachineTransition_6n7tr"), "run", "pickedup", SubResource("AnimationNodeStateMachineTransition_ctbrs"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_aawbi")]
-graph_offset = Vector2(-66, -53)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_fs1kf"), "pickedup", "End", SubResource("AnimationNodeStateMachineTransition_6n7tr"), "run", "pickedup", SubResource("AnimationNodeStateMachineTransition_ctbrs"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_aawbi"), "idle", "BlendSpace1D", SubResource("AnimationNodeStateMachineTransition_5l6a8"), "BlendSpace1D", "run", SubResource("AnimationNodeStateMachineTransition_57rww")]
+graph_offset = Vector2(-27, -65)
 
 [node name="CatchableMouse" type="PathFollow3D"]
 use_model_front = true
 script = ExtResource("1_0kofr")
 
 [node name="Prop" parent="." instance=ExtResource("1_op51x")]
-center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0.0418263, 0.0140955)
+collision_mask = 4
+gravity_scale = 0.0
+sleeping = false
+can_sleep = false
 freeze = true
+durability = 1000.0
+ranged_grab_method = 0
 
 [node name="CollisionShape3D" parent="Prop" index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0471021, 0.00635852)
@@ -116,10 +141,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0418263, 0.0140955)
 visible = false
 
 [node name="GrabPointHandLeft" parent="Prop" index="2"]
-transform = Transform3D(0.965926, 0.258815, -0.00143649, 0, -0.00555016, -0.999985, -0.258819, 0.965911, -0.00536104, -0.00373961, 0.108736, 0.0552307)
+transform = Transform3D(0.999307, 0.037236, -0.000206682, -0.0372366, 0.999291, -0.00554627, -8.54702e-09, 0.00555011, 0.999985, -0.0193492, 0.108736, -0.094521)
 
 [node name="GrabPointHandRight" parent="Prop" index="3"]
-transform = Transform3D(0.965926, -0.258812, 0.00185659, 0, -0.0071733, -0.999974, 0.258819, 0.965901, -0.00692888, 0.00355334, 0.109338, 0.0471475)
+transform = Transform3D(1, 3.72529e-07, 1.97906e-09, -2.98023e-08, 0.999974, -0.00717326, 3.45378e-10, 0.00717326, 0.999974, 0.014856, 0.109338, -0.092574)
 
 [node name="mouse2" parent="Prop" instance=ExtResource("3_u2olp")]
 transform = Transform3D(0.0677243, 0, 0, 0, 0.0677243, 0, 0, 0, 0.0677243, 0, 0, 0)
@@ -214,14 +239,11 @@ bones/152/rotation = Quaternion(0.999725, -4.74966e-08, 2.02604e-06, -0.0234371)
 bones/153/rotation = Quaternion(0.846624, -0.0587282, -0.267999, -0.456021)
 bones/154/scale = Vector3(1, 1, 1)
 bones/155/rotation = Quaternion(0.214509, 0.0035053, 0.0798912, 0.973443)
-bones/155/scale = Vector3(1, 1, 1)
 bones/156/rotation = Quaternion(0.846623, 0.0587301, 0.268002, -0.456021)
 bones/156/scale = Vector3(1, 1, 1)
 bones/157/scale = Vector3(1, 1, 1)
-bones/158/scale = Vector3(1, 1, 1)
 bones/159/rotation = Quaternion(-0.627896, -0.205387, -0.0658457, 0.747815)
 bones/160/rotation = Quaternion(0.544423, 0.655434, 0.455442, 0.258037)
-bones/161/rotation = Quaternion(-0.0102666, -1.43034e-06, -2.69266e-08, 0.999947)
 bones/162/rotation = Quaternion(-0.627896, 0.205384, 0.0658432, 0.747816)
 bones/163/rotation = Quaternion(-0.544424, 0.655435, 0.45544, -0.258034)
 bones/164/rotation = Quaternion(-0.00677641, 1.95488e-11, -4.84721e-09, 0.999977)
@@ -307,33 +329,41 @@ bones/290/rotation = Quaternion(0.997484, -0.0450698, 0.0166621, -0.052124)
 bones/290/scale = Vector3(1, 1, 1)
 bones/293/rotation = Quaternion(0.205935, 2.52354e-11, 0.00174612, 0.978564)
 
+[node name="Plane_001" parent="Prop/mouse2/rig/Skeleton3D" index="0"]
+lod_bias = 7.0
+
 [node name="AnimationPlayer" parent="Prop/mouse2" index="1"]
+root_motion_track = NodePath("rig/Skeleton3D:root")
 autoplay = "run cycle"
 
 [node name="Label3D" type="Label3D" parent="Prop/mouse2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.01825, 1.10889)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20027e-07, 1.64855, 0.919999)
 visible = false
 pixel_size = 0.1975
 billboard = 1
+no_depth_test = true
 fixed_size = true
-alpha_cut = 1
 modulate = Color(1, 0.194376, 0.144153, 1)
 outline_modulate = Color(0.0962047, 0.0962048, 0.0962047, 1)
 text = "!"
+outline_size = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Prop/mouse2")
+root_motion_track = NodePath("rig/Skeleton3D:root")
 libraries = {
 "": SubResource("AnimationLibrary_niws2")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 root_node = NodePath("../Prop/mouse2")
+root_motion_track = NodePath("rig/Skeleton3D:root")
 tree_root = SubResource("AnimationNodeStateMachine_pmpdp")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/alerted = false
 parameters/conditions/picked_up = false
 parameters/conditions/started_alert = false
+parameters/BlendSpace1D/blend_position = 0.190641
 
 [connection signal="grabbed" from="Prop" to="." method="_on_prop_grabbed"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

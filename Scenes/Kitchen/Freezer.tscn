@@ -31,9 +31,9 @@
 [ext_resource type="PackedScene" uid="uid://cx1bcubqk4d6q" path="res://Props/Not Meat/Spice_GarlicBulb.tscn" id="29_f006n"]
 [ext_resource type="PackedScene" uid="uid://2yraxyewndek" path="res://Props/Not Meat/Veggie_Eggplant.tscn" id="30_xt5ex"]
 [ext_resource type="PackedScene" uid="uid://dr5g707ruoixi" path="res://Props/Not Meat/Veggie_Lemon.tscn" id="31_0dhgx"]
-[ext_resource type="PackedScene" path="res://Props/Not Meat/Veggie_Onion_red.tscn" id="32_kf37y"]
+[ext_resource type="PackedScene" uid="uid://duknstj5k4ntf" path="res://Props/Not Meat/Veggie_Onion_red.tscn" id="32_kf37y"]
 [ext_resource type="PackedScene" uid="uid://bfn87jahro84i" path="res://Props/Not Meat/Veggie_Onion_yellow.tscn" id="33_1t5vj"]
-[ext_resource type="PackedScene" path="res://Props/Bottles/Bottle_Amphora.tscn" id="34_6pu7a"]
+[ext_resource type="PackedScene" uid="uid://cij1exldbbaag" path="res://Props/Bottles/Bottle_Amphora.tscn" id="34_6pu7a"]
 [ext_resource type="PackedScene" uid="uid://bm3slivdt5lec" path="res://Props/Meat/Egg_Box.tscn" id="35_x6ggr"]
 [ext_resource type="PackedScene" uid="uid://d3h48jbb75enk" path="res://Props/Meat/Egg_Egg_Fried_01.tscn" id="36_8cjsn"]
 [ext_resource type="PackedScene" uid="uid://7rjhh3prr12q" path="res://Props/Meat/Egg_Egg_Hardboiled_Stand.tscn" id="37_6tq7l"]
@@ -189,10 +189,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.87162, 1.57714, -1.45234)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03079, 0.769376, -1.57554)
 
 [node name="Prop4" parent="." instance=ExtResource("5_mlfmo")]
-transform = Transform3D(-0.221089, 0, 0.975254, 0, 1, 0, -0.975254, 0, -0.221089, 4.60477, 1.57714, -1.73346)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30317, 1.57714, -1.57084)
 
 [node name="Prop5" parent="." instance=ExtResource("5_mlfmo")]
-transform = Transform3D(0.233072, 0, -0.972459, 0, 1, 0, 0.972459, 0, 0.233072, 4.97457, 1.57714, -1.60754)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55451, 1.57714, -1.60754)
 
 [node name="Prop6" parent="." instance=ExtResource("5_mlfmo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7577, 1.57714, -1.55604)
@@ -487,87 +487,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62715, 0.769376, 1.80605)
 
 [node name="Prop72" parent="." instance=ExtResource("16_j0ig2")]
 transform = Transform3D(0.622132, 0, -0.782912, 0, 1, 0, 0.782912, 0, 0.622132, 5.78187, 1.5734, -0.340123)
-
-[node name="Prop73" parent="." instance=ExtResource("18_5gd82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75128, 1.57714, -1.24913)
-
-[node name="Prop74" parent="." instance=ExtResource("18_5gd82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76607, 1.57714, -1.77418)
-
-[node name="Prop75" parent="." instance=ExtResource("18_5gd82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79668, 1.57714, 1.90987)
-
-[node name="Prop76" parent="." instance=ExtResource("18_5gd82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81263, 1.57714, 1.65586)
-
-[node name="Prop77" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.77833, 1.57714, 1.16508)
-
-[node name="Prop78" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91219, 1.57714, 1.88468)
-
-[node name="Prop79" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.78693, 1.57714, 0.332871)
-
-[node name="Prop80" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80921, 1.57714, 0.942711)
-
-[node name="Prop81" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68891, 1.57714, -1.75319)
-
-[node name="Prop82" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2476, 0.769376, 1.72659)
-
-[node name="Prop83" parent="." instance=ExtResource("6_jt2m2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40646, 0.769376, -1.75149)
-
-[node name="Prop84" parent="." instance=ExtResource("6_jt2m2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8997, 0.769376, -1.74996)
-
-[node name="Prop85" parent="." instance=ExtResource("9_abikc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92254, 0.769376, 1.85194)
-
-[node name="Prop86" parent="." instance=ExtResource("9_abikc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25556, 0.769376, 1.95712)
-
-[node name="Prop87" parent="." instance=ExtResource("2_174bf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15002, 1.57714, -1.57479)
-
-[node name="Prop88" parent="." instance=ExtResource("3_1a47p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33549, 1.57714, -1.60671)
-
-[node name="Prop89" parent="." instance=ExtResource("2_174bf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4385, 1.57714, -1.49109)
-
-[node name="Prop90" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36187, 1.57714, 1.66764)
-
-[node name="Prop91" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03875, 1.57714, 1.98847)
-
-[node name="Prop92" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95206, 1.57714, 1.70937)
-
-[node name="Prop93" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4796, 1.57714, 1.99609)
-
-[node name="Prop94" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.70045, 1.57714, 1.70184)
-
-[node name="Prop95" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.78132, 0.769376, 1.32901)
-
-[node name="Prop96" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84854, 0.769376, -0.910851)
-
-[node name="Prop97" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91126, 0.769376, -1.73953)
-
-[node name="Prop98" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33195, 0.769376, -1.56982)
-
-[node name="Prop99" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23949, 0.769376, 1.92374)
 
 [editable path="Firewood2"]
 [editable path="Firewood3"]

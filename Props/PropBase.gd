@@ -18,6 +18,7 @@ func _ready() -> void:
 func shatter() -> GPUParticles3D:
 	var clone := PROP_BREAK_EFFECT.instantiate()
 	clone.position = position
+	clone.get_node("ShatterSoundFX").stream = clank_sound_player.stream
 	clone.emitting = true
 	add_sibling(clone)
 	return clone
@@ -32,6 +33,6 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 			GameData.score -= cash_value * (5 if on_will else 1)
 			shatter()
 			drop_and_free()
-		elif force > 64:
+		elif force > 16:
 			clank_sound_player.play()
 		i += 1
