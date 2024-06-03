@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6k54kxrl7ipp"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_0gvp5"]
+[ext_resource type="PackedScene" uid="uid://ch5w32u7fk6e1" path="res://Assets/low_poly_dungeon/Bread_Half.glb" id="2_r5uxo"]
+[ext_resource type="Material" uid="uid://bp2tewifpx1ny" path="res://Assets/low_poly_dungeon/low_poly_dungeon_atlas_mat.tres" id="3_eevpl"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6x16b"]
+points = PackedVector3Array(-0.166758, 0.026261, -0.0486547, -0.00292867, 0.0854237, 0.111792, -0.0115462, 0.0851792, 0.109556, -0.00360702, 0.126929, -0.0762554, -0.000916422, 0, -0.0964361, -0.000916422, 1.38778e-17, 0.0964361, -0.161527, 0.071497, 0.0441075, -0.15302, 0.00172055, 0.0557826, -0.0869436, 0.128844, -0.00333785, -0.149828, 0.0434106, -0.0806178, -0.00367133, 0.126889, 0.0761999, -0.0199088, 0.074949, -0.112537, -0.12154, 0.0471305, 0.0904603, -0.152856, 0.00191243, -0.0556329, -0.161664, 0.0714936, -0.0441947, -0.090306, 0.108692, 0.0676089, -0.0903072, 0.108667, -0.0675622, -0.18086, 0.036621, 0.0034502, -0.00480489, 0.143287, -0.00683446, -0.0867713, 0.00173252, -0.0871662, -0.00174965, 0.0431418, -0.113272, -0.152131, 0.047449, 0.0755965, -0.00174965, 0.0431418, 0.113272, -0.0832614, 0.00150058, 0.0874491, -0.162705, 0.0814097, 0.00325603, -0.0902698, 0.057677, -0.100129, -0.166531, 0.00213553, -0.00343223, -0.100177, 0.123909, 0.00323875, -0.0902549, 0.050582, 0.100992, -0.174035, 0.0400419, 0.0418956, -0.00331462, 0.0853707, -0.111308, -0.174029, 0.0400446, -0.0418923)
+
+[node name="Prop" instance=ExtResource("1_0gvp5")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_6x16b")
+
+[node name="Bread_Half2" parent="." index="1" instance=ExtResource("2_r5uxo")]
+
+[node name="Bread_Half" parent="Bread_Half2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("3_eevpl")
+
+[editable path="Bread_Half2"]

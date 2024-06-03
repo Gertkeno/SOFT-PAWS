@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bakvhog64uagl"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_gp2bb"]
+[ext_resource type="PackedScene" uid="uid://5jydhajlk6ie" path="res://Assets/low_poly_dungeon/Book_Big_Brown.glb" id="2_1ulak"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtcr8"]
+size = Vector3(0.387634, 0.451294, 0.15918)
+
+[node name="Prop" instance=ExtResource("1_gp2bb")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.0156006, 0.177393, 0)
+shape = SubResource("BoxShape3D_vtcr8")
+
+[node name="HighlightRing" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177276, 0)
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(-0.902833, 0.202188, 0.379489, 0.0442033, 0.921518, -0.385812, -0.427713, -0.331549, -0.840914, 0.193857, 0.193803, -0.00514671)
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(-0.990873, -0.0679936, -0.116394, 2.36886e-08, 0.863466, -0.504407, 0.134799, -0.499803, -0.855585, -0.191216, 0.194723, 0.0414052)
+
+[node name="Book_Big_Brown2" parent="." index="4" instance=ExtResource("2_1ulak")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Book_Big_Brown" parent="Book_Big_Brown2" index="0"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[editable path="Book_Big_Brown2"]

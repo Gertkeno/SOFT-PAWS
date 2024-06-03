@@ -1,0 +1,44 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=14 format=3 uid="uid://b1wc2uimig6ww"]
+
+[ext_resource type="AudioStream" uid="uid://bl2y3rdf51v2" path="res://Sounds/Effects/Metal/knife hit 1.wav" id="1_3e0fd"]
+[ext_resource type="AudioStream" uid="uid://bknswm64utj32" path="res://Sounds/Effects/Metal/knife hit 2.wav" id="2_cwtwt"]
+[ext_resource type="AudioStream" uid="uid://4dfxeo2710y" path="res://Sounds/Effects/Metal/knife hit 16.wav" id="3_dfwkd"]
+[ext_resource type="AudioStream" uid="uid://550vxy58gknt" path="res://Sounds/Effects/Metal/knife hit 19.wav" id="4_m7gln"]
+[ext_resource type="AudioStream" uid="uid://4inwvtcwoqbb" path="res://Sounds/Effects/Metal/knife hit 22.wav" id="5_ysmku"]
+[ext_resource type="AudioStream" uid="uid://d2ssac3d6j657" path="res://Sounds/Effects/Metal/knife hit 3.wav" id="6_ep4om"]
+[ext_resource type="AudioStream" uid="uid://dnlkp7wsyte4d" path="res://Sounds/Effects/Metal/knife hit 4.wav" id="7_bnmhx"]
+[ext_resource type="AudioStream" uid="uid://byoustn4vofpj" path="res://Sounds/Effects/Metal/knife hit 5.wav" id="8_tl2m2"]
+[ext_resource type="AudioStream" uid="uid://0ad32rqfge4m" path="res://Sounds/Effects/Metal/knife hit 6.wav" id="9_x3dym"]
+[ext_resource type="AudioStream" uid="uid://cl82apo0kf0ds" path="res://Sounds/Effects/Metal/knife hit 7.wav" id="10_ac4ep"]
+[ext_resource type="AudioStream" uid="uid://56w8rm7foq06" path="res://Sounds/Effects/Metal/knife hit 8.wav" id="11_q56np"]
+[ext_resource type="AudioStream" uid="uid://bntcexsyovpjj" path="res://Sounds/Effects/Metal/knife hit 9.wav" id="12_gkyde"]
+[ext_resource type="AudioStream" uid="uid://c4kg2fy70f1fq" path="res://Sounds/Effects/Metal/knife hit 10.wav" id="13_ofk1u"]
+
+[resource]
+streams_count = 13
+stream_0/stream = ExtResource("1_3e0fd")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_cwtwt")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("6_ep4om")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("7_bnmhx")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("8_tl2m2")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("9_x3dym")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("10_ac4ep")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("11_q56np")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("12_gkyde")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("13_ofk1u")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("3_dfwkd")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("4_m7gln")
+stream_11/weight = 1.0
+stream_12/stream = ExtResource("5_ysmku")
+stream_12/weight = 1.0

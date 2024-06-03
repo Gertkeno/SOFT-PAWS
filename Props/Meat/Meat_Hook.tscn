@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5v6cpvua8r0n"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_5m0jp"]
+[ext_resource type="PackedScene" uid="uid://c3ifog1mabk5n" path="res://Assets/LowPolyFoodPack/Assets/meatHook.glb" id="2_tes3w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cutol"]
+size = Vector3(0.379883, 0.0270996, 0.249023)
+
+[node name="Prop" instance=ExtResource("1_5m0jp")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0131381, 0)
+shape = SubResource("BoxShape3D_cutol")
+
+[node name="meatHook2" parent="." index="1" instance=ExtResource("2_tes3w")]
+
+[editable path="meatHook2"]

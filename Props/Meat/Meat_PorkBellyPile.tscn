@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dck1d41yufg4s"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_upadt"]
+[ext_resource type="PackedScene" uid="uid://binw2ij4glc56" path="res://Assets/LowPolyFoodPack/Assets/porkBellyBitsGroup.glb" id="2_62ew3"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_ev70x"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_07ahl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6bffn"]
+size = Vector3(0.16272, 0.0924683, 0.126099)
+
+[node name="Prop" instance=ExtResource("1_upadt")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00213623, 0.0465707, 0.00445557)
+shape = SubResource("BoxShape3D_6bffn")
+
+[node name="porkBellyBitsGroup2" parent="." index="1" instance=ExtResource("2_62ew3")]
+
+[node name="porkBellyBitsGroup" parent="porkBellyBitsGroup2" index="0"]
+material_override = ExtResource("3_ev70x")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0537952, 0.0718995, -0.0341471)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0494541, 0.0718995, -0.0341471)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_07ahl")
+
+[editable path="porkBellyBitsGroup2"]

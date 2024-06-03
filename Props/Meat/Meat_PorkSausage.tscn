@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyqctjeldfhqg"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_ktu43"]
+[ext_resource type="PackedScene" uid="uid://kxk37gorg3nr" path="res://Assets/LowPolyFoodPack/Assets/porkSausage.glb" id="2_i5rtx"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_vei6s"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_4sero"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pwkvs"]
+radius = 0.03
+height = 0.28
+
+[node name="Prop" instance=ExtResource("1_ktu43")]
+cash_value = 2
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("CapsuleShape3D_pwkvs")
+
+[node name="porkSausage2" parent="." index="1" instance=ExtResource("2_i5rtx")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0274458, 0, 0)
+
+[node name="porkSausage" parent="porkSausage2" index="0"]
+material_override = ExtResource("3_vei6s")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0299835, -0.0668644)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0299835, -0.0668644)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_4sero")
+
+[editable path="porkSausage2"]

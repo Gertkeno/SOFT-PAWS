@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b5dqyg5k8bqas"]
+[gd_scene load_steps=41 format=3 uid="uid://b5dqyg5k8bqas"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_b517u"]
 [ext_resource type="PackedScene" uid="uid://dfftgbe678sr8" path="res://Assets/giant dungeon pack/table_medium.gltf" id="2_5va3t"]
@@ -20,6 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://dck1ibmd8rmja" path="res://Props/Pans/Skillet.tscn" id="18_4d4dk"]
 [ext_resource type="PackedScene" uid="uid://ycolfgyagvh" path="res://Props/Appliances/Blender.tscn" id="19_ylsm3"]
 [ext_resource type="PackedScene" uid="uid://ckt2mg76rh7fe" path="res://Props/Appliances/RiceCooker.tscn" id="20_8en3c"]
+[ext_resource type="PackedScene" uid="uid://diaiidqgfsqvt" path="res://Props/Bottles/bottle_green.tscn" id="21_oacvr"]
+[ext_resource type="PackedScene" uid="uid://b6gf5csesdc4n" path="res://Props/Bottles/bottle_green_squat.tscn" id="22_f7stq"]
+[ext_resource type="PackedScene" uid="uid://dhvwloxs63i77" path="res://Props/Bottles/bottle_green_large.tscn" id="23_mxsyo"]
+[ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="24_acjy0"]
+[ext_resource type="PackedScene" uid="uid://cq1vujdqnujhv" path="res://Props/Bottles/bottle_brown_large.tscn" id="25_ju4pr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fp4pu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -207,3 +212,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.480876, 0, -1.70856)
 
 [node name="Prop7" parent="." instance=ExtResource("20_8en3c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00616, 0, -2.52237)
+
+[node name="Prop8" parent="." instance=ExtResource("21_oacvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.489353, 0, -1.56941)
+
+[node name="Prop9" parent="." instance=ExtResource("22_f7stq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5861, 0, -1.53103)
+
+[node name="Prop10" parent="." instance=ExtResource("23_mxsyo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88548, -1.19209e-07, -1.18904)
+
+[node name="Prop11" parent="." instance=ExtResource("21_oacvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39631, 0, -2.12217)
+
+[node name="Prop12" parent="." instance=ExtResource("24_acjy0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27389, 0, -0.848377)
+
+[node name="Prop13" parent="." instance=ExtResource("25_ju4pr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26825, 0, -1.39589)

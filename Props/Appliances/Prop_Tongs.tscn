@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://boc2owd5le0eg"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_as7ta"]
+[ext_resource type="PackedScene" uid="uid://u4cdt23jwjuu" path="res://Assets/LowPolyFoodPack/Assets/tongs.glb" id="2_ayktb"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_ukw2k"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x6qo8"]
+points = PackedVector3Array(0.15989, 0.0452299, -0.0790873, -0.253087, 0.0231068, 0.00205067, 0.167236, -0.00638225, 0.0978967, -0.253087, -0.00638225, 0.0241218, 0.211495, 0.0452299, 0.105278, 0.211495, 0.000993798, -0.0790873, 0.108239, -0.00638225, -0.0717062, 0.108239, 0.0452299, 0.0978967, 0.211495, 0.0452299, -0.0790873, 0.211495, 0.000993798, 0.105278, 0.108239, 0.0452299, -0.0717062, 0.108239, -0.00638225, 0.0978967, -0.253087, -0.00638225, 0.00205067, -0.253087, 0.0231068, 0.0241218, 0.0935017, 0.000993798, -0.0717062, 0.167236, -0.00638225, -0.0717062, 0.100894, 0.0378538, 0.0978967, 0.0935017, 0.0378538, -0.0717062, 0.167236, 0.0452299, 0.105278, 0.0639802, 0.000993798, 0.0904975, 0.100894, 0.000993798, 0.0978967)
+
+[node name="Prop" instance=ExtResource("1_as7ta")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_x6qo8")
+
+[node name="tongs2" parent="." index="1" instance=ExtResource("2_ayktb")]
+
+[node name="tongs" parent="tongs2" index="0"]
+material_override = ExtResource("3_ukw2k")
+
+[editable path="tongs2"]

@@ -217,6 +217,7 @@ func _on_PokeBody_body_contact_end(body):
 		return
 
 	# Report release
-	XRToolsPointerEvent.released(self, target, last_collided_at)
-	XRToolsPointerEvent.exited(self, target, last_collided_at)
+	if is_instance_valid(target):
+		XRToolsPointerEvent.released(self, target, last_collided_at)
+		XRToolsPointerEvent.exited(self, target, last_collided_at)
 	target = null

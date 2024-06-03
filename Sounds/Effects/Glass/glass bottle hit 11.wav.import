@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2fv5jc7myyjj"
+path="res://.godot/imported/glass bottle hit 11.wav-de7b6a1d7f5f21dcdb349632f7267d18.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Glass/glass bottle hit 11.wav"
+dest_files=["res://.godot/imported/glass bottle hit 11.wav-de7b6a1d7f5f21dcdb349632f7267d18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

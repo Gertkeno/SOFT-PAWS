@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3atqmjtlp67n"
+path="res://.godot/imported/metal briefcase hit 11.wav-e8ce6841cf1ee0edaa081a58f3835b03.sample"
+
+[deps]
+
+source_file="res://Sounds/Effects/Sturdy_Wood/metal briefcase hit 11.wav"
+dest_files=["res://.godot/imported/metal briefcase hit 11.wav-e8ce6841cf1ee0edaa081a58f3835b03.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

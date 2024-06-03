@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://be7el7lathxj7"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_61txg"]
+[ext_resource type="PackedScene" uid="uid://bax8o7dkr6o03" path="res://Assets/LowPolyFoodPack/Assets/ham.glb" id="2_4g3gx"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_mtfhh"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_ymvp3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0sff5"]
+points = PackedVector3Array(0.0920039, 0.0240645, 0.0567902, 0.0706141, 0.094333, -0.0996056, -0.175874, -0.00206883, -0.0185369, 0.0647752, 0.168567, 0.0733323, 0.0603888, 0.181694, -0.044794, -0.180288, 0.0416888, 0.0207974, 0.0931517, 0.0276237, -0.0677362, 0.0845122, 0.0943063, 0.0987687, -0.180288, 0.0416888, -0.0185369, -0.171515, -0.00206883, 0.0207974, 0.0933718, 0.00243952, -0.00519936, 0.0953978, 0.116038, -0.0185369, -0.00756954, 0.156309, 0.00255925, 0.0647752, 0.168567, -0.0754513, 0.0926884, 0.0361523, 0.0737204, -0.00404001, 0.0742485, 0.079416, 0.0863488, 0.11112, -0.0981135, -0.00391717, 0.0741735, -0.0818081, 0.0502402, 0.0243941, -0.0668612, 0.0594503, 0.185677, 0.0155512, 0.0863459, 0.111119, 0.096012, 0.0953978, 0.116038, 0.0164384, 0.0948425, 0.043619, -0.0770512, 0.094861, 0.0436118, 0.0749426, 0.0932203, 0.00254607, 0.0030952, -4.83842e-05, 0.0259804, 0.0592655, 0.0381251, 0.0200558, 0.0566771, 0.0603888, 0.177318, 0.0514548, 0.00441877, 0.0334147, -0.0660429, -0.00745873, 0.156512, -0.00469058, 0.0390843, 0.18141, 0.0027049, 0.025876, 0.0157676, -0.0506562)
+
+[node name="Prop" instance=ExtResource("1_61txg")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_0sff5")
+
+[node name="ham2" parent="." index="1" instance=ExtResource("2_4g3gx")]
+
+[node name="ham" parent="ham2" index="0"]
+material_override = ExtResource("3_mtfhh")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(-1.13133e-08, 0.965926, -0.258819, 4.2222e-08, 0.258819, 0.965926, 1, 0, -4.37114e-08, -0.0801652, -0.0399992, 0.00246823)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(-1.13133e-08, 0.965926, -0.258819, 4.2222e-08, 0.258819, 0.965926, 1, 0, -4.37114e-08, -0.0801652, -0.0399992, 0.00246823)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_ymvp3")
+volume_db = -25.0
+
+[editable path="ham2"]

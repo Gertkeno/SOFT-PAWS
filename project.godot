@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="SOFT PAWS?? (Mayjam)"
-run/main_scene="res://Scenes/Hallway/hallway.tscn"
+run/main_scene="res://Scenes/Kitchen/Kitchen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+GameData="*res://System/GameData.gd"
 
 [debug]
 

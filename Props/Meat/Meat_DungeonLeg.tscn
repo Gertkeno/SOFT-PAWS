@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl2tj6m2l1hko"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_sg5a3"]
+[ext_resource type="PackedScene" uid="uid://dlgkyobmaktnb" path="res://Assets/low_poly_dungeon/Meat.glb" id="2_d2k1p"]
+[ext_resource type="Material" uid="uid://bp2tewifpx1ny" path="res://Assets/low_poly_dungeon/low_poly_dungeon_atlas_mat.tres" id="3_ehtf5"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gfi5v"]
+points = PackedVector3Array(0.0280508, -0.00735906, 0.0190906, -0.0167846, -0.00576803, -0.022609, -0.0743348, -0.00441011, 0.00953001, 0.00748304, 0.0126313, 0.035113, 0.00577427, -0.0129361, 0.0334013, -0.0760436, 0.00751855, -0.00750142, 0.0256395, 0.00717422, -0.0116603, -0.0027482, -0.0180524, -0.000681042, -0.00445697, 0.0177476, -0.00238614, -0.070928, -0.00611671, -0.0160269, 0.0251053, -0.00739883, -0.0114377, 0.00236742, -0.00611671, 0.0419333, -0.0726368, 0.00581195, 0.00953001, 0.0238714, 0.00690897, 0.0330133, 0.00577427, 0.0177476, 0.018062, -0.0760436, -0.00782331, 0.00102405, 0.00926804, 0.00715359, -0.0229708, 0.00748304, -0.0180524, 0.018062, -0.0726368, 0.00581195, -0.0160269, 0.00407619, 0.00751855, 0.0419333, 0.00878654, -0.00735001, -0.0225013, 0.0236168, -0.00717555, 0.0328817, 0.0289339, 0.00717847, 0.00788194, -0.0760436, 0.00751855, 0.00102405, -0.0726368, -0.00611671, 0.00953001, -0.0760436, -0.00782331, -0.00579633, 0.00353736, 0.0163657, -0.00310444, 0.0284366, -0.00741331, 0.00788966, 0.0101385, 0.0165175, 0.0142361, -0.0743348, 0.00410535, 0.00953001, 0.0281173, 0.00706364, 0.0191041, -0.0777524, -0.00611671, 0.00272915)
+
+[node name="Prop" instance=ExtResource("1_sg5a3")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_gfi5v")
+
+[node name="Meat2" parent="." index="1" instance=ExtResource("2_d2k1p")]
+
+[node name="Meat" parent="Meat2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("3_ehtf5")
+
+[editable path="Meat2"]

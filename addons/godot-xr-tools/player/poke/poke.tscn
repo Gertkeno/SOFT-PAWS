@@ -14,7 +14,7 @@ height = 0.01
 radial_segments = 32
 rings = 16
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1b1h"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_he6j3"]
 transparency = 1
 shading_mode = 0
 albedo_color = Color(0.8, 0.8, 1, 0.5)
@@ -33,8 +33,9 @@ script = ExtResource("2")
 shape = SubResource("1")
 
 [node name="MeshInstance" type="MeshInstance3D" parent="PokeBody"]
+visible = false
 mesh = SubResource("2")
-surface_material_override/0 = SubResource("StandardMaterial3D_g1b1h")
+surface_material_override/0 = SubResource("StandardMaterial3D_he6j3")
 
 [connection signal="body_contact_end" from="PokeBody" to="." method="_on_PokeBody_body_contact_end"]
 [connection signal="body_contact_start" from="PokeBody" to="." method="_on_PokeBody_body_contact_start"]

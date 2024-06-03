@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://vfso6wcfgwp3"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_swxvn"]
+[ext_resource type="PackedScene" uid="uid://dfmg1u56nw17i" path="res://Assets/low_poly_dungeon/Book_Open.glb" id="2_wmbty"]
+[ext_resource type="Material" uid="uid://bp2tewifpx1ny" path="res://Assets/low_poly_dungeon/low_poly_dungeon_atlas_mat.tres" id="3_fqxr4"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yrx7b"]
+points = PackedVector3Array(-0.320813, 0.00572055, -0.196613, -0.320813, 0.00572055, 0.194378, 0.320813, 0.00572055, -0.196613, -0.160343, 0.0859159, -0.176558, -0.250596, 0.0758826, 0.174323, 0.320813, 0.00572055, 0.194378, 0.160344, 0.0859159, -0.176558, 0.160344, 0.0859159, 0.174323, 0.0300212, -0.0043127, -0.196613, -0.030084, -0.0043127, 0.194378, 0.250596, 0.0758826, -0.176558, -0.320813, 0.0257782, -0.196613, 0.320813, 0.0257694, 0.194378, -0.250596, 0.0758826, -0.176558, -0.160343, 0.0859159, 0.174323, -0.320813, 0.0257782, 0.194378, 0.320813, 0.0257694, -0.196613, 0.250596, 0.0758826, 0.174323, 0.0300212, -0.0043127, 0.194378, -0.030084, -0.0043127, -0.196613)
+
+[node name="Prop" instance=ExtResource("1_swxvn")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_yrx7b")
+
+[node name="Book_Open2" parent="." index="1" instance=ExtResource("2_wmbty")]
+
+[node name="Book_Open" parent="Book_Open2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("3_fqxr4")
+
+[editable path="Book_Open2"]

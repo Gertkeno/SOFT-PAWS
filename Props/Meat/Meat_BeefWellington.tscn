@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2gjllmwulyxa"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_m34xl"]
+[ext_resource type="PackedScene" uid="uid://bqvu314slsviu" path="res://Assets/LowPolyFoodPack/Assets/beefWellington.glb" id="2_bedv0"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_brvl8"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_jfgpg"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p585o"]
+height = 0.299887
+radius = 0.0546267
+
+[node name="Prop" instance=ExtResource("1_m34xl")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0.0516476, 0)
+shape = SubResource("CylinderShape3D_p585o")
+
+[node name="beefWellington2" parent="." index="1" instance=ExtResource("2_bedv0")]
+
+[node name="beefWellington" parent="beefWellington2" index="0"]
+material_override = ExtResource("3_brvl8")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.152886, 0.106754, -0.0559759)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.171311, 0.0918728, -0.069362)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_jfgpg")
+
+[editable path="beefWellington2"]

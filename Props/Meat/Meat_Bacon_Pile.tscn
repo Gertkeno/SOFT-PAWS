@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfcr7gwd70gny"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_uuok0"]
+[ext_resource type="PackedScene" uid="uid://bwmam464ac32x" path="res://Assets/LowPolyFoodPack/Assets/baconStrip03.glb" id="2_lyckr"]
+[ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_o71oj"]
+[ext_resource type="AudioStream" uid="uid://kj4vqh1i3pbd" path="res://Sounds/Effects/Flesh_Slap/punch_flesh_rand.tres" id="4_6if3o"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ua621"]
+height = 0.0344375
+radius = 0.0695832
+
+[node name="Prop" instance=ExtResource("1_uuok0")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0153088, 0)
+shape = SubResource("CylinderShape3D_ua621")
+
+[node name="baconStrip032" parent="." index="1" instance=ExtResource("2_lyckr")]
+
+[node name="baconStrip03" parent="baconStrip032" index="0"]
+material_override = ExtResource("3_o71oj")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.057509, 0.0640936, 0.024455)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.043725, 0.0712964, -1.49012e-08)
+
+[node name="ClankSoundPlayer" parent="." index="5"]
+stream = ExtResource("4_6if3o")
+
+[editable path="baconStrip032"]

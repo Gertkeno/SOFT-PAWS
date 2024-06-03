@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cij1exldbbaag"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_mlew0"]
+[ext_resource type="PackedScene" uid="uid://dmvolk55yhgbt" path="res://Assets/low_poly_dungeon/Amphora.glb" id="2_5ceq2"]
+[ext_resource type="Material" uid="uid://bp2tewifpx1ny" path="res://Assets/low_poly_dungeon/low_poly_dungeon_atlas_mat.tres" id="3_pk6vq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_oyk51"]
+points = PackedVector3Array(0.00692621, -0.46435, -0.0898073, 0.0237363, 0.101667, 0.216581, 0.045553, 0.566864, 0.128397, -0.21725, 0.0862388, -0.0727974, 0.141052, 0.0671147, -0.188573, 0.213919, -0.0862016, 0.0650718, 0.0833369, 0.566864, -0.117186, -0.127621, -0.16802, 0.164166, -0.124451, 0.566864, 0.0527884, -0.0942025, 0.0672963, -0.205871, -0.0283915, -0.572041, 0.0318442, -0.0677524, 0.566864, -0.117186, 0.12639, -0.0853763, 0.183981, -0.182593, -0.224087, -0.0555076, -0.145431, 0.0676319, 0.182257, 0.212906, 0.102891, 0.0647479, 0.194161, -0.17023, -0.0718993, -0.212066, -0.0504149, 0.0802824, 0.0589425, -0.519468, 0.0307294, 0.006975, -0.190204, 0.203725, 0.00692465, -0.154719, -0.210205, 0.121167, 0.566864, 0.0716905, 0.211249, 0.102097, -0.0719144, -0.129009, -0.186794, -0.156721, 0.143681, 0.0683514, 0.184237, -0.0101749, 0.0856794, -0.226671, -0.0488373, 0.566864, 0.128397, 0.127231, -0.188996, -0.158523, -0.0280804, -0.565395, -0.039124, -0.212491, 0.0843356, 0.0804525, 0.0248483, -0.566447, -0.0391897, -0.124451, 0.566864, -0.06048)
+
+[node name="Prop" instance=ExtResource("1_mlew0")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_oyk51")
+
+[node name="Amphora2" parent="." index="1" instance=ExtResource("2_5ceq2")]
+
+[node name="Amphora" parent="Amphora2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("3_pk6vq")
+
+[editable path="Amphora2"]
