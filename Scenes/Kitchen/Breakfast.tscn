@@ -1,10 +1,9 @@
-[gd_scene load_steps=56 format=3 uid="uid://ckdh1cw6akt0c"]
+[gd_scene load_steps=51 format=3 uid="uid://ckdh1cw6akt0c"]
 
 [ext_resource type="ArrayMesh" uid="uid://dx3sfafmiufpl" path="res://Assets/livingroom/curtains.obj" id="1_nxd0a"]
 [ext_resource type="Texture2D" uid="uid://dx216u3m8utr7" path="res://textures/dreamy-days-pink-parfait-stripe-floral--merw-l.jpg" id="2_u0ckv"]
 [ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="3_nj3xn"]
 [ext_resource type="ArrayMesh" uid="uid://c8jr3efn4huwn" path="res://Assets/Alex Assets/Created Assets/Test_Map_BlockOut_low.obj" id="4_43q6m"]
-[ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="5_540e1"]
 [ext_resource type="ArrayMesh" uid="uid://dub8why5oe80e" path="res://Assets/livingroom/tall_flower.obj" id="6_amx2s"]
 [ext_resource type="ArrayMesh" uid="uid://be2qlonhsuiky" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Square_Small.obj" id="7_01gxs"]
 [ext_resource type="ArrayMesh" uid="uid://2i0wl5rnutvj" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Square_Large.obj" id="8_eolxx"]
@@ -12,13 +11,9 @@
 [ext_resource type="ArrayMesh" uid="uid://be2r7fkbv316n" path="res://Assets/modular_house_collection/Prop_Misc_Picture_Landscape.obj" id="10_j8f3f"]
 [ext_resource type="ArrayMesh" uid="uid://cdipe2r0y5opw" path="res://Assets/modular_house_collection/Prop_Misc_Rug_Rectangle.obj" id="11_nf6my"]
 [ext_resource type="Texture2D" uid="uid://st565pe4ujth" path="res://textures/WijOXI.jpg" id="12_vl0t7"]
-[ext_resource type="ArrayMesh" uid="uid://efwdbjv35ta2" path="res://Assets/modular_house_collection/Prop_Misc_Rug_Square.obj" id="13_fmm7h"]
 [ext_resource type="ArrayMesh" uid="uid://bfxof63m7xhot" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Corner.obj" id="14_xinjx"]
 [ext_resource type="ArrayMesh" uid="uid://damu6esun4ntv" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Side_Shelves.obj" id="15_1ju77"]
-[ext_resource type="PackedScene" uid="uid://bikisik7py2ok" path="res://Assets/Scenes/furniture/furniture_shelf_1.tscn" id="16_ogw5n"]
 [ext_resource type="PackedScene" uid="uid://ch84sdomsnivc" path="res://Assets/Scenes/furniture/furniture_shelf_2.tscn" id="17_qvcuv"]
-[ext_resource type="PackedScene" uid="uid://cmd50qaj25od0" path="res://Assets/Scenes/furniture/furniture_shelf_4.tscn" id="18_nekeq"]
-[ext_resource type="ArrayMesh" uid="uid://bmdew8ibwx4g0" path="res://Assets/slavic tavern/vertical_barrel.obj" id="19_ei4pg"]
 [ext_resource type="ArrayMesh" uid="uid://xqra3sfeefew" path="res://Assets/slavic tavern/window.obj" id="20_7tlk1"]
 [ext_resource type="PackedScene" uid="uid://wj73r5gr2v24" path="res://Assets/Scenes/furniture/furniture_desk_drawers_2.tscn" id="21_4jnnq"]
 [ext_resource type="PackedScene" uid="uid://8sdxss4j6hrg" path="res://Assets/Scenes/furniture/furniture_rocking_chair_1.tscn" id="22_t5f2y"]
@@ -159,9 +154,6 @@ transparency = 1.0
 mesh = ExtResource("4_43q6m")
 metadata/_edit_lock_ = true
 
-[node name="XRPlayer" parent="." instance=ExtResource("5_540e1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7965, -0.864038, 9.68073)
-
 [node name="TallFlower" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.126715, -0.887609, 2.25443)
 mesh = ExtResource("6_amx2s")
@@ -212,10 +204,6 @@ surface_material_override/3 = SubResource("StandardMaterial3D_c5pap")
 surface_material_override/4 = SubResource("StandardMaterial3D_oo83p")
 surface_material_override/5 = SubResource("StandardMaterial3D_oebxs")
 
-[node name="PropMiscRugSquare" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69932, 0, 3.27155)
-mesh = ExtResource("13_fmm7h")
-
 [node name="StructureKitchenCabinetWallCorner" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0459907, 0, 0.998942, 0, 1, 0, -0.998942, 0, 0.0459907, -5.94428, 3.15524, 5.17009)
 mesh = ExtResource("14_xinjx")
@@ -224,19 +212,9 @@ mesh = ExtResource("14_xinjx")
 transform = Transform3D(0.989116, 0, 0.147136, 0, 1, 0, -0.147136, 0, 0.989116, -0.0978642, 0, 2.60542)
 mesh = ExtResource("15_1ju77")
 
-[node name="Furniture_Shelf_1" parent="." instance=ExtResource("16_ogw5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28401, 0, 0.653863)
-
 [node name="Furniture_Shelf_2" parent="." instance=ExtResource("17_qvcuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6, -5.09626, 0.34965, 2.34731)
 surface_material_override/0 = SubResource("StandardMaterial3D_xa3sh")
-
-[node name="Furniture_Shelf_4" parent="." instance=ExtResource("18_nekeq")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 2.53935, 0.0934199, 2.39654)
-
-[node name="VerticalBarrel" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45148, 0, 2.97459)
-mesh = ExtResource("19_ei4pg")
 
 [node name="Window" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11003, 0, 4.49466)
@@ -252,7 +230,7 @@ transform = Transform3D(0.870909, 0, 0.67195, 0, 1.1, 0, -0.67195, 0, 0.870909, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.864234, 0.162565, 2.8624)
 
 [node name="StructureKitchenCabinetWallShort" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.92116, -2.75425, 7.6928)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.473, -1.52748, 11.8102)
 mesh = ExtResource("24_uxi8e")
 
 [node name="StructureKitchenCabinetWallOpen" type="MeshInstance3D" parent="."]
@@ -260,15 +238,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49672, 1.50383, 14.2116)
 mesh = ExtResource("25_k03nv")
 
 [node name="StructureKitchenCabinetWallHalf" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.38528, -1.52575, 7.64657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00887, -0.298978, 11.764)
 mesh = ExtResource("26_ieycl")
 
 [node name="StructureKitchenCabinetWallCorner2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70606, -2.17027, 7.20641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6881, -0.943498, 11.3239)
 mesh = ExtResource("14_xinjx")
 
 [node name="StructureKitchenCabinetSideShelves2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02083, -2.89021, 8.33518)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.37333, -1.66344, 12.4526)
 mesh = ExtResource("15_1ju77")
 
 [node name="candle2" parent="." instance=ExtResource("27_fswmm")]

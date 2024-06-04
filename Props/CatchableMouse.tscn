@@ -122,6 +122,7 @@ graph_offset = Vector2(-27, -65)
 [node name="CatchableMouse" type="PathFollow3D"]
 use_model_front = true
 script = ExtResource("1_0kofr")
+start_alert = false
 
 [node name="Prop" parent="." instance=ExtResource("1_op51x")]
 collision_mask = 4
@@ -365,7 +366,7 @@ parameters/conditions/picked_up = false
 parameters/conditions/started_alert = false
 parameters/BlendSpace1D/blend_position = 0.190641
 
-[connection signal="grabbed" from="Prop" to="." method="_on_prop_grabbed"]
+[connection signal="picked_up" from="Prop" to="." method="_on_prop_grabbed"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 
 [editable path="Prop"]

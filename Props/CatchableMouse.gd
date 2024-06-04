@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	progress += speed * delta
 
 
-func _on_prop_grabbed(_pickable: Variant, _by: Variant) -> void:
+func _on_prop_grabbed(_pickable: Variant) -> void:
 	set_process(false)
 	animation_tree.set("parameters/conditions/picked_up", true)
 

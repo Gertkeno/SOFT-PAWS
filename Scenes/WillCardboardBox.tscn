@@ -139,6 +139,7 @@ shape = SubResource("BoxShape3D_d6c3e")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27876, 0)
+visible = false
 billboard = 2
 text = "Will items here"
 

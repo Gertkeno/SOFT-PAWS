@@ -33,6 +33,6 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 			GameData.score -= cash_value * (5 if on_will else 1)
 			shatter()
 			drop_and_free()
-		elif force > 16:
+		elif force > 9:
 			clank_sound_player.play()
 		i += 1

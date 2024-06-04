@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=23 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_ts8fo"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_u45ga"]
@@ -7,6 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b66yod2n3uvbo" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Corner.obj" id="5_fu6cm"]
 [ext_resource type="ArrayMesh" uid="uid://dub8why5oe80e" path="res://Assets/livingroom/tall_flower.obj" id="6_0ilck"]
 [ext_resource type="PackedScene" uid="uid://bsyh2jr2a747y" path="res://Props/CatchableMouse.tscn" id="7_cw84t"]
+[ext_resource type="PackedScene" uid="uid://ckdh1cw6akt0c" path="res://Scenes/Kitchen/Breakfast.tscn" id="13_56gmd"]
 [ext_resource type="PackedScene" uid="uid://hot87aq8tgy5" path="res://Scenes/Kitchen/Freezer.tscn" id="13_bipwd"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="13_e7725"]
 [ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="14_tv6rs"]
@@ -28,14 +29,14 @@ tonemap_mode = 2
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eyhfx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yt1n6"]
-size = Vector3(2.88787, 1.48828, 4.90625)
+size = Vector3(2.71497, 1.45203, 4.90625)
 
 [sub_resource type="Curve3D" id="Curve3D_y01x1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.25113, 0.970111, -3.042, 0, 0, 0, 0, 0, 0, -1.75135, 0.970111, -3.91381, 0, 0, 0, 0, 0, 0, -0.702046, 0.970111, -5.04316, 0, 0, 0, 0, 0, 0, -0.737314, 0.970111, -5.86549, 0.196085, -0.0143874, 0.120371, -0.196085, 0.0143874, -0.120371, -1.33582, 0.970111, -6.4816, 0, 0, 0, 0, 0, 0, -1.74069, 0.970111, -6.56961),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0.384254, -0.016771, 0.107371, -0.384254, 0.016771, -0.107371, -1.25113, 0.970111, -3.042, 0.123879, -0.0222368, 0.295819, -0.123879, 0.0222368, -0.295819, -1.75135, 0.970111, -3.91381, -0.154752, -0.000926197, 0.280192, 0.154752, 0.000926197, -0.280192, -0.702046, 0.970111, -5.04316, 0.132191, 0.000609815, 0.211801, -0.132191, -0.000609815, -0.211801, -0.737314, 0.970111, -5.86549, 0.196085, -0.0143874, 0.120371, -0.196085, 0.0143874, -0.120371, -1.11159, 0.983931, -6.61392, 0.257432, -0.00531828, -0.140787, -0.257432, 0.00531828, 0.140787, -1.74069, 0.970111, -6.56961, -0.0289209, -0.0177251, -0.356944, 0.0289209, 0.0177251, 0.356944, -2.01628, 0.987198, -5.91592, -0.0281448, 0.0212838, -0.236536, 0.0281448, -0.0212838, 0.236536, -1.81956, 0.985497, -4.76931, -0.0132393, 0.00212169, -0.133964, 0.0132393, -0.00212169, 0.133964, -0.796819, 1.0532, -3.74534, 0.241019, 0.000709891, 0.0612743, -0.241019, -0.000709891, -0.0612743, -1.25113, 0.970111, -3.042),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 6
+point_count = 10
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_t3j41"]
 
@@ -197,7 +198,7 @@ mesh = ExtResource("3_x6y8i")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484547, 0.244141, -1.48389)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.460194, 0.226014, -1.48389)
 shape = SubResource("BoxShape3D_yt1n6")
 
 [node name="TallFlower" type="MeshInstance3D" parent="."]
@@ -205,11 +206,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41528, 0, -8.92712)
 mesh = ExtResource("6_0ilck")
 
 [node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.167035, 0.0284243, -0.0860417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175, -0.00262495, -0.0911024)
 curve = SubResource("Curve3D_y01x1")
 
 [node name="CatchableMouse" parent="Path3D" instance=ExtResource("7_cw84t")]
-transform = Transform3D(-0.867366, 0, -0.49767, 0, 1, 0, 0.49767, 0, -0.867366, -1.25113, 0.970111, -3.042)
+transform = Transform3D(-0.269118, 0.0404488, -0.962255, -3.72528e-09, 0.999114, 0.0419983, 0.963104, 0.0113025, -0.26888, -1.25113, 0.970111, -3.042)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
@@ -239,7 +240,42 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.999857, 0, 9.45204
 mesh = ExtResource("16_ituxt")
 
 [node name="Area3D" parent="." instance=ExtResource("18_g217l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.322471, 0, -11.9624)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48631, 0, -13.1604)
 
 [node name="Freezer" parent="." instance=ExtResource("13_bipwd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0190578, -15.4494)
+
+[node name="Prop9" parent="Freezer" index="22"]
+transform = Transform3D(0.240601, -6.58591e-09, -0.970624, -0.209122, 0.976515, -0.0518377, 0.947829, 0.215451, 0.23495, 5.81999, 0.769376, -0.0509405)
+
+[node name="CSGBox3D" parent="Freezer/TestMapBlockOutLow" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72394, 1.29621, 0.0726404)
+
+[node name="Prop55" parent="Freezer" index="75"]
+cash_value = 200
+on_will = true
+durability = 11.0
+
+[node name="Prop72" parent="Freezer" index="92"]
+on_will = true
+
+[node name="Node3D" parent="." instance=ExtResource("13_56gmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107865, 0.828136, -16.8641)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.13516, 2.31888, -13.9426)
+pixel_size = 0.0025
+double_sided = false
+text = "Tuna for my dearest Ms.Mostly Mittens
+T-Bone steaks go to Mr.Mustard
+My incredibly expensive vase must be 
+  buried along side me"
+horizontal_alignment = 0
+
+[editable path="Freezer"]
+[editable path="Freezer/Firewood2"]
+[editable path="Freezer/Firewood3"]
+[editable path="Freezer/keg2"]
+[editable path="Freezer/keg3"]
+[editable path="Freezer/keg4"]
+[editable path="Freezer/keg5"]
