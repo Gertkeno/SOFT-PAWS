@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=24 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_ts8fo"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_u45ga"]
@@ -6,10 +6,11 @@
 [ext_resource type="ArrayMesh" uid="uid://cygmb684txid1" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Side.obj" id="4_03b55"]
 [ext_resource type="ArrayMesh" uid="uid://b66yod2n3uvbo" path="res://Assets/modular_house_collection/Prop_Dining_Room_Table_Modular_Corner.obj" id="5_fu6cm"]
 [ext_resource type="ArrayMesh" uid="uid://dub8why5oe80e" path="res://Assets/livingroom/tall_flower.obj" id="6_0ilck"]
-[ext_resource type="PackedScene" uid="uid://bsyh2jr2a747y" path="res://Props/CatchableMouse.tscn" id="7_cw84t"]
+[ext_resource type="Script" path="res://System/PathMoving3D.gd" id="8_l2t6u"]
 [ext_resource type="PackedScene" uid="uid://ckdh1cw6akt0c" path="res://Scenes/Kitchen/Breakfast.tscn" id="13_56gmd"]
 [ext_resource type="PackedScene" uid="uid://hot87aq8tgy5" path="res://Scenes/Kitchen/Freezer.tscn" id="13_bipwd"]
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="13_e7725"]
+[ext_resource type="PackedScene" uid="uid://co3afsttnjf5x" path="res://Props/SusseMouse.tscn" id="14_a0q88"]
 [ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="14_tv6rs"]
 [ext_resource type="ArrayMesh" uid="uid://4wtfhaoct82c" path="res://Assets/Alex Assets/Test Re-export/Test_Door.obj" id="16_ituxt"]
 [ext_resource type="PackedScene" uid="uid://c6vbocv5wc8dj" path="res://Scenes/WillCardboardBox.tscn" id="18_g217l"]
@@ -209,8 +210,9 @@ mesh = ExtResource("6_0ilck")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175, -0.00262495, -0.0911024)
 curve = SubResource("Curve3D_y01x1")
 
-[node name="CatchableMouse" parent="Path3D" instance=ExtResource("7_cw84t")]
-transform = Transform3D(-0.269118, 0.0404488, -0.962255, -3.72528e-09, 0.999114, 0.0419983, 0.963104, 0.0113025, -0.26888, -1.25113, 0.970111, -3.042)
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.269118, 0.0404488, 0.962255, 3.72528e-09, 0.999114, -0.0419983, -0.963105, 0.0113025, 0.26888, -1.25113, 0.970111, -3.042)
+script = ExtResource("8_l2t6u")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
@@ -228,12 +230,15 @@ mesh = SubResource("PlaneMesh_uqybx")
 
 [node name="PickableObject5" parent="." instance=ExtResource("14_tv6rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -4)
+flying_strength = 1000.0
 
 [node name="PickableObject6" parent="." instance=ExtResource("14_tv6rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -3)
+flying_strength = 1000.0
 
 [node name="PickableObject7" parent="." instance=ExtResource("14_tv6rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2982, 0.988281, -3.53628)
+flying_strength = 1000.0
 
 [node name="TestDoor" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.999857, 0, 9.45204)
@@ -245,19 +250,229 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48631, 0, -13.1604)
 [node name="Freezer" parent="." instance=ExtResource("13_bipwd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0190578, -15.4494)
 
+[node name="Prop" parent="Freezer" index="14"]
+flying_strength = 1000.0
+
+[node name="Prop2" parent="Freezer" index="15"]
+flying_strength = 1000.0
+
+[node name="Prop3" parent="Freezer" index="16"]
+flying_strength = 1000.0
+
+[node name="Prop4" parent="Freezer" index="17"]
+flying_strength = 1000.0
+
+[node name="Prop5" parent="Freezer" index="18"]
+flying_strength = 1000.0
+
+[node name="Prop6" parent="Freezer" index="19"]
+flying_strength = 1000.0
+
+[node name="Prop7" parent="Freezer" index="20"]
+flying_strength = 1000.0
+
+[node name="Prop8" parent="Freezer" index="21"]
+flying_strength = 1000.0
+
 [node name="Prop9" parent="Freezer" index="22"]
 transform = Transform3D(0.240601, -6.58591e-09, -0.970624, -0.209122, 0.976515, -0.0518377, 0.947829, 0.215451, 0.23495, 5.81999, 0.769376, -0.0509405)
+flying_strength = 1000.0
+
+[node name="Prop10" parent="Freezer" index="23"]
+flying_strength = 1000.0
+
+[node name="Prop11" parent="Freezer" index="24"]
+flying_strength = 1000.0
+
+[node name="Prop12" parent="Freezer" index="25"]
+flying_strength = 1000.0
+
+[node name="Prop13" parent="Freezer" index="26"]
+flying_strength = 1000.0
+
+[node name="Prop14" parent="Freezer" index="27"]
+flying_strength = 1000.0
+
+[node name="Prop15" parent="Freezer" index="28"]
+flying_strength = 1000.0
+
+[node name="Prop28" parent="Freezer" index="29"]
+flying_strength = 1000.0
+
+[node name="Prop29" parent="Freezer" index="30"]
+flying_strength = 1000.0
+
+[node name="Prop30" parent="Freezer" index="31"]
+flying_strength = 1000.0
+
+[node name="Prop16" parent="Freezer" index="32"]
+flying_strength = 1000.0
+
+[node name="Prop17" parent="Freezer" index="33"]
+flying_strength = 1000.0
+
+[node name="Prop18" parent="Freezer" index="34"]
+flying_strength = 1000.0
+
+[node name="Prop31" parent="Freezer" index="35"]
+flying_strength = 1000.0
+
+[node name="Prop32" parent="Freezer" index="36"]
+flying_strength = 1000.0
+
+[node name="Prop19" parent="Freezer" index="37"]
+flying_strength = 1000.0
+
+[node name="Prop20" parent="Freezer" index="38"]
+flying_strength = 1000.0
+
+[node name="Prop21" parent="Freezer" index="39"]
+flying_strength = 1000.0
+
+[node name="Prop22" parent="Freezer" index="40"]
+flying_strength = 1000.0
+
+[node name="Prop23" parent="Freezer" index="41"]
+flying_strength = 1000.0
+
+[node name="Prop24" parent="Freezer" index="42"]
+flying_strength = 1000.0
+
+[node name="Prop25" parent="Freezer" index="43"]
+flying_strength = 1000.0
+
+[node name="Prop26" parent="Freezer" index="44"]
+flying_strength = 1000.0
+
+[node name="Prop27" parent="Freezer" index="45"]
+flying_strength = 1000.0
 
 [node name="CSGBox3D" parent="Freezer/TestMapBlockOutLow" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72394, 1.29621, 0.0726404)
+
+[node name="Prop33" parent="Freezer" index="53"]
+flying_strength = 1000.0
+
+[node name="Prop34" parent="Freezer" index="54"]
+flying_strength = 1000.0
+
+[node name="Prop35" parent="Freezer" index="55"]
+flying_strength = 1000.0
+
+[node name="Prop36" parent="Freezer" index="56"]
+flying_strength = 1000.0
+
+[node name="Prop37" parent="Freezer" index="57"]
+flying_strength = 1000.0
+
+[node name="Prop38" parent="Freezer" index="58"]
+flying_strength = 1000.0
+
+[node name="Prop39" parent="Freezer" index="59"]
+flying_strength = 1000.0
+
+[node name="Prop40" parent="Freezer" index="60"]
+flying_strength = 1000.0
+
+[node name="Prop41" parent="Freezer" index="61"]
+flying_strength = 1000.0
+
+[node name="Prop42" parent="Freezer" index="62"]
+flying_strength = 1000.0
+
+[node name="Prop43" parent="Freezer" index="63"]
+flying_strength = 1000.0
+
+[node name="Prop44" parent="Freezer" index="64"]
+flying_strength = 1000.0
+
+[node name="Prop45" parent="Freezer" index="65"]
+flying_strength = 1000.0
+
+[node name="Prop46" parent="Freezer" index="66"]
+flying_strength = 1000.0
+
+[node name="Prop47" parent="Freezer" index="67"]
+flying_strength = 1000.0
+
+[node name="Prop48" parent="Freezer" index="68"]
+flying_strength = 1000.0
+
+[node name="Prop49" parent="Freezer" index="69"]
+flying_strength = 1000.0
+
+[node name="Prop50" parent="Freezer" index="70"]
+flying_strength = 1000.0
+
+[node name="Prop51" parent="Freezer" index="71"]
+flying_strength = 1000.0
+
+[node name="Prop52" parent="Freezer" index="72"]
+flying_strength = 1000.0
+
+[node name="Prop53" parent="Freezer" index="73"]
+flying_strength = 1000.0
+
+[node name="Prop54" parent="Freezer" index="74"]
+flying_strength = 1000.0
 
 [node name="Prop55" parent="Freezer" index="75"]
 cash_value = 200
 on_will = true
 durability = 11.0
+flying_strength = 1000.0
+
+[node name="Prop56" parent="Freezer" index="76"]
+flying_strength = 1000.0
+
+[node name="Prop57" parent="Freezer" index="77"]
+flying_strength = 1000.0
+
+[node name="Prop58" parent="Freezer" index="78"]
+flying_strength = 1000.0
+
+[node name="Prop59" parent="Freezer" index="79"]
+flying_strength = 1000.0
+
+[node name="Prop60" parent="Freezer" index="80"]
+flying_strength = 1000.0
+
+[node name="Prop61" parent="Freezer" index="81"]
+flying_strength = 1000.0
+
+[node name="Prop62" parent="Freezer" index="82"]
+flying_strength = 1000.0
+
+[node name="Prop63" parent="Freezer" index="83"]
+flying_strength = 1000.0
+
+[node name="Prop64" parent="Freezer" index="84"]
+flying_strength = 1000.0
+
+[node name="Prop65" parent="Freezer" index="85"]
+flying_strength = 1000.0
+
+[node name="Prop66" parent="Freezer" index="86"]
+flying_strength = 1000.0
+
+[node name="Prop67" parent="Freezer" index="87"]
+flying_strength = 1000.0
+
+[node name="Prop68" parent="Freezer" index="88"]
+flying_strength = 1000.0
+
+[node name="Prop69" parent="Freezer" index="89"]
+flying_strength = 1000.0
+
+[node name="Prop70" parent="Freezer" index="90"]
+flying_strength = 1000.0
+
+[node name="Prop71" parent="Freezer" index="91"]
+flying_strength = 1000.0
 
 [node name="Prop72" parent="Freezer" index="92"]
 on_will = true
+flying_strength = 1000.0
 
 [node name="Node3D" parent="." instance=ExtResource("13_56gmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107865, 0.828136, -16.8641)
@@ -271,6 +486,10 @@ T-Bone steaks go to Mr.Mustard
 My incredibly expensive vase must be 
   buried along side me"
 horizontal_alignment = 0
+
+[node name="SusseMouse" parent="." node_paths=PackedStringArray("flying_target") instance=ExtResource("14_a0q88")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728934, 1.02158, -3.08346)
+flying_target = NodePath("../Path3D/PathFollow3D")
 
 [editable path="Freezer"]
 [editable path="Freezer/Firewood2"]

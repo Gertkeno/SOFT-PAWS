@@ -1,34 +1,30 @@
-extends PathFollow3D
+extends PropBase
 
-@export var bonus_score: int = 1000
 @export var start_alert: bool = true
-@export_range(0, 5, 0.05) var speed: float = 0.5
 @onready var animation_tree: AnimationTree = $AnimationTree
 
 func _ready() -> void:
+	super._ready()
 	set_process(start_alert)
-	if start_alert:
-		$Prop/mouse2/AnimationPlayer.play("run cycle")
 	animation_tree.set("parameters/conditions/started_alert", start_alert)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	progress += speed * delta
+	if not start_alert and flying_target:
+		flying_target.set_process(false)
 
 
 func _on_prop_grabbed(_pickable: Variant) -> void:
-	set_process(false)
+	flying_target = null
 	animation_tree.set("parameters/conditions/picked_up", true)
 
 func alert() -> void:
-	set_process(true)
+	if flying_target:
+		flying_target.set_process(true)
 	animation_tree.set("parameters/conditions/alerted", true)
 
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "pickedup":
 		pass # TODO: particles and yipee!!
-		GameData.score += bonus_score
-		$Prop.shatter()
-		$Prop.drop()
+		GameData.score += cash_value
+		shatter()
+		drop()
 		queue_free()

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fuwmu281lq3k"
-path.s3tc="res://.godot/imported/book_pattern_disp_1k.png-c128a30069f3de7f07221c003daaa69b.s3tc.ctex"
-path.etc2="res://.godot/imported/book_pattern_disp_1k.png-c128a30069f3de7f07221c003daaa69b.etc2.ctex"
+path.s3tc="res://.godot/imported/book_pattern_disp_1k.png-91c27a7b3d110e491a11f6df74fcb2a1.s3tc.ctex"
+path.etc2="res://.godot/imported/book_pattern_disp_1k.png-91c27a7b3d110e491a11f6df74fcb2a1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/textures/book_pattern_disp_1k.png"
-dest_files=["res://.godot/imported/book_pattern_disp_1k.png-c128a30069f3de7f07221c003daaa69b.s3tc.ctex", "res://.godot/imported/book_pattern_disp_1k.png-c128a30069f3de7f07221c003daaa69b.etc2.ctex"]
+source_file="res://textures/book_pattern/book_pattern_disp_1k.png"
+dest_files=["res://.godot/imported/book_pattern_disp_1k.png-91c27a7b3d110e491a11f6df74fcb2a1.s3tc.ctex", "res://.godot/imported/book_pattern_disp_1k.png-91c27a7b3d110e491a11f6df74fcb2a1.etc2.ctex"]
 
 [params]
 

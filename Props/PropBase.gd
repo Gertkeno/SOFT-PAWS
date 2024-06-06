@@ -10,8 +10,11 @@ var durability_sq: float
 const PROP_BREAK_EFFECT = preload("res://Props/PropBreakEffect.tscn")
 @onready var clank_sound_player: AudioStreamPlayer3D = $ClankSoundPlayer
 
+@export var flying_target: Node3D
+@export var flying_strength: float = 1000
+
 func _ready() -> void:
-	super()
+	super._ready()
 	durability_sq = durability*durability
 
 
@@ -36,3 +39,11 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		elif force > 9:
 			clank_sound_player.play()
 		i += 1
+
+	if flying_target:
+		var diff := flying_target.global_position - global_position
+		var dist2 := diff.length_squared()
+
+		var diff_match := diff - state.linear_velocity
+		var near_strength := smoothstep(0, 2, dist2) * flying_strength
+		state.apply_central_force(diff_match.limit_length(near_strength))

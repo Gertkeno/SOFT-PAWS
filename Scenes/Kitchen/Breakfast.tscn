@@ -30,7 +30,7 @@
 [ext_resource type="ArrayMesh" uid="uid://d2tdlelgov6ga" path="res://christmas/chair_1.obj" id="33_y06io"]
 [ext_resource type="Texture2D" uid="uid://csrdito181h04" path="res://textures/Granny Chic - Granny Squares MD.jpg" id="34_2levw"]
 [ext_resource type="Texture2D" uid="uid://co30i8m7gw83h" path="res://textures/gGkYcM.jpg" id="35_v53i5"]
-[ext_resource type="Texture2D" uid="uid://fuwmu281lq3k" path="res://textures/textures/book_pattern_disp_1k.png" id="36_pn47p"]
+[ext_resource type="Texture2D" uid="uid://fuwmu281lq3k" path="res://textures/book_pattern/book_pattern_disp_1k.png" id="36_pn47p"]
 [ext_resource type="ArrayMesh" uid="uid://cqej5qv2i200x" path="res://Assets/livingroom/picture_frames.obj" id="37_wc3lb"]
 [ext_resource type="PackedScene" uid="uid://ewgra0i6quii" path="res://Assets/low_poly_dungeon/Desk.glb" id="38_505ks"]
 [ext_resource type="ArrayMesh" uid="uid://dkc5tshqcn465" path="res://Assets/low_poly_dungeon/Bookcase (1).obj" id="39_ks4dc"]

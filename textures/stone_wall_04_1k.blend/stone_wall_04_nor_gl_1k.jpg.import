@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvsmdcx2ccude"
-path.s3tc="res://.godot/imported/stone_wall_04_diff_1k.jpg-1ed55c7b4ec71013e57cc43ae5b40848.s3tc.ctex"
-path.etc2="res://.godot/imported/stone_wall_04_diff_1k.jpg-1ed55c7b4ec71013e57cc43ae5b40848.etc2.ctex"
+uid="uid://cid8fe7puy70m"
+path.s3tc="res://.godot/imported/stone_wall_04_nor_gl_1k.jpg-152b1510866a73b6a096b39942d2fd46.s3tc.ctex"
+path.etc2="res://.godot/imported/stone_wall_04_nor_gl_1k.jpg-152b1510866a73b6a096b39942d2fd46.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/stone_wall_04_1k.blend/textures/stone_wall_04_diff_1k.jpg"
-dest_files=["res://.godot/imported/stone_wall_04_diff_1k.jpg-1ed55c7b4ec71013e57cc43ae5b40848.s3tc.ctex", "res://.godot/imported/stone_wall_04_diff_1k.jpg-1ed55c7b4ec71013e57cc43ae5b40848.etc2.ctex"]
+source_file="res://textures/stone_wall_04_1k.blend/stone_wall_04_nor_gl_1k.jpg"
+dest_files=["res://.godot/imported/stone_wall_04_nor_gl_1k.jpg-152b1510866a73b6a096b39942d2fd46.s3tc.ctex", "res://.godot/imported/stone_wall_04_nor_gl_1k.jpg-152b1510866a73b6a096b39942d2fd46.etc2.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
