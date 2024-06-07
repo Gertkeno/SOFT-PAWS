@@ -17,6 +17,16 @@ shape = SubResource("ConvexPolygonShape3D_qd5tv")
 [node name="garlicBulb2" parent="." index="1" instance=ExtResource("2_bilqo")]
 
 [node name="garlicBulb" parent="garlicBulb2" index="0"]
+layers = 2
 material_override = SubResource("StandardMaterial3D_w7y4w")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0193477, 0.0542717, -0.0762222)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00334543, 0.0464269, -0.0777035)
 
 [editable path="garlicBulb2"]

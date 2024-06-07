@@ -19,6 +19,7 @@ shape = SubResource("CapsuleShape3D_pwkvs")
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0274458, 0, 0)
 
 [node name="porkSausage" parent="porkSausage2" index="0"]
+layers = 2
 material_override = ExtResource("3_vei6s")
 
 [node name="HighlightRing" parent="." index="2"]

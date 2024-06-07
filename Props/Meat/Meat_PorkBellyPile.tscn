@@ -17,6 +17,7 @@ shape = SubResource("BoxShape3D_6bffn")
 [node name="porkBellyBitsGroup2" parent="." index="1" instance=ExtResource("2_62ew3")]
 
 [node name="porkBellyBitsGroup" parent="porkBellyBitsGroup2" index="0"]
+layers = 2
 material_override = ExtResource("3_ev70x")
 
 [node name="HighlightRing" parent="." index="2"]

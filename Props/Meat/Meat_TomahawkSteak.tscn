@@ -16,10 +16,11 @@ shape = SubResource("ConvexPolygonShape3D_e2qjj")
 [node name="tomahawk022" parent="." index="1" instance=ExtResource("2_smx4q")]
 
 [node name="tomahawk02" parent="tomahawk022" index="0"]
+layers = 2
 material_override = ExtResource("3_aes5i")
 
 [node name="HighlightRing" parent="." index="2"]
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00728154, 0.010038, 0)
 
 [node name="GrabPointHandLeft" parent="." index="3"]
 transform = Transform3D(1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, -0.0946172, -0.0565605, -0.0206472)

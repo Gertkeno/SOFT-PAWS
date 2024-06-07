@@ -15,6 +15,7 @@ shape = SubResource("ConvexPolygonShape3D_wy60m")
 [node name="eggBox2" parent="." index="1" instance=ExtResource("2_hqjlq")]
 
 [node name="eggBox" parent="eggBox2" index="0"]
+layers = 2
 material_override = ExtResource("3_c17cp")
 
 [editable path="eggBox2"]

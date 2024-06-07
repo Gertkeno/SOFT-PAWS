@@ -5,7 +5,6 @@ extends PropBase
 
 func _ready() -> void:
 	super._ready()
-	set_process(start_alert)
 	animation_tree.set("parameters/conditions/started_alert", start_alert)
 	if not start_alert and flying_target:
 		flying_target.set_process(false)

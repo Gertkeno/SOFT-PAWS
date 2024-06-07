@@ -16,6 +16,7 @@ shape = SubResource("ConvexPolygonShape3D_8oawl")
 [node name="tuna2" parent="." index="1" instance=ExtResource("2_4lvuv")]
 
 [node name="tuna" parent="tuna2" index="0"]
+layers = 2
 material_override = ExtResource("3_h11po")
 
 [node name="HighlightRing" parent="." index="2"]

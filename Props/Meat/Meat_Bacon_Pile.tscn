@@ -18,6 +18,7 @@ shape = SubResource("CylinderShape3D_ua621")
 [node name="baconStrip032" parent="." index="1" instance=ExtResource("2_lyckr")]
 
 [node name="baconStrip03" parent="baconStrip032" index="0"]
+layers = 2
 material_override = ExtResource("3_o71oj")
 
 [node name="HighlightRing" parent="." index="2"]

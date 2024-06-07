@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=26 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_ts8fo"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_u45ga"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="13_e7725"]
 [ext_resource type="PackedScene" uid="uid://co3afsttnjf5x" path="res://Props/SusseMouse.tscn" id="14_a0q88"]
 [ext_resource type="PackedScene" uid="uid://djm052u16ishv" path="res://Props/Bottles/bottle_fat_brown.tscn" id="14_tv6rs"]
+[ext_resource type="ArrayOccluder3D" uid="uid://bep4lggdyomym" path="res://Scenes/Testing/Gurt_TestRoom_Table_Alex.occ" id="15_202qv"]
 [ext_resource type="ArrayMesh" uid="uid://4wtfhaoct82c" path="res://Assets/Alex Assets/Test Re-export/Test_Door.obj" id="16_ituxt"]
 [ext_resource type="PackedScene" uid="uid://c6vbocv5wc8dj" path="res://Scenes/WillCardboardBox.tscn" id="18_g217l"]
 
@@ -214,7 +215,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175, -0.00262495, -0.091102
 curve = SubResource("Curve3D_y01x1")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.269118, 0.0404487, 0.962255, 3.72528e-09, 0.999113, -0.0419983, -0.963105, 0.0113025, 0.26888, -1.25113, 0.970111, -3.042)
+transform = Transform3D(0.269118, 0.0404487, 0.962255, 3.72528e-09, 0.999112, -0.0419983, -0.963105, 0.0113025, 0.26888, -1.25113, 0.970111, -3.042)
 script = ExtResource("8_l2t6u")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
@@ -369,6 +370,7 @@ flying_strength = 1000.0
 flying_strength = 1000.0
 
 [node name="Prop37" parent="Freezer" index="57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.81452, 0.870607, 2.68331)
 flying_strength = 1000.0
 
 [node name="Prop38" parent="Freezer" index="58"]
@@ -381,6 +383,7 @@ flying_strength = 1000.0
 flying_strength = 1000.0
 
 [node name="Prop41" parent="Freezer" index="61"]
+transform = Transform3D(0.528379, 0, -0.849009, 0, 1, 0, 0.849009, 0, 0.528379, 5.80334, 0.870607, 4.21155)
 flying_strength = 1000.0
 
 [node name="Prop42" parent="Freezer" index="62"]
@@ -427,6 +430,7 @@ cash_value = 200
 on_will = true
 durability = 11.0
 flying_strength = 1000.0
+metadata/_edit_lock_ = true
 
 [node name="Prop56" parent="Freezer" index="76"]
 flying_strength = 1000.0
@@ -500,6 +504,12 @@ flying_target = NodePath("../Path3D/PathFollow3D")
 [node name="SusseMouse3" parent="." node_paths=PackedStringArray("flying_target") instance=ExtResource("14_a0q88")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0213242, 1.0039, -3.80302)
 flying_target = NodePath("../Path3D/PathFollow3D")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("15_202qv")
+bake_mask = 4293918721
+bake_simplification_distance = 1.0
+metadata/_edit_lock_ = true
 
 [editable path="Freezer"]
 [editable path="Freezer/Firewood2"]

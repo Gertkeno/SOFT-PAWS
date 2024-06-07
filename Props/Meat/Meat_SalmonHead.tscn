@@ -16,6 +16,7 @@ shape = SubResource("ConvexPolygonShape3D_poqae")
 [node name="salmonHead2" parent="." index="1" instance=ExtResource("2_ub113")]
 
 [node name="salmonHead" parent="salmonHead2" index="0"]
+layers = 2
 material_override = ExtResource("3_wnp6v")
 
 [node name="HighlightRing" parent="." index="2"]

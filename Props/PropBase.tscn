@@ -34,6 +34,7 @@ ranged_grab_method = 2
 ranged_grab_speed = 10.0
 
 [node name="HighlightRing" parent="." index="1" instance=ExtResource("2_u7yeh")]
+layers = 4
 
 [node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("3_epned")]
 hand_pose = SubResource("Resource_ovmpd")

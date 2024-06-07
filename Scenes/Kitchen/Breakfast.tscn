@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://c01tnypfpprxw" path="res://Assets/giant dungeon pack/shelf_small_candles.gltf" id="30_kw07c"]
 [ext_resource type="PackedScene" uid="uid://4qwy0eo371ri" path="res://Assets/giant dungeon pack/shelf_small.gltf" id="31_xsc3g"]
 [ext_resource type="ArrayMesh" uid="uid://b5451weujhbqc" path="res://Assets/slavic tavern/table_with_one_cloths.obj" id="32_fanjb"]
-[ext_resource type="ArrayMesh" uid="uid://d2tdlelgov6ga" path="res://christmas/chair_1.obj" id="33_y06io"]
+[ext_resource type="ArrayMesh" uid="uid://d2tdlelgov6ga" path="res://Assets/christmas/chair_1.obj" id="33_y06io"]
 [ext_resource type="Texture2D" uid="uid://csrdito181h04" path="res://textures/Granny Chic - Granny Squares MD.jpg" id="34_2levw"]
 [ext_resource type="Texture2D" uid="uid://co30i8m7gw83h" path="res://textures/gGkYcM.jpg" id="35_v53i5"]
 [ext_resource type="Texture2D" uid="uid://fuwmu281lq3k" path="res://textures/book_pattern/book_pattern_disp_1k.png" id="36_pn47p"]

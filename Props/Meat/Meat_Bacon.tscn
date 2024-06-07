@@ -17,6 +17,7 @@ shape = SubResource("BoxShape3D_xkp15")
 [node name="bacon2" parent="." index="1" instance=ExtResource("2_k5kvw")]
 
 [node name="bacon" parent="bacon2" index="0"]
+layers = 2
 material_override = ExtResource("3_6kqd1")
 
 [node name="HighlightRing" parent="." index="2"]

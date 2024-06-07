@@ -17,6 +17,7 @@ shape = SubResource("BoxShape3D_aosh6")
 [node name="chickenDrum022" parent="." index="1" instance=ExtResource("2_extgh")]
 
 [node name="chickenDrum02" parent="chickenDrum022" index="0"]
+layers = 2
 material_override = ExtResource("3_r76y6")
 
 [node name="HighlightRing" parent="." index="2"]

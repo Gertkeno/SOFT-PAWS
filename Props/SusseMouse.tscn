@@ -325,7 +325,11 @@ bones/290/scale = Vector3(1, 1, 1)
 bones/293/rotation = Quaternion(0.205935, 2.52354e-11, 0.00174612, 0.978564)
 
 [node name="Plane_001" parent="mouse2/rig/Skeleton3D" index="0"]
+layers = 2
 lod_bias = 7.0
+
+[node name="Roundcube_001" parent="mouse2/rig/Skeleton3D" index="1"]
+layers = 2
 
 [node name="AnimationPlayer" parent="mouse2" index="1"]
 root_motion_track = NodePath("rig/Skeleton3D:root")

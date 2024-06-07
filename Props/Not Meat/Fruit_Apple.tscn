@@ -15,6 +15,7 @@ shape = SubResource("ConvexPolygonShape3D_vuix2")
 [node name="apple2" parent="." index="1" instance=ExtResource("2_vxim6")]
 
 [node name="apple" parent="apple2" index="0"]
+layers = 2
 material_override = ExtResource("3_arkl8")
 
 [editable path="apple2"]
