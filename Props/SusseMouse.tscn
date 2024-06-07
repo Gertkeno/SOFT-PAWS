@@ -120,10 +120,13 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-27, -65)
 
 [node name="SusseMouse" instance=ExtResource("1_wly8x")]
-freeze = true
+gravity_scale = 0.0
+sleeping = false
+can_sleep = false
+lock_rotation = true
 script = ExtResource("2_at37v")
 start_alert = true
-flying_strength = 1000.0
+ranged_grab_method = 0
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0424279, 0)
@@ -358,5 +361,8 @@ parameters/conditions/alerted = false
 parameters/conditions/picked_up = false
 parameters/conditions/started_alert = false
 parameters/BlendSpace1D/blend_position = 0.190641
+
+[connection signal="picked_up" from="." to="." method="_on_prop_grabbed"]
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 
 [editable path="mouse2"]

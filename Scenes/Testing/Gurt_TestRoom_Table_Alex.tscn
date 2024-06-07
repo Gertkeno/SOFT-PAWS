@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ps8hxxoihopf"]
+[gd_scene load_steps=25 format=3 uid="uid://ps8hxxoihopf"]
 
 [ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_ts8fo"]
 [ext_resource type="PackedScene" uid="uid://cfqyp3r41fmt2" path="res://Assets/giant dungeon pack/floor_wood_large_dark.gltf" id="2_u45ga"]
@@ -38,6 +38,9 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 10
+
+[sub_resource type="PrismMesh" id="PrismMesh_6go4j"]
+size = Vector3(0.3, 0.2, 0.2)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_t3j41"]
 
@@ -211,8 +214,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175, -0.00262495, -0.091102
 curve = SubResource("Curve3D_y01x1")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.269118, 0.0404488, 0.962255, 3.72528e-09, 0.999114, -0.0419983, -0.963105, 0.0113025, 0.26888, -1.25113, 0.970111, -3.042)
+transform = Transform3D(0.269118, 0.0404487, 0.962255, 3.72528e-09, 0.999113, -0.0419983, -0.963105, 0.0113025, 0.26888, -1.25113, 0.970111, -3.042)
 script = ExtResource("8_l2t6u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
+mesh = SubResource("PrismMesh_6go4j")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
@@ -229,7 +235,7 @@ cast_shadow = 0
 mesh = SubResource("PlaneMesh_uqybx")
 
 [node name="PickableObject5" parent="." instance=ExtResource("14_tv6rs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02119, 1, -4.70438)
 flying_strength = 1000.0
 
 [node name="PickableObject6" parent="." instance=ExtResource("14_tv6rs")]
@@ -489,6 +495,10 @@ horizontal_alignment = 0
 
 [node name="SusseMouse" parent="." node_paths=PackedStringArray("flying_target") instance=ExtResource("14_a0q88")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.728934, 1.02158, -3.08346)
+flying_target = NodePath("../Path3D/PathFollow3D")
+
+[node name="SusseMouse3" parent="." node_paths=PackedStringArray("flying_target") instance=ExtResource("14_a0q88")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0213242, 1.0039, -3.80302)
 flying_target = NodePath("../Path3D/PathFollow3D")
 
 [editable path="Freezer"]

@@ -13,7 +13,11 @@ func _ready() -> void:
 
 func _on_prop_grabbed(_pickable: Variant) -> void:
 	flying_target = null
+	set_deferred("freeze", true)
 	animation_tree.set("parameters/conditions/picked_up", true)
+	picked_up.disconnect(_on_prop_grabbed)
+	await dropped
+	set_deferred("freeze", true)
 
 func alert() -> void:
 	if flying_target:

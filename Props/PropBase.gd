@@ -44,6 +44,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		var diff := flying_target.global_position - global_position
 		var dist2 := diff.length_squared()
 
-		var diff_match := diff - state.linear_velocity
-		var near_strength := smoothstep(0, 2, dist2) * flying_strength
+		var diff_match := (diff - state.linear_velocity / 8) * 16
+		var near_strength := smoothstep(0, 0.04, dist2) * flying_strength
 		state.apply_central_force(diff_match.limit_length(near_strength))
+		look_at(flying_target.global_position, Vector3.UP, true)
