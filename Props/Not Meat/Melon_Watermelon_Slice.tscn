@@ -15,6 +15,17 @@ shape = SubResource("ConvexPolygonShape3D_4ocq3")
 [node name="watermelonSlice2" parent="." index="1" instance=ExtResource("2_n4wqg")]
 
 [node name="watermelonSlice" parent="watermelonSlice2" index="0"]
+layers = 2
 material_override = ExtResource("3_lljfp")
+
+[node name="HighlightRing" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0713354, 0)
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(0.965336, 1.14091e-08, 0.26101, 0.26101, -4.21962e-08, -0.965336, 0, 1, -4.37114e-08, -0.0871996, 0.0733298, -2.98023e-08)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -0.0373937, -0.999301, 0, 0.999301, -0.0373937, 0.0721451, 0.144724, 0.0338019)
 
 [editable path="watermelonSlice2"]

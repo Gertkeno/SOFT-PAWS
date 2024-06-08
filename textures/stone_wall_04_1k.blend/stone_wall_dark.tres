@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cvedm0hcvdedp"]
+
+[ext_resource type="Texture2D" uid="uid://dvsmdcx2ccude" path="res://textures/stone_wall_04_1k.blend/stone_wall_04_diff_1k.jpg" id="1_uunx4"]
+[ext_resource type="Texture2D" uid="uid://cid8fe7puy70m" path="res://textures/stone_wall_04_1k.blend/stone_wall_04_nor_gl_1k.jpg" id="2_hcdug"]
+
+[resource]
+albedo_color = Color(0.404085, 0.132875, 0.0496954, 1)
+albedo_texture = ExtResource("1_uunx4")
+normal_enabled = true
+normal_texture = ExtResource("2_hcdug")
+uv1_scale = Vector3(0.27, 0.27, 0.27)
+uv1_triplanar = true

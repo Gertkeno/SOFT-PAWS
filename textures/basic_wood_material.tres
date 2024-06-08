@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmn2qjk155rlj" path="res://textures/dark_wood_nor_gl_1k.jpg" id="2_8uue2"]
 
 [resource]
+diffuse_mode = 1
 albedo_color = Color(0.644993, 0.571419, 0.633725, 1)
 albedo_texture = ExtResource("1_yjrd2")
 normal_enabled = true

@@ -4,17 +4,29 @@
 [ext_resource type="PackedScene" uid="uid://cw5ehqlrlb23p" path="res://Assets/LowPolyFoodPack/Assets/friedEgg01.glb" id="2_1dldu"]
 [ext_resource type="Material" uid="uid://rxf0a83n5u1s" path="res://Assets/LowPolyFoodPack/lowpolyfoodatlas_mat.tres" id="3_me1ai"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4qltl"]
-points = PackedVector3Array(0.063962, 0.0002, 0.0378963, -0.00473518, 0.0002, -0.0758222, -0.00541057, 0.00426508, -0.086637, -0.0649608, 0.00426508, 0.0595502, 0.00614989, 0.0178926, 0.00614989, 0.0676746, 0.00426508, -0.0595502, -0.0649608, 0.00426508, -0.062264, 0.0649608, 0.00426508, 0.062264, -0.0568518, 0.0002, 0.0521166, 0.00541057, 0.00426508, 0.086637, -0.086637, 0.00426508, -0.00541057, 0.086637, 0.00426508, 0.00541057, -0.00614989, 0.0178926, -0.00614989, -0.0568518, 0.0002, -0.0544917, 0.0592268, 0.0002, -0.0521166, 0.00473518, 0.0002, 0.0758222, -0.00614989, 0.0178926, 0.00614989, 0.00614989, 0.0178926, -0.00614989, -0.0758222, 0.0002, 0.00473518, 0.00541057, 0.00426508, -0.086637, -0.00541057, 0.00426508, 0.086637, 0.0758222, 0.0002, -0.00473518, -0.086637, 0.00426508, 0.00541057, 0.086637, 0.00426508, -0.00541057, -0.0595502, 0.00426508, 0.0649608, 0.0568518, 0.0002, 0.0544917, 0.0541397, 0.00426508, -0.0676746, -0.00473518, 0.0002, 0.0758222, 0.00473518, 0.0002, -0.0758222, -0.0541397, 0.00426508, -0.0676746, 0.0730851, 0.00426508, 0.0433015, -0.0758222, 0.0002, -0.00473518)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_f0ove"]
+height = 0.0261451
+radius = 0.0814898
 
 [node name="Prop" instance=ExtResource("1_0jhj3")]
 
 [node name="CollisionShape3D" parent="." index="0"]
-shape = SubResource("ConvexPolygonShape3D_4qltl")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00671759, 0)
+shape = SubResource("CylinderShape3D_f0ove")
 
 [node name="friedEgg012" parent="." index="1" instance=ExtResource("2_1dldu")]
 
 [node name="friedEgg01" parent="friedEgg012" index="0"]
+layers = 2
 material_override = ExtResource("3_me1ai")
+
+[node name="HighlightRing" parent="." index="2"]
+visible = false
+
+[node name="GrabPointHandLeft" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0267915, 0.0247234, -0.0630403)
+
+[node name="GrabPointHandRight" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0148398, 0.0163583, -0.0649289)
 
 [editable path="friedEgg012"]

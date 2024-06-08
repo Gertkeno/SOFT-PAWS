@@ -24,7 +24,6 @@ ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 sky_material = SubResource("ProceduralSkyMaterial_yticr")
 
 [sub_resource type="Environment" id="Environment_7ma2e"]
-background_mode = 2
 sky = SubResource("Sky_v7v5a")
 tonemap_mode = 2
 
@@ -370,7 +369,6 @@ flying_strength = 1000.0
 flying_strength = 1000.0
 
 [node name="Prop37" parent="Freezer" index="57"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.81452, 0.870607, 2.68331)
 flying_strength = 1000.0
 
 [node name="Prop38" parent="Freezer" index="58"]
@@ -383,7 +381,6 @@ flying_strength = 1000.0
 flying_strength = 1000.0
 
 [node name="Prop41" parent="Freezer" index="61"]
-transform = Transform3D(0.528379, 0, -0.849009, 0, 1, 0, 0.849009, 0, 0.528379, 5.80334, 0.870607, 4.21155)
 flying_strength = 1000.0
 
 [node name="Prop42" parent="Freezer" index="62"]
@@ -430,7 +427,6 @@ cash_value = 200
 on_will = true
 durability = 11.0
 flying_strength = 1000.0
-metadata/_edit_lock_ = true
 
 [node name="Prop56" parent="Freezer" index="76"]
 flying_strength = 1000.0
@@ -486,6 +482,7 @@ flying_strength = 1000.0
 
 [node name="Node3D" parent="." instance=ExtResource("13_56gmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107865, 0.828136, -16.8641)
+metadata/_edit_lock_ = true
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.13516, 2.31888, -13.9426)

@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c16w5ubto871o" path="res://textures/Stones & Brick Textures/Brickwall_Texture.png" id="7_qgms0"]
 [ext_resource type="ArrayMesh" uid="uid://6xh4fbn6f37n" path="res://Assets/3d_objects_free kitchen cute/floor_tiles.obj" id="8_5a3od"]
 [ext_resource type="Texture2D" uid="uid://dvsmdcx2ccude" path="res://textures/stone_wall_04_1k.blend/stone_wall_04_diff_1k.jpg" id="8_bw7q4"]
+[ext_resource type="Material" uid="uid://cvedm0hcvdedp" path="res://textures/stone_wall_04_1k.blend/stone_wall_dark.tres" id="9_gjhpn"]
 [ext_resource type="Texture2D" uid="uid://cjcjxxyd36sqh" path="res://textures/dark_wood_diff_1k.jpg" id="9_ioujp"]
 [ext_resource type="Texture2D" uid="uid://cid8fe7puy70m" path="res://textures/stone_wall_04_1k.blend/stone_wall_04_nor_gl_1k.jpg" id="9_urrlg"]
 [ext_resource type="ArrayMesh" uid="uid://brfrl3gn0rvy3" path="res://Assets/3d_objects_free kitchen cute/dinig_chair.obj" id="9_xmgmi"]
@@ -137,14 +138,6 @@ albedo_color = Color(0, 0, 0, 1)
 metallic = 1.0
 clearcoat_enabled = true
 clearcoat_roughness = 1.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_73en1"]
-albedo_color = Color(0.404085, 0.132875, 0.0496954, 1)
-albedo_texture = ExtResource("8_bw7q4")
-normal_enabled = true
-normal_texture = ExtResource("9_urrlg")
-uv1_scale = Vector3(0.27, 0.27, 0.27)
-uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e4cjg"]
 albedo_color = Color(0.0253583, 0.112635, 0.141957, 1)
@@ -417,7 +410,7 @@ mesh = ExtResource("7_5xvud")
 surface_material_override/0 = SubResource("StandardMaterial3D_hjki6")
 surface_material_override/3 = SubResource("StandardMaterial3D_makc8")
 surface_material_override/5 = SubResource("StandardMaterial3D_rct3j")
-surface_material_override/6 = SubResource("StandardMaterial3D_73en1")
+surface_material_override/6 = ExtResource("9_gjhpn")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="FirePlace"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17067, 1.00655, 0.106499)
