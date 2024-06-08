@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://co3afsttnjf5x"]
+[gd_scene load_steps=26 format=3 uid="uid://co3afsttnjf5x"]
 
 [ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_wly8x"]
 [ext_resource type="PackedScene" uid="uid://b76dhdfnggch" path="res://Assets/Mouse Character and Animations/mouse.glb" id="2_2rue5"]
 [ext_resource type="Script" path="res://Props/CatchableMouse.gd" id="2_at37v"]
+[ext_resource type="PackedScene" uid="uid://dmnrx340sejii" path="res://System/SusseMouseCatchEffect.tscn" id="3_w5w4y"]
 [ext_resource type="Animation" uid="uid://cbj5dgv823f7v" path="res://Assets/Mouse Character and Animations/reset.res" id="3_ymdp1"]
 [ext_resource type="Animation" uid="uid://0e68xjk5krwx" path="res://Assets/Mouse Character and Animations/alert.res" id="4_byi48"]
 [ext_resource type="Animation" uid="uid://c05vbkjn7vp2h" path="res://Assets/Mouse Character and Animations/idle.res" id="5_qgfbr"]
@@ -126,6 +127,7 @@ can_sleep = false
 lock_rotation = true
 script = ExtResource("2_at37v")
 start_alert = true
+break_effect = ExtResource("3_w5w4y")
 ranged_grab_method = 0
 
 [node name="CollisionShape3D" parent="." index="0"]

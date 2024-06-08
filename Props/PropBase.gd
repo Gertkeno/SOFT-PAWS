@@ -7,7 +7,7 @@ class_name PropBase
 @export_range(10, 1000, 0.5, "or_less") var durability: float = 15
 var durability_sq: float
 
-const PROP_BREAK_EFFECT = preload("res://Props/PropBreakEffect.tscn")
+@export var break_effect: PackedScene
 @onready var clank_sound_player: AudioStreamPlayer3D = $ClankSoundPlayer
 
 @export var flying_target: Node3D
@@ -19,10 +19,11 @@ func _ready() -> void:
 
 
 func shatter() -> GPUParticles3D:
-	var clone := PROP_BREAK_EFFECT.instantiate()
+	var clone := break_effect.instantiate() as GPUParticles3D
 	clone.position = position
 	clone.get_node("ShatterSoundFX").stream = clank_sound_player.stream
 	clone.emitting = true
+	clone.finished.connect(clone.queue_free)
 	add_sibling(clone)
 	return clone
 

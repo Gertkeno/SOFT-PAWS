@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dp7sy4o66ea5w"]
+[gd_scene load_steps=12 format=3 uid="uid://dp7sy4o66ea5w"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_wo0p2"]
 [ext_resource type="Script" path="res://Props/PropBase.gd" id="2_pskfu"]
 [ext_resource type="PackedScene" uid="uid://da2qgxxwwitl6" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.tscn" id="2_u7yeh"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_epned"]
+[ext_resource type="PackedScene" uid="uid://dthc4cqc05jhd" path="res://System/BasicPropBreakEffect.tscn" id="3_tyeqa"]
 [ext_resource type="Animation" uid="uid://dgfeikrugfewi" path="res://addons/godot-xr-tools/hands/animations/left/Cup.res" id="4_fuiea"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_hrhd4"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_cvuw6"]
@@ -28,6 +29,7 @@ script = ExtResource("2_pskfu")
 cash_value = 10
 on_will = false
 durability = 15.0
+break_effect = ExtResource("3_tyeqa")
 flying_strength = 20.0
 picked_up_layer = 65540
 ranged_grab_method = 2
