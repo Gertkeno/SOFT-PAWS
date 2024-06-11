@@ -254,10 +254,10 @@ transform = Transform3D(0.0581739, 0.998306, 0, -0.998306, 0.0581739, 0, 0, 0, 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44845, 1.57714, 1.81096)
 
 [node name="Prop20" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79196, 0.769376, -1.52324)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6915, 0.762601, -0.693222)
 
 [node name="Prop21" parent="." instance=ExtResource("15_3gkaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82256, 0.769376, -1.18184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87694, 0.769376, -0.62671)
 
 [node name="Prop22" parent="." instance=ExtResource("16_j0ig2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64032, 1.57714, -1.50944)
@@ -270,10 +270,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.46588, 0.769376, -1.58994)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.77204, 1.57714, -0.92614)
 
 [node name="Prop25" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(0.541195, 0, -0.840897, 0, 1, 0, 0.840897, 0, 0.541195, 5.73124, 1.57714, -0.0394401)
+transform = Transform3D(0.541195, 0, -0.840897, 0, 1, 0, 0.840897, 0, 0.541195, 5.70143, 0.763063, 0.378209)
 
 [node name="Prop26" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(-0.534116, 0, 0.845411, 0, 1, 0, -0.845411, 0, -0.534116, 5.83033, 1.57714, 0.690461)
+transform = Transform3D(-0.534116, 0, 0.845411, 0, 1, 0, -0.845411, 0, -0.534116, 5.57019, 0.784607, -0.372268)
 
 [node name="Prop27" parent="." instance=ExtResource("14_hs5aa")]
 transform = Transform3D(-0.401676, 0, -0.915782, 0, 1, 0, 0.915782, 0, -0.401676, 5.8832, 1.57714, 1.56826)
@@ -471,7 +471,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79125, 1.57714, 3.49867)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19105, 1.57714, -1.6244)
 
 [node name="Prop67" parent="." instance=ExtResource("14_hs5aa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16489, 1.57714, 1.8282)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82873, 0.823816, 0.560118)
 
 [node name="Prop68" parent="." instance=ExtResource("15_3gkaq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02248, 1.57714, -1.65189)

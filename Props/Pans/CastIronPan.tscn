@@ -22,6 +22,9 @@ transform = Transform3D(-0.983531, -0.0130642, -0.18027, -0.180742, 0.0710904, 0
 [node name="Cooking Assets" parent="." index="4" instance=ExtResource("2_g03o3")]
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -0.00599781, 0.0205259, 0.357427)
 
+[node name="pan cast iron skillet" parent="Cooking Assets" index="0"]
+layers = 2
+
 [node name="ClankSoundPlayer" parent="." index="5"]
 stream = ExtResource("3_iyq4v")
 

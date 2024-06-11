@@ -1,6 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://bd1oxd7fjlxs8"]
+[gd_scene load_steps=15 format=3 uid="uid://bd1oxd7fjlxs8"]
 
-[ext_resource type="PackedScene" uid="uid://rb0negbwpm2v" path="res://xr_player.tscn" id="1_e4rkn"]
 [ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="2_sh1bm"]
 [ext_resource type="PackedScene" uid="uid://dbofeung6ah1f" path="res://Assets/kitchen assets/GLB/All/appliance_refrigerator.glb" id="3_moj2e"]
 [ext_resource type="ArrayMesh" uid="uid://bxg2y3cm6ujjf" path="res://Assets/3d_objects_free kitchen cute/fridge.obj" id="4_wo60t"]
@@ -12,19 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://blhwe6d408okt" path="res://Assets/low_poly_dungeon/Oven.glb" id="10_6vfxe"]
 [ext_resource type="PackedScene" uid="uid://bpx0j4t0dkyn0" path="res://Props/HangingPans.tscn" id="11_w8odv"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6rve4"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_brcmw"]
+size = Vector3(4.74316, 0.917236, 1.35156)
 
-[sub_resource type="Sky" id="Sky_t4c5s"]
-sky_material = SubResource("ProceduralSkyMaterial_6rve4")
+[sub_resource type="BoxShape3D" id="BoxShape3D_81g80"]
+size = Vector3(5.96695, 0.925537, 0.803833)
 
-[sub_resource type="Environment" id="Environment_44bf7"]
-background_mode = 2
-sky = SubResource("Sky_t4c5s")
-tonemap_mode = 2
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kkwsg"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0npwt"]
+size = Vector3(1.00562, 1.08398, 0.535919)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_45i6r"]
 lightmap_size_hint = Vector2i(202, 202)
@@ -32,28 +26,6 @@ add_uv2 = true
 size = Vector2(40, 40)
 
 [node name="Kitchen" type="Node3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_44bf7")
-
-[node name="XRPlayer" parent="." instance=ExtResource("1_e4rkn")]
-
-[node name="Floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
-shape = SubResource("WorldBoundaryShape3D_kkwsg")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -3.5)
-material_override = ExtResource("2_sh1bm")
-cast_shadow = 0
-mesh = SubResource("PlaneMesh_45i6r")
 
 [node name="Cooking Assets" parent="." instance=ExtResource("3_moj2e")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 1.27957, 0, -13.68)
@@ -63,7 +35,7 @@ visible = false
 transform = Transform3D(0.530032, 0, 0, 0, 0.425657, 0, 0, 0, 0.438319, 0, 6.88552, 0)
 
 [node name="Fridge" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6.11959e-08, 0, -1.4, 0, 1.4, 0, 1.4, 0, -6.11959e-08, 2.63482, 2.08165e-12, -14)
+transform = Transform3D(-6.11959e-08, 0, -1.4, 0, 1.4, 0, 1.4, 0, -6.11959e-08, 2.63482, 2.08165e-12, -14.0002)
 mesh = ExtResource("4_wo60t")
 
 [node name="StructureKitchenCabinetBaseFull4" type="MeshInstance3D" parent="."]
@@ -123,7 +95,7 @@ transform = Transform3D(-0.95, 3.31348e-16, 1.43446e-07, 3.31348e-16, 0.95, -3.3
 mesh = ExtResource("9_tkd8n")
 
 [node name="ISLAND6" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.95, -3.31348e-16, 3.31348e-16, 3.31348e-16, 0.95, -3.31348e-16, -3.31348e-16, 3.31348e-16, 0.95, 0.892781, 0.00590062, -11.0798)
+transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 0.892781, 0.00590062, -11.0798)
 mesh = ExtResource("9_tkd8n")
 
 [node name="ISLAND7" type="MeshInstance3D" parent="."]
@@ -144,8 +116,45 @@ mesh = ExtResource("9_tkd8n")
 
 [node name="Oven2" parent="." instance=ExtResource("10_6vfxe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1901, 0.0113821, -6.3014)
+visible = false
 
 [node name="HangingPans" parent="." instance=ExtResource("11_w8odv")]
 transform = Transform3D(1, 0, 0, 0, 0.0535734, -0.998564, 0, 0.998564, 0.0535734, 3.08956, 2.36473, -11.8023)
+
+[node name="island collision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75202, 0.645072, -11.488)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="island collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0328026, -0.161995, 0.0524845)
+shape = SubResource("BoxShape3D_brcmw")
+
+[node name="counter collision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75202, 0.645072, -14.369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="counter collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.336559, -0.157845, 0.28985)
+shape = SubResource("BoxShape3D_81g80")
+
+[node name="cabinet collision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.446697, 2.28614, -14.369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinet collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012313, -0.188454, 0.120523)
+shape = SubResource("BoxShape3D_0npwt")
+
+[node name="cabinet collision2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.58441, 2.28614, -14.369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinet collision2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012313, -0.188454, 0.120523)
+shape = SubResource("BoxShape3D_0npwt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5)
+material_override = ExtResource("2_sh1bm")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_45i6r")
+skeleton = NodePath("")
+metadata/_edit_lock_ = true
 
 [editable path="Cooking Assets"]

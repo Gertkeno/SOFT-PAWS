@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SOFT PAWS?? (Mayjam)"
-run/main_scene="res://Scenes/Kitchen/Kitchen.tscn"
+run/main_scene="res://Scenes/Testing/Gurt_TestRoom_Table_Alex.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
 GameData="*res://System/GameData.gd"
-XrSimulator="res://addons/xr-simulator/XRSimulator.tscn"
+XrSimulator="*res://addons/xr-simulator/XRSimulator.tscn"
 
 [debug]
 
