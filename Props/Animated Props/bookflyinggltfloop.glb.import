@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cp3in076vacli"
+uid="uid://dv7o5g4phjghm"
 path="res://.godot/imported/bookflyinggltfloop.glb-f96133fbddccbb93de47710fa1c5cd48.scn"
 
 [deps]
@@ -25,7 +25,7 @@ meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
-animation/fps=24.0
+animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
