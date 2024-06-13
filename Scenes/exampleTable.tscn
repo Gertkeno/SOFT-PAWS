@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ier831hpsxop" path="res://Assets/giant dungeon pack/key.gltf" id="9_e3ere"]
 [ext_resource type="PackedScene" uid="uid://c37dxg0dobrg0" path="res://Assets/giant dungeon pack/plate_stack.gltf" id="10_jmrpu"]
 [ext_resource type="PackedScene" uid="uid://xqk8jjwddnmb" path="res://Assets/giant dungeon pack/chair.gltf" id="11_fefbx"]
-[ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="12_efi38"]
+[ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://Assets/textures/Stones & Brick Textures/Stones_Texture.png" id="12_efi38"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fp4pu"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

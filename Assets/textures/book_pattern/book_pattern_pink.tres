@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://88tcsxmebeq0"]
+
+[ext_resource type="Texture2D" uid="uid://bpvvbyp7g5p2n" path="res://Assets/textures/book_pattern/book_pattern_rough_1k.jpg" id="1_6ytlx"]
+
+[resource]
+diffuse_mode = 1
+albedo_color = Color(0.396665, 0.27113, 0.367098, 1)
+albedo_texture = ExtResource("1_6ytlx")
+uv1_scale = Vector3(1.48, 1.48, 1.48)
+uv1_triplanar = true

@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ier831hpsxop" path="res://Assets/giant dungeon pack/key.gltf" id="9_e3ere"]
 [ext_resource type="PackedScene" uid="uid://c37dxg0dobrg0" path="res://Assets/giant dungeon pack/plate_stack.gltf" id="10_jmrpu"]
 [ext_resource type="PackedScene" uid="uid://xqk8jjwddnmb" path="res://Assets/giant dungeon pack/chair.gltf" id="11_fefbx"]
-[ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://textures/Stones & Brick Textures/Stones_Texture.png" id="12_efi38"]
+[ext_resource type="Texture2D" uid="uid://df3h7q1eel0as" path="res://Assets/textures/Stones & Brick Textures/Stones_Texture.png" id="12_efi38"]
 [ext_resource type="PackedScene" uid="uid://d3ue2s4exyl4o" path="res://Props/Pans/Wok.tscn" id="14_oamtp"]
 [ext_resource type="PackedScene" uid="uid://bqiauoe2v64w1" path="res://Props/Pans/CeramicPot.tscn" id="15_brdq4"]
 [ext_resource type="PackedScene" uid="uid://dhrxr50cl2aye" path="res://Props/Pans/CastIronPan.tscn" id="16_pxcfp"]

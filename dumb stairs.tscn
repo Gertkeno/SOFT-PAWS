@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://e3e3ujwrq36n"]
-
-[node name="Sketchfab_Scene"]
-
-[node name="Sketchfab_model" parent="." index="0"]
-transform = Transform3D(0.156325, 0, 0, 0, 3.47111e-17, 0.156325, 0, -0.156325, 3.47111e-17, -156.553, 4.5034, 203.508)
