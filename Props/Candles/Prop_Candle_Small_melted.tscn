@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcdxdaqhup3uv"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_wwoq7"]
+[ext_resource type="PackedScene" uid="uid://bgcghe8qh6dya" path="res://Assets/giant dungeon pack/candle_melted.gltf" id="2_utl6h"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mp1am"]
+points = PackedVector3Array(0.0276317, 0.707067, 0.0250317, -0.161586, 0.0175814, -0.0392104, -0.138292, 0.0233614, -0.0795039, 0.143593, 0.00996025, 0.0877586, 0.107234, 0.514482, -0.130681, -0.143745, 0.637887, 0.0876318, -0.11143, 0.62632, -0.124644, 0.0154324, 0.0176147, -0.16417, -0.0577099, 0.0157938, 0.1595, 0.0573893, 0.549612, 0.1595, 0.150555, 0.506669, 0.0647658, 0.158742, 1.11022e-16, -0.0411255, -0.143745, 0.0104374, 0.0876318, -0.163407, 0.645585, -0.00801695, -0.0577099, 0.591522, 0.1595, 0.0153986, 0.568931, -0.16382, 0.0573893, 0.0157938, 0.1595, 0.159923, 0.505661, -0.0389146, -0.107504, 0.0236021, -0.130582, 0.107234, 0.0233502, -0.130681, 0.0165153, 0.707067, -0.0305841, -0.0157423, 0.569252, -0.164057, -0.122742, 0.681278, -0.0294055, -0.161586, 0.642297, -0.0392104, 0.158742, 5.55112e-17, 0.0136545, 0.140273, 0.517242, 0.0856676, -0.112929, 0.672967, 0.0670464, -0.0157423, 0.017848, -0.164057, 0.0387819, 0.695906, -0.0305841, -0.0477047, 0.646643, 0.118739, -0.161566, 0.0176227, 0.00240548, -0.0583219, 0.657585, -0.103271)
+
+[node name="Prop" instance=ExtResource("1_wwoq7")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_mp1am")
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00604637, 0.017756, -0.0811393)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027832, -0.0930358)
+visible = true
+
+[node name="candle_melted2" parent="." index="5" instance=ExtResource("2_utl6h")]
+
+[node name="candle_melted" parent="candle_melted2" index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[editable path="candle_melted2"]

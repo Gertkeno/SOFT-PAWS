@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtda7tr6i0yf3"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_2cvse"]
+[ext_resource type="PackedScene" uid="uid://ld8kvvx1ti5t" path="res://Assets/giant dungeon pack/candle.gltf" id="2_15pe7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_080sa"]
+size = Vector3(0.0518131, 0.119865, 0.0501366)
+
+[node name="Prop" instance=ExtResource("1_2cvse")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.84857e-05, 0.0603142, -0.00140953)
+shape = SubResource("BoxShape3D_080sa")
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0532818, -0.0687161)
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000971258, 0.0394458, -0.073474)
+
+[node name="candle2" parent="." index="5" instance=ExtResource("2_15pe7")]
+
+[node name="candle" parent="candle2" index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[editable path="candle2"]

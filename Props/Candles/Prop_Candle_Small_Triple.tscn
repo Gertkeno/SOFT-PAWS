@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch8iplqdvvp0w"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_2nysa"]
+[ext_resource type="PackedScene" uid="uid://crdn224rxodih" path="res://Assets/giant dungeon pack/candle_triple.gltf" id="2_mson4"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m5at7"]
+points = PackedVector3Array(0.295871, 0.527043, 0.157508, -0.159996, 0.0174487, -0.0112979, -0.143358, 0.0239394, -0.0879562, -0.0493848, 0.69971, -0.0278477, 0.284533, 0.0187611, -0.128626, 0.246368, 0.764764, -0.142763, 0.219203, 0.0188953, 0.223727, -0.0759618, 0.537772, 0.142089, 0.269273, 0.879929, -0.013962, -0.0641139, 0.551011, -0.15007, 0.218982, 0.527592, 0.223422, -0.105141, 0.0228609, 0.131444, 0.326385, 0.0141583, -0.0776716, -0.159996, 0.501966, -0.0112979, 0.32593, 0.765788, -0.0774626, -0.0662009, 0.0233642, -0.152702, 0.295871, 0.0220796, 0.157508, 0.213822, 0.879929, -0.0832722, -0.000597732, 0.576692, 0.168318, -0.0493848, 0.69971, 0.0275768, -0.153277, 0.500151, 0.0535832, -0.142051, 0.513347, -0.0872468, 0.326119, 0.766043, -0.0247807, 0.258669, 0.527888, 0.210938, 0.213822, 0.879929, -0.013962, 0.255946, 0.0246681, -0.139215, 0.163623, 0.0356644, 0.216129, 0.311819, 0.764507, -0.103251, -0.153277, 0.0290718, 0.0535832, 0.259126, 0.0171292, 0.211395, 0.283123, 0.782874, 0.0552301, -0.114999, 0.52547, 0.117188)
+
+[node name="Prop" instance=ExtResource("1_2nysa")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_m5at7")
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0388873, -0.0709515)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0212416, 0.0557581, -0.0697845)
+visible = true
+
+[node name="candle_triple2" parent="." index="5" instance=ExtResource("2_mson4")]
+
+[node name="candle_triple" parent="candle_triple2" index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[editable path="candle_triple2"]

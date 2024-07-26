@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://6q3qlatsltx7"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_0ans6"]
+[ext_resource type="PackedScene" uid="uid://cs78mkcjyh6gg" path="res://Assets/giant dungeon pack/candle_thin.gltf" id="2_lgpt3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ruvu8"]
+points = PackedVector3Array(0.0904348, 0.769071, -0.0634287, -0.103488, -0.00692856, -0.0357225, -0.103488, -0.00692856, 0.0335225, 0.104288, -0.00692856, 0.0196694, -0.0480756, 0.769071, 0.102788, -0.0896348, 0.769071, -0.0634287, 0.0211694, -0.00692856, -0.104988, 0.0488756, -0.00692856, 0.102788, 0.0627287, 0.782874, 0.0889348, 0.0211694, 0.782874, -0.104988, -0.103488, 0.769071, 0.0335225, -0.0342225, 0.879929, 0.0335225, -0.0480756, -0.00692856, 0.102788, -0.0619287, -0.00692856, -0.0911348, 0.0904348, -0.00692856, -0.0634287, 0.104288, 0.769071, -0.0357225, 0.0211694, 0.879929, -0.0357225, -0.0619287, 0.782874, -0.0911348, 0.0627287, 0.769071, -0.0911348, 0.0488756, 0.769071, 0.102788, -0.103488, 0.782874, -0.0357225, 0.0904348, -0.00692856, 0.0612287, -0.0203694, -0.00692856, -0.104988, -0.0896348, -0.00692856, 0.0612287, 0.0350225, 0.879929, 0.0196694, 0.0627287, -0.00692856, -0.0911348, 0.104288, -0.00692856, -0.0357225, -0.0203694, 0.879929, -0.0357225, 0.0794215, 0.740505, 0.0536045, -0.0896348, -0.00692856, -0.0634287, -0.0619287, 0.782874, 0.0889348, 0.0211694, 0.879929, 0.0335225)
+
+[node name="Prop" instance=ExtResource("1_0ans6")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ruvu8")
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0140619, 0.0300716, -0.0916259)
+visible = true
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021199, 0.0363619, -0.0846525)
+visible = true
+
+[node name="candle_thin2" parent="." index="5" instance=ExtResource("2_lgpt3")]
+
+[node name="candle_thin" parent="candle_thin2" index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[editable path="candle_thin2"]
