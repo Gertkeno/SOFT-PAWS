@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ervjarnng12p"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_wogr5"]
+[ext_resource type="PackedScene" uid="uid://y61t72y0uob" path="res://Assets/kitchen assets/GLB/Plates/plate_rectangle.glb" id="2_82hu3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uho5r"]
+points = PackedVector3Array(1.40587, -0.105481, 0.614451, -2.14236, 0.0284297, -0.992281, -2.14236, 0.0954048, -0.992281, -2.14236, 0.0284297, 1.01658, 2.14236, 0.0954048, 1.01658, 2.14236, 0.0954048, -0.992281, -1.40587, -0.105481, -0.657406, 1.94146, -0.0384863, -0.925227, -2.14236, 0.0954048, 1.01658, -1.40587, -0.105481, 0.614451, 1.94146, -0.0384863, 0.882469, 1.40587, -0.105481, -0.657406, -1.94146, -0.0384863, -0.925227, 2.14236, 0.0284297, 1.01658, -1.94146, -0.0384863, 0.882469, 2.14236, 0.0284297, -0.992281)
+
+[node name="Prop" instance=ExtResource("1_wogr5")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_uho5r")
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299649, 0.056104, -0.182657)
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292713, 0.04214, 0.0327624)
+
+[node name="Cooking Assets" parent="." index="5" instance=ExtResource("2_82hu3")]
+
+[node name="plate rectangle" parent="Cooking Assets" index="0"]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[editable path="Cooking Assets"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://ckdh1cw6akt0c"]
+[gd_scene load_steps=72 format=3 uid="uid://ckdh1cw6akt0c"]
 
 [ext_resource type="ArrayMesh" uid="uid://dx3sfafmiufpl" path="res://Assets/livingroom/curtains.obj" id="1_nxd0a"]
 [ext_resource type="Texture2D" uid="uid://dx216u3m8utr7" path="res://Assets/textures/dreamy-days-pink-parfait-stripe-floral--merw-l.jpg" id="2_u0ckv"]
@@ -42,6 +42,8 @@
 [ext_resource type="Material" uid="uid://88tcsxmebeq0" path="res://Assets/textures/book_pattern/book_pattern_pink.tres" id="40_dn4th"]
 [ext_resource type="Material" uid="uid://dyvkl7geog3ny" path="res://Assets/textures/book_pattern/book_pattern_green.tres" id="41_2ujvi"]
 [ext_resource type="Texture2D" uid="uid://c0tyg6dkqqhuv" path="res://Assets/textures/GRANNY SQUARE CROCHET-01.jpg" id="42_iawuw"]
+[ext_resource type="ArrayMesh" uid="uid://chwo0il2kn6no" path="res://Assets/Alex Assets/Trying/Mesh_Pillow_small.tres" id="42_mdfec"]
+[ext_resource type="ArrayMesh" uid="uid://crcpnpg0ps86n" path="res://Assets/Alex Assets/Trying/Mesh_Pillow_upright.tres" id="43_u8w3m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nj1ex"]
 albedo_color = Color(0.338726, 0.37625, 0.407796, 0.372549)
@@ -527,10 +529,12 @@ material_override = ExtResource("41_2ujvi")
 
 [node name="Cube_061" parent="chair_1" index="2"]
 material_override = ExtResource("41_2ujvi")
+mesh = ExtResource("42_mdfec")
 
 [node name="Cube_062" parent="chair_1" index="3"]
-transform = Transform3D(1, 2.98023e-08, 0, 0, 0, -1, -2.98023e-08, 1, 0, 0, 0, 0)
+transform = Transform3D(1, -2.98023e-08, 0, 0, 0, -1, 2.98023e-08, 1, 0, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_2psbv")
+mesh = ExtResource("43_u8w3m")
 
 [node name="Cylinder_008" parent="chair_1" index="4"]
 material_override = ExtResource("36_sy443")

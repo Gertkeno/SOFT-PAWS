@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbwn2vm1x7c3i"]
+
+[ext_resource type="PackedScene" uid="uid://dp7sy4o66ea5w" path="res://Props/PropBase.tscn" id="1_sfqpd"]
+[ext_resource type="PackedScene" uid="uid://bnwlgdpn7jkmo" path="res://Assets/LowPolyFoodPack/Assets/sushiServingPlate01.glb" id="2_s4lef"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_u13ue"]
+points = PackedVector3Array(-0.0883126, -0.00551905, -0.320096, 0.110343, 0.0386333, 0.353219, -0.110419, 0.0386333, 0.353219, 0.110343, 0.0386333, -0.353219, 0.088258, -0.00551905, 0.320096, -0.110419, 0.0386333, -0.353219, -0.0883126, -0.00551905, 0.309032, 0.088258, -0.00551905, -0.309032, -0.110419, 0.0165571, 0.353219, 0.110343, 0.0165571, -0.353219, -0.110419, 0.0165571, -0.353219, 0.110343, 0.0165571, 0.353219, -0.0772702, -0.00551905, 0.320096, 0.0993004, 0.00551905, 0.342155, 0.0772156, -0.00551905, -0.320096, -0.099355, 0.00551905, -0.342155)
+
+[node name="Prop" instance=ExtResource("1_sfqpd")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConvexPolygonShape3D_u13ue")
+
+[node name="GrabPointHandLeft" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0832447, 0.0463624, 0.21609)
+
+[node name="GrabPointHandRight" parent="." index="3"]
+transform = Transform3D(0.978361, -0.206904, 0, 0.206904, 0.978361, 0, 0, 0, 1, 0.0958693, 0.0538223, 0.241132)
+
+[node name="sushiServingPlate012" parent="." index="5" instance=ExtResource("2_s4lef")]
+
+[editable path="sushiServingPlate012"]
