@@ -1,6 +1,5 @@
 [gd_scene load_steps=72 format=3 uid="uid://ckdh1cw6akt0c"]
 
-[ext_resource type="ArrayMesh" uid="uid://dx3sfafmiufpl" path="res://Assets/livingroom/curtains.obj" id="1_nxd0a"]
 [ext_resource type="Texture2D" uid="uid://dx216u3m8utr7" path="res://Assets/textures/dreamy-days-pink-parfait-stripe-floral--merw-l.jpg" id="2_u0ckv"]
 [ext_resource type="Material" uid="uid://chnlt1i0uhelv" path="res://Scenes/Kitchen/kitchen_tile.tres" id="3_nj3xn"]
 [ext_resource type="ArrayMesh" uid="uid://c8jr3efn4huwn" path="res://Assets/Alex Assets/Created Assets/Test_Map_BlockOut_low.obj" id="4_43q6m"]
@@ -14,7 +13,6 @@
 [ext_resource type="ArrayMesh" uid="uid://bfxof63m7xhot" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Corner.obj" id="14_xinjx"]
 [ext_resource type="ArrayMesh" uid="uid://damu6esun4ntv" path="res://Assets/modular_house_collection/Structure_Kitchen_Cabinet_Side_Shelves.obj" id="15_1ju77"]
 [ext_resource type="PackedScene" uid="uid://ch84sdomsnivc" path="res://Assets/Scenes/furniture/furniture_shelf_2.tscn" id="17_qvcuv"]
-[ext_resource type="ArrayMesh" uid="uid://xqra3sfeefew" path="res://Assets/slavic tavern/window.obj" id="20_7tlk1"]
 [ext_resource type="PackedScene" uid="uid://wj73r5gr2v24" path="res://Assets/Scenes/furniture/furniture_desk_drawers_2.tscn" id="21_4jnnq"]
 [ext_resource type="PackedScene" uid="uid://8sdxss4j6hrg" path="res://Assets/Scenes/furniture/furniture_rocking_chair_1.tscn" id="22_t5f2y"]
 [ext_resource type="PackedScene" uid="uid://dxf4jtx50x1ed" path="res://Assets/Scenes/furniture/furniture_step_ladder_2.tscn" id="23_6lm3u"]
@@ -43,7 +41,9 @@
 [ext_resource type="Material" uid="uid://dyvkl7geog3ny" path="res://Assets/textures/book_pattern/book_pattern_green.tres" id="41_2ujvi"]
 [ext_resource type="Texture2D" uid="uid://c0tyg6dkqqhuv" path="res://Assets/textures/GRANNY SQUARE CROCHET-01.jpg" id="42_iawuw"]
 [ext_resource type="ArrayMesh" uid="uid://chwo0il2kn6no" path="res://Assets/Alex Assets/Trying/Mesh_Pillow_small.tres" id="42_mdfec"]
+[ext_resource type="PackedScene" uid="uid://bemdyjgyxgdna" path="res://Assets/slavic tavern/window.glb" id="43_j2irg"]
 [ext_resource type="ArrayMesh" uid="uid://crcpnpg0ps86n" path="res://Assets/Alex Assets/Trying/Mesh_Pillow_upright.tres" id="43_u8w3m"]
+[ext_resource type="PackedScene" uid="uid://bfcmvj28ejl4s" path="res://Assets/livingroom/curtains.glb" id="44_ehdx8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nj1ex"]
 albedo_color = Color(0.338726, 0.37625, 0.407796, 0.372549)
@@ -299,10 +299,6 @@ uv1_scale = Vector3(2.185, 2.185, 2.185)
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77951, 0.195961, 2.65423)
 
-[node name="Curtains" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.36351, 0, 4.37982)
-mesh = ExtResource("1_nxd0a")
-
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73332, 0.921378, 1.96881)
 material_override = SubResource("StandardMaterial3D_nj1ex")
@@ -356,6 +352,7 @@ metadata/_edit_lock_ = true
 
 [node name="TallFlower" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.126715, -0.887609, 2.25443)
+layers = 2
 mesh = ExtResource("6_amx2s")
 
 [node name="PropMiscPictureSquareSmall" type="MeshInstance3D" parent="."]
@@ -424,10 +421,6 @@ mesh = ExtResource("15_1ju77")
 [node name="Furniture_Shelf_2" parent="." instance=ExtResource("17_qvcuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6, -5.09626, 0.34965, 2.34731)
 surface_material_override/0 = SubResource("StandardMaterial3D_xa3sh")
-
-[node name="Window" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11003, 0, 4.49466)
-mesh = ExtResource("20_7tlk1")
 
 [node name="Furniture_DeskDrawers_3" parent="." instance=ExtResource("21_4jnnq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35819, 0.892473, 12.9257)
@@ -521,7 +514,6 @@ surface_material_override/2 = SubResource("StandardMaterial3D_6sldv")
 transform = Transform3D(0.554689, 0, 0.708745, 0, 0.9, 0, -0.708745, 0, 0.554689, -5.46304, -0.934877, 5.34868)
 
 [node name="lowchair" parent="chair_1" index="0"]
-transform = Transform3D(1, 2.98023e-08, 0, 0, 0, -1, -2.98023e-08, 1, 0, 0, 0, 0)
 material_override = ExtResource("40_dn4th")
 
 [node name="Cube_060" parent="chair_1" index="1"]
@@ -541,6 +533,12 @@ material_override = ExtResource("36_sy443")
 
 [node name="Plane_002" parent="chair_1" index="5"]
 material_override = SubResource("StandardMaterial3D_52y8s")
+
+[node name="window2" parent="." instance=ExtResource("43_j2irg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.97802, 0.169336, 4.50292)
+
+[node name="curtains2" parent="." instance=ExtResource("44_ehdx8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38324, 2.69804, 4.41576)
 
 [editable path="picture_frames_low"]
 [editable path="picture_frames_low2"]

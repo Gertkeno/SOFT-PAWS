@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://disnl0quievvm"
-path="res://.godot/imported/cauldronstir.glb-f19de8bc369c71c9316aaae3abae848c.scn"
+uid="uid://bemdyjgyxgdna"
+path="res://.godot/imported/window.glb-91df68b36b5366886d32444e09c939eb.scn"
 
 [deps]
 
-source_file="res://Props/Animated Props/cauldronstir.glb"
-dest_files=["res://.godot/imported/cauldronstir.glb-f19de8bc369c71c9316aaae3abae848c.scn"]
+source_file="res://Assets/slavic tavern/window.glb"
+dest_files=["res://.godot/imported/window.glb-91df68b36b5366886d32444e09c939eb.scn"]
 
 [params]
 
