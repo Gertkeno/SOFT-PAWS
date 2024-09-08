@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c6ep7kw3wlruq"
-path="res://.godot/imported/fence3.fbx-e652d0c7c661c1043f36fb2f0a6ec8c6.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/fence3.fbx"
-dest_files=["res://.godot/imported/fence3.fbx-e652d0c7c661c1043f36fb2f0a6ec8c6.scn"]
 
 [params]
 

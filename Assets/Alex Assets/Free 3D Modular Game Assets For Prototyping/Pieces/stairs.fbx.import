@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://t6u7fdu4buce"
-path="res://.godot/imported/stairs.fbx-d8cc53c09f66ed34e6859e3596bab863.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/stairs.fbx"
-dest_files=["res://.godot/imported/stairs.fbx-d8cc53c09f66ed34e6859e3596bab863.scn"]
 
 [params]
 

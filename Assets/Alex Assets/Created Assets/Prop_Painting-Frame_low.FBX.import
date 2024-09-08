@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ct858uaj5lgjb"
-path="res://.godot/imported/Prop_Painting-Frame_low.FBX-44aa4426afbeca0ffdf8180c59a5f7cf.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Created Assets/Prop_Painting-Frame_low.FBX"
-dest_files=["res://.godot/imported/Prop_Painting-Frame_low.FBX-44aa4426afbeca0ffdf8180c59a5f7cf.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5kl6xqqxviii"
-path="res://.godot/imported/cone3.fbx-0e6d036c1b93b4d41570c143f4c55380.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/cone3.fbx"
-dest_files=["res://.godot/imported/cone3.fbx-0e6d036c1b93b4d41570c143f4c55380.scn"]
 
 [params]
 

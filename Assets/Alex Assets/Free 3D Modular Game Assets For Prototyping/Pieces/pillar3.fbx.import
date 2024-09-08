@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://6vcvk4dy5sbv"
-path="res://.godot/imported/pillar3.fbx-5a3d0f28bc2dfc24e80a95fd22a81429.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/pillar3.fbx"
-dest_files=["res://.godot/imported/pillar3.fbx-5a3d0f28bc2dfc24e80a95fd22a81429.scn"]
 
 [params]
 

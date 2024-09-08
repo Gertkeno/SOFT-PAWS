@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cavlhs6rn2l15"
-path="res://.godot/imported/door1.fbx-868004f9ad4a59e46525e77d198cd622.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/door1.fbx"
-dest_files=["res://.godot/imported/door1.fbx-868004f9ad4a59e46525e77d198cd622.scn"]
 
 [params]
 

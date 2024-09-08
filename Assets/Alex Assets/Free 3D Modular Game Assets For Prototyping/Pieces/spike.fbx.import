@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://xja6d20lj8eo"
-path="res://.godot/imported/spike.fbx-f077bdac24b623b8fa1f21f63c2e8273.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/spike.fbx"
-dest_files=["res://.godot/imported/spike.fbx-f077bdac24b623b8fa1f21f63c2e8273.scn"]
 
 [params]
 

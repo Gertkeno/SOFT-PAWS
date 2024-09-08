@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bc0b72jywqofm"
-path="res://.godot/imported/coin.fbx-70b702704337c5dcd30e27e3e00a5da9.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/coin.fbx"
-dest_files=["res://.godot/imported/coin.fbx-70b702704337c5dcd30e27e3e00a5da9.scn"]
 
 [params]
 

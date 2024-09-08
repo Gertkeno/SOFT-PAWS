@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bxdqvschy415g"
-path="res://.godot/imported/sphere1.fbx-16e8f61f52871610e0a695b9dde4822b.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/sphere1.fbx"
-dest_files=["res://.godot/imported/sphere1.fbx-16e8f61f52871610e0a695b9dde4822b.scn"]
 
 [params]
 

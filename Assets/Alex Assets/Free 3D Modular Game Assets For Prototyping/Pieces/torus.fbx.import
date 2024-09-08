@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bbn4c21gr5jl7"
-path="res://.godot/imported/torus.fbx-d96c6f7fe64f1a91c2a3bf9039e9ebb5.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/torus.fbx"
-dest_files=["res://.godot/imported/torus.fbx-d96c6f7fe64f1a91c2a3bf9039e9ebb5.scn"]
 
 [params]
 

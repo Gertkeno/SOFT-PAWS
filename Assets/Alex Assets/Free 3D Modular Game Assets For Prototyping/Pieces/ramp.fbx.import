@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cxslenj0phd1j"
-path="res://.godot/imported/ramp.fbx-cfc8395973e1a5bf6271143bdf597809.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/ramp.fbx"
-dest_files=["res://.godot/imported/ramp.fbx-cfc8395973e1a5bf6271143bdf597809.scn"]
 
 [params]
 

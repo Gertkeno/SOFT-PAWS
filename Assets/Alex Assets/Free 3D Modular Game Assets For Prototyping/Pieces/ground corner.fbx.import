@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c2nkxbbdps30h"
-path="res://.godot/imported/ground corner.fbx-24170429ede5d58809ab77a6982341c1.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/ground corner.fbx"
-dest_files=["res://.godot/imported/ground corner.fbx-24170429ede5d58809ab77a6982341c1.scn"]
 
 [params]
 

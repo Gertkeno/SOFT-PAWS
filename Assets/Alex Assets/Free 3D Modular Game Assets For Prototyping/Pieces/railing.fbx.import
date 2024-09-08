@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b8i0lxqotrofe"
-path="res://.godot/imported/railing.fbx-2047378be9a4cf7327263a16aa7cf7b6.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/railing.fbx"
-dest_files=["res://.godot/imported/railing.fbx-2047378be9a4cf7327263a16aa7cf7b6.scn"]
 
 [params]
 

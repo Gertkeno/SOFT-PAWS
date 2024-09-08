@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c3doesypmohdo"
-path="res://.godot/imported/cylinder5.fbx-03505388d3bc30f8aff4630792b006f1.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/cylinder5.fbx"
-dest_files=["res://.godot/imported/cylinder5.fbx-03505388d3bc30f8aff4630792b006f1.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://fyfapkuuafh1"
-path="res://.godot/imported/ladder.fbx-0053e25b4fb204f90691d34169ff6398.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/ladder.fbx"
-dest_files=["res://.godot/imported/ladder.fbx-0053e25b4fb204f90691d34169ff6398.scn"]
 
 [params]
 

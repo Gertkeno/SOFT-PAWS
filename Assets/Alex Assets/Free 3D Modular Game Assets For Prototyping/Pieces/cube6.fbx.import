@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfpdces1wl5c2"
-path="res://.godot/imported/cube6.fbx-4567022dea657e5618d29c8c3045b82d.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/cube6.fbx"
-dest_files=["res://.godot/imported/cube6.fbx-4567022dea657e5618d29c8c3045b82d.scn"]
 
 [params]
 

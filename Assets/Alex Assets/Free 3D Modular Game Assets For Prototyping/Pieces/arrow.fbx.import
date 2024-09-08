@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://btcxshxoje438"
-path="res://.godot/imported/arrow.fbx-76530a47e22020b3c8ce74697f923db4.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/arrow.fbx"
-dest_files=["res://.godot/imported/arrow.fbx-76530a47e22020b3c8ce74697f923db4.scn"]
 
 [params]
 

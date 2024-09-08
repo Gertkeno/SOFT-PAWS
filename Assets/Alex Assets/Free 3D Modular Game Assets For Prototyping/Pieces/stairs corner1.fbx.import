@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b76415g1rfqtj"
-path="res://.godot/imported/stairs corner1.fbx-9a18bc95c448ab938d6a23b65daa9469.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/Alex Assets/Free 3D Modular Game Assets For Prototyping/Pieces/stairs corner1.fbx"
-dest_files=["res://.godot/imported/stairs corner1.fbx-9a18bc95c448ab938d6a23b65daa9469.scn"]
 
 [params]
 
