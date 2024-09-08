@@ -1,0 +1,98 @@
+[gd_scene load_steps=12 format=3 uid="uid://fbblvqhkx4ty"]
+
+[ext_resource type="Script" path="res://watch.gd" id="1_vnbrs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxpvd"]
+albedo_color = Color(0.528573, 0.487841, 0.42826, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0opt"]
+albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
+metallic = 0.94
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfpgy"]
+albedo_color = Color(0.384314, 0.0196078, 0.0117647, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6a8jv"]
+material = SubResource("StandardMaterial3D_bfpgy")
+flip_faces = true
+size = Vector2(0.003, 0.045)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rp18v"]
+albedo_color = Color(0.098635, 0.0521868, 0.201095, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2pck3"]
+material = SubResource("StandardMaterial3D_rp18v")
+flip_faces = true
+size = Vector2(0.006, 0.035)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fsy6w"]
+albedo_color = Color(0.0874253, 0.0588752, 0.111418, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_n3ccc"]
+material = SubResource("StandardMaterial3D_fsy6w")
+flip_faces = true
+size = Vector2(0.007, 0.025)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_xmcye"]
+flip_faces = true
+size = Vector2(0.081, 0.002)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_mp8ae"]
+flip_faces = true
+size = Vector2(0.038, 0.002)
+orientation = 1
+
+[node name="CSGCylinder3D" type="CSGCylinder3D"]
+transform = Transform3D(0.998561, 0.0534694, 0.00409368, -0.00657503, 0.0463139, 0.998905, 0.0532212, -0.997495, 0.0465988, 0, 0, 0)
+radius = 0.0674708
+height = 0.0656809
+sides = 12
+material = SubResource("StandardMaterial3D_rxpvd")
+script = ExtResource("1_vnbrs")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, -3.72529e-09, -4.65661e-10, 0, 1, 0, 4.65661e-10, -3.72529e-09, 1, 0, 0, 0)
+operation = 2
+radius = 0.0549505
+height = 0.0656809
+sides = 12
+
+[node name="Face" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.0173469, -0.354683, -0.934825, 0.998805, -0.0488497, 0, -0.0456659, -0.933708, 0.355107, 0.0242849, 0.000949353, 0.0593221)
+radius = 0.0423917
+height = 0.0127352
+material = SubResource("StandardMaterial3D_b0opt")
+
+[node name="SecondPivot" type="Node3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000202298, -0.00743999, 0.000100672)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/SecondPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52696e-10, 0.000492724, 0.0158095)
+mesh = SubResource("QuadMesh_6a8jv")
+
+[node name="MinutePivot" type="Node3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000202298, -0.00743999, 0.000100672)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/MinutePivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.32232e-10, -0.00060092, 0.0182976)
+mesh = SubResource("QuadMesh_2pck3")
+
+[node name="HourPivot" type="Node3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000202298, -0.00743999, 0.000100672)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face/HourPivot"]
+transform = Transform3D(1, -2.79397e-09, -3.72529e-09, 0, 1, 2.01399e-08, -3.72529e-09, -4.11819e-08, 1, -9.89735e-05, -0.00106341, 0.0127003)
+mesh = SubResource("QuadMesh_n3ccc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27596e-12, -0.00662109, 3.66867e-10)
+mesh = SubResource("QuadMesh_xmcye")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Face"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.03394e-10, -0.00662109, 0.0195021)
+mesh = SubResource("QuadMesh_mp8ae")

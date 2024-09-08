@@ -1,10 +1,9 @@
-[gd_scene load_steps=55 format=3 uid="uid://rb0negbwpm2v"]
+[gd_scene load_steps=31 format=3 uid="uid://rb0negbwpm2v"]
 
 [ext_resource type="Script" path="res://xr_player.gd" id="1_3atvn"]
 [ext_resource type="PackedScene" uid="uid://dqx0wklvs01g8" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_r6d2t"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="3_4q0vq"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="3_wur7k"]
-[ext_resource type="Shader" path="res://addons/so_fluffy/so_fluffy.gdshader" id="4_ex2lj"]
 [ext_resource type="Script" path="res://addons/so_fluffy/so_fluffy.gd" id="4_kqigi"]
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="4_xykjk"]
 [ext_resource type="Texture2D" uid="uid://dvsya36dr8mba" path="res://Assets/ParticlePNGs/fade_off_gradient.tres" id="5_hakd0"]
@@ -14,477 +13,47 @@
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="6_nd82y"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="6_xgpg3"]
 [ext_resource type="Material" uid="uid://dg43tnvih5d8" path="res://Assets/glovelikepaws.tres" id="6_ysgxy"]
+[ext_resource type="PackedScene" uid="uid://fbblvqhkx4ty" path="res://watch.tscn" id="8_uxoo5"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_30hqb"]
 frequency = 0.0095
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_i47d2"]
-as_normal_map = true
-noise = SubResource("FastNoiseLite_30hqb")
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_07ca0"]
 as_normal_map = true
 noise = SubResource("FastNoiseLite_30hqb")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fgobg"]
-render_priority = 0
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 1.0
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_i47d2"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_30hqb")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vl7ot"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_fgobg")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.909091
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vv8en"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_vl7ot")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.818182
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_syy42"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_vv8en")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.727273
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4f4of"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_syy42")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.636364
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l0xtg"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_4f4of")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.545455
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1cxk7"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_l0xtg")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.454545
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ws418"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_1cxk7")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.363636
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_erryn"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_ws418")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.272727
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ifjv3"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_erryn")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.181818
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6vpwn"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_ifjv3")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.0909091
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l4yy8"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_6vpwn")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.0
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2cd00"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v32bg"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jfvxj"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r650x"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ig3tj"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_68swn"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ikv75"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g7n6p"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_iy8bm"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_202yd"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vsm8m"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_b2yyy"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_2cd00")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_v32bg")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_jfvxj")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_r650x")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_ig3tj")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_68swn")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_ikv75")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_g7n6p")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_iy8bm")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_202yd")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
 
@@ -492,465 +61,34 @@ node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigge
 radius = 0.0661047
 height = 0.246303
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_uaqdl"]
-render_priority = 0
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 1.0
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bykoj"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_uaqdl")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.909091
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dhl4x"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_bykoj")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.818182
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gn7sx"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_dhl4x")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.727273
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lqeud"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_gn7sx")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.636364
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5vaon"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_lqeud")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.545455
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_25doa"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_5vaon")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.454545
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0156f"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_25doa")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.363636
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ekosi"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_0156f")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.272727
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_07gea"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_ekosi")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.181818
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iwsdv"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_07gea")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.0909091
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_omkd0"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_iwsdv")
-shader = ExtResource("4_ex2lj")
-shader_parameter/height = 0.02
-shader_parameter/normal_strength = 1.0
-shader_parameter/static_direction_local = Vector3(0, 0, 0)
-shader_parameter/static_direction_world = Vector3(0, 0, 0)
-shader_parameter/h = 0.0
-shader_parameter/density = 0.5
-shader_parameter/render_skin = false
-shader_parameter/seed = 22407
-shader_parameter/scruffiness = 0.5
-shader_parameter/use_heightmap_texture = false
-shader_parameter/turbulence_strength = 0.3
-shader_parameter/jitter_strength = 0.0
-shader_parameter/curls_enabled = false
-shader_parameter/curls_twist = 48.0
-shader_parameter/curls_fill = 0.785398
-shader_parameter/color = Color(0.366595, 0.366595, 0.366595, 1)
-shader_parameter/use_height_gradient = false
-shader_parameter/scale_height_gradient = false
-shader_parameter/use_albedo_texture = true
-shader_parameter/use_emission = false
-shader_parameter/emission_color = Color(0, 0, 0, 1)
-shader_parameter/emission_energy_multiplier = 1.0
-shader_parameter/use_emission_texture = false
-shader_parameter/use_thickness_curve = false
-shader_parameter/thickness_scale = 1.5
-shader_parameter/physics_pos_offset = Vector3(0, 0, 0)
-shader_parameter/physics_rot_offset = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
-shader_parameter/turbulence_texture = SubResource("NoiseTexture2D_07ca0")
-shader_parameter/jitter_texture = SubResource("NoiseTexture2D_i47d2")
-shader_parameter/albedo_texture = ExtResource("5_hakd0")
-metadata/is_fur = true
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hq2q3"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2uio4"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1w4ea"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kgeum"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_dxcfq"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_lk4dx"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7ryup"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ryuek"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_11itq"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_35mk1"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_h224y"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_v3vey"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_hq2q3")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_2uio4")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_1w4ea")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_kgeum")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_dxcfq")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_lk4dx")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_7ryup")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_ryuek")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_11itq")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_35mk1")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1", &"output", 0, &"Grip"]
 
@@ -994,7 +132,6 @@ bones/22/rotation = Quaternion(0.0585786, 0.0216483, -0.269905, 0.96086)
 bones/23/rotation = Quaternion(0.00687177, -0.00357275, -0.211953, 0.977249)
 
 [node name="mesh_Hand_Nails_low_L" parent="XROrigin3D/LeftHand/LeftHand/Hand_Nails_low_L/Armature/Skeleton3D" index="0"]
-material_overlay = SubResource("ShaderMaterial_l4yy8")
 surface_material_override/0 = ExtResource("6_ysgxy")
 
 [node name="Fur" type="Node" parent="XROrigin3D/LeftHand/LeftHand/Hand_Nails_low_L/Armature/Skeleton3D/mesh_Hand_Nails_low_L" index="0"]
@@ -1009,7 +146,10 @@ albedo_texture = ExtResource("5_hakd0")
 physics_enabled = false
 
 [node name="AnimationTree" parent="XROrigin3D/LeftHand/LeftHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_vsm8m")
+tree_root = SubResource("AnimationNodeBlendTree_b2yyy")
+
+[node name="CSGCylinder3D" parent="XROrigin3D/LeftHand/LeftHand" instance=ExtResource("8_uxoo5")]
+transform = Transform3D(0.998561, 0.0534694, 0.00409368, -0.00657503, 0.0463139, 0.998905, 0.0532212, -0.997495, 0.0465988, -0.03304, -0.051506, 0.189257)
 
 [node name="Marker3D" type="Marker3D" parent="XROrigin3D/LeftHand"]
 
@@ -1062,7 +202,6 @@ bones/22/rotation = Quaternion(0.0585786, -0.0216483, 0.269905, 0.96086)
 bones/23/rotation = Quaternion(0.00687177, 0.00357275, 0.211953, 0.977249)
 
 [node name="mesh_Hand_Nails_low_R" parent="XROrigin3D/RightHand/RightHand/Hand_Nails_low_R/Armature/Skeleton3D" index="0"]
-material_overlay = SubResource("ShaderMaterial_omkd0")
 surface_material_override/0 = ExtResource("6_ysgxy")
 
 [node name="Fur" type="Node" parent="XROrigin3D/RightHand/RightHand/Hand_Nails_low_R/Armature/Skeleton3D/mesh_Hand_Nails_low_R" index="0"]
@@ -1078,7 +217,7 @@ physics_enabled = false
 
 [node name="AnimationTree" parent="XROrigin3D/RightHand/RightHand" index="1"]
 root_node = NodePath("../Hand_Nails_low_R")
-tree_root = SubResource("AnimationNodeBlendTree_h224y")
+tree_root = SubResource("AnimationNodeBlendTree_v3vey")
 
 [node name="Marker3D" type="Marker3D" parent="XROrigin3D/RightHand"]
 
